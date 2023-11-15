@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans", "sans-serif";
     @apply dark:bg-dark-700 bg-gray-100 text-dark-800 dark:text-gray-300;
 }
 .animate-spin-slow {
