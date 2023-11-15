@@ -38,8 +38,8 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                conthrax: "'Conthrax', serif",
-                opensans: "Open Sans', sans-seri",
+                conthrax: "'Conthrax', sans-serif",
+                opensans: "Open Sans', sans-serif",
             },
         },
     },

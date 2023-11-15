@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: "Conthrax";
-    src: url("../public/font/conthrax.otf") format("woff2");
+    src: url("/font/conthrax.otf") format("woff2");
 }
 
 body {

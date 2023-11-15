@@ -57,7 +57,7 @@ const HeroSection = () => {
                         <div className='flex flex-col justify-center items-center text-center duration-700 w-full h-full'>
                             <div className='relative items-center justify-center bg-dark-700 rounded-full -z-20 p-2 shadow-lg'>
                                 <Image
-                                    src='/icons/Circle.webp'
+                                    src='/icons/globe.webp'
                                     alt='circle'
                                     width={200}
                                     height={200}
@@ -65,7 +65,7 @@ const HeroSection = () => {
                                 />
                                 <Image
                                     src='/icons/AInCircle.webp'
-                                    alt='circle'
+                                    alt='Aircle'
                                     width={200}
                                     height={200}
                                 />
