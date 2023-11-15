@@ -7,9 +7,10 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
-
+  css: {
+    minimize: false,
+  },
     theme: {
-
         extend: {
             colors: {
                 dark: {
@@ -30,4 +31,4 @@ module.exports = {
         },
     },
     plugins: [],
-}
+};
