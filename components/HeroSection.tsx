@@ -70,7 +70,7 @@ const HeroSection = () => {
                                     height={200}
                                 />
                             </div>
-                            <p className='font-conthrax'>Loading...</p>
+                            <p className='font-conthrax drop-shadow-lg p-3'>Loading...</p>
                         </div>
                     )}
                 </div>
