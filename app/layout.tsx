@@ -3,7 +3,8 @@ import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "ALAMSYAH.ID",
-  description: "Trusted Premium Account Market",
+  description:
+    "ALAMSYAH.ID Menawarkan Premium Digital dan Solusi Terjangkau. Kami adalah pilihan terpercaya untuk akun premium seperti Netflix dan solusi virtual machine berkinerja tinggi seperti VPS, Remote Desktop, WHM, serta Cloud9 IDE. Produk berkualitas dengan harga terjangkau, hanya di ALAMSYAH.ID.",
   icons: {
     icon: [
       {
