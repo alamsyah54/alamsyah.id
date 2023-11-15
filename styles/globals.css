@@ -5,23 +5,23 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "Conthrax";
-    src: url("/font/conthrax.otf") format("woff2");
+  font-family: "Conthrax";
+  src: url("/font/conthrax.otf") format("woff2");
 }
 
 body {
-    font-family: "Open Sans", "sans-serif";
-    @apply dark:bg-dark-700 bg-gray-100 text-dark-800 dark:text-gray-300;
+  font-family: "Open Sans", "sans-serif";
+  @apply dark:bg-dark-700 bg-gray-100 text-dark-800 dark:text-gray-300;
 }
 .animate-spin-slow {
-    animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
