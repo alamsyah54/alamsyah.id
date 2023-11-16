@@ -10,6 +10,7 @@ import {
     MdOutlineKeyboardArrowUp,
 } from "react-icons/md"
 import { contactsButton } from "@/constant"
+import { RiArrowRightUpLine } from "react-icons/ri"
 
 const Navbar = () => {
     const navButtons = [
@@ -93,13 +94,13 @@ const Navbar = () => {
         >
             <div className='dark:bg-dark-600 bg-gray-100 rounded-2xl py-2 flex px-6 justify-between duration-1000 items-center shadow-lg shadow-black/25 dark:shadow-black/70'>
                 <Link href='/' className='max-md:p-2'>
-                    <h1 className='font-conthrax lg:text-xl p-3 '>
+                    <h1 className='font-conthrax lg:text-xl lg:p-3 '>
                         ALAMSYAH.ID
                     </h1>
                 </Link>
-                <div className='flex items-center justify-between gap-10'>
+                <div className='flex items-center justify-between gap-5 lg:gap-10'>
                     <div className='max-md:hidden flex lg:text-md'>
-                        <div className='flex gap-8'>
+                        <div className='flex lg:gap-10 gap-5'>
                             {navButtons.map((nav, i) => (
                                 <Link
                                     href={nav.url}
@@ -147,9 +148,11 @@ const Navbar = () => {
                                                 href={cont.url}
                                                 className='flex gap-2 hover:bg-white/20 w-full py-1 px-3'
                                                 key={cont.title}
+                                                target='_blank'
                                             >
                                                 {cont.icon}
                                                 {cont.title}
+                                                <RiArrowRightUpLine className='text-sm opacity-50' />
                                             </Link>
                                         ))}
                                     </div>

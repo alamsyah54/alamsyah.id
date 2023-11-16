@@ -47,11 +47,11 @@ const HeroSection = () => {
         <AnimatePresence mode='wait'>
             <section
                 id='home'
-                className='flex max-lg:justify-between max-md:flex-col-reverse items-center w-full max-h-screen'
+                className='flex max-lg:justify-between max-md:flex-col-reverse items-center w-full max-h-screen '
             >
-                <div className='flex max-lg:basis-2/5 w-full h-screen items-center -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-100 dark:from-dark-700 z-10 '>
+                <div className='flex max-lg:basis-2/5 w-full h-screen items-center max-sm:pb-24 sm:pb-24 -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-100 dark:from-dark-700 z-10 '>
                     <div>
-                        <h1 className='font-black text-2xl md:text-3xl lg:text-5xl'>
+                        <h1 className='font-black text-2xl md:text-3xl lg:text-6xl'>
                             Unlock Premium Digital Experiences
                             <br /> with{" "}
                             <span className='font-conthrax duration-700 my-4 dark:text-transparent dark:bg-gradient-to-tl dark:from-cyan-300 dark:to-fuchsia-400 bg-clip-text'>
