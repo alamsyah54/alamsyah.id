@@ -49,12 +49,12 @@ const HeroSection = () => {
                 id='home'
                 className='flex max-lg:justify-between max-md:flex-col-reverse items-center w-full max-h-screen'
             >
-                <div className='flex max-lg:basis-2/5 w-full h-screen items-center -mt-40 md:m-0 sm:-mt-40 lg:px-24  md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-100 dark:from-dark-700 z-10'>
+                <div className='flex max-lg:basis-2/5 w-full h-screen items-center -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-100 dark:from-dark-700 z-10 '>
                     <div>
                         <h1 className='font-black text-2xl md:text-3xl lg:text-5xl'>
                             Unlock Premium Digital Experiences
                             <br /> with{" "}
-                            <span className='font-conthrax duration-700 dark:text-transparent dark:bg-gradient-to-tl dark:from-cyan-300 dark:to-fuchsia-400 bg-clip-text'>
+                            <span className='font-conthrax duration-700 my-4 dark:text-transparent dark:bg-gradient-to-tl dark:from-cyan-300 dark:to-fuchsia-400 bg-clip-text'>
                                 ALAMSYAH.ID
                             </span>
                         </h1>
@@ -67,7 +67,7 @@ const HeroSection = () => {
                                 href='/products'
                                 className='relative group w-fit h-fit duration-500 group'
                             >
-                                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition duration-500 opacity-50 group-hover:opacity-100 group-hover:blur-lg'></div>
+                                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg'></div>
                                 <div className='relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-4 font-black bg-gray-200 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#171c23]/80 dark:from-[#171c23] dark:from-15% dark:via-[#171c23] via-30% dark:to-[#0c0d0f] to-90%  shadow-light-100 dark:shadow-dark-100'>
                                     Buy Now
                                 </div>
