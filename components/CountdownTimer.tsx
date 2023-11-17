@@ -56,11 +56,11 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     return (
         <div className='flex justify-center items-center flex-col'>
             <h2
-                className={`${roboto.className} dark:text-red-500 text-[55px] py-1`}
+                className={`${roboto.className} dark:text-red-500 text-3xl py-1`}
             >
-                ENDED IN
+                Berakhir Pada
             </h2>
-            <div className='flex justify-evenly items-center gap-2'>
+            <div className='flex justify-center items-center gap-2'>
                 <div className='flex flex-col items-center'>
                     <div
                         className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
@@ -71,6 +71,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                         Days
                     </span>
                 </div>
+                <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
                         className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
@@ -81,6 +82,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                         Hours
                     </span>
                 </div>
+                <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
                         className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
@@ -91,6 +93,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                         Minutes
                     </span>
                 </div>
+                <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
                         className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}

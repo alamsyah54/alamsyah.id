@@ -25,7 +25,7 @@ const DetailSection = () => {
                                 All Devices
                             </p>
                             <h1
-                                className={`${roboto.className} text-8xl lg:text-[150px] absolute opacity-10 -z-20`}
+                                className={`${roboto.className} text-[85px] lg:text-[150px] absolute opacity-10 -z-20`}
                             >
                                 SUPPORT
                             </h1>
@@ -71,6 +71,19 @@ const DetailSection = () => {
                     pengalaman tanpa khawatir dengan akun berlangganan asli dari
                     <br className='hidden md:block lg:block' />
                     kami. Tidak akan ada masalah tahan atau hambatan pembayaran.
+                    <br className='hidden md:block lg:block' />
+                    <br className='hidden md:block lg:block' />
+                    <span className='font-extrabold text-lg'>
+                        Garansi Full Selama Durasi Pembelian
+                    </span>
+                    <br className='' />
+                    Kami memberikan garansi sepanjang durasi pembelian Anda.
+                    <br className='hidden md:block lg:block' />
+                    Contohnya, jika Anda membeli untuk 1 bulan, kami menjamin
+                    <br className='hidden md:block lg:block' />
+                    layanan penuh selama 1 bulan penuh. Garansi ini memberikan
+                    <br className='hidden md:block lg:block' />
+                    kepastian dan perlindungan ekstra bagi setiap pelanggan.
                 </p>
             </span>
         </section>
