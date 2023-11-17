@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { PiCaretDoubleDown } from "react-icons/pi"
 import { Roboto } from "next/font/google"
 import CountdownTimer from "./CountdownTimer"
 
@@ -16,16 +15,23 @@ const PromoSection = () => {
                 <div className='flex items-center  w-full h-64 max-h-full justify-center '>
                     <div className='flex justify-center items-center w-full'>
                         <h1
-                            className={`${roboto.className} text-9xl lg:text-[150px] absolute opacity-40`}
+                            className={`${roboto.className} text-9xl lg:text-[150px] absolute opacity-10`}
                         >
                             PROMO
                         </h1>
                         <Image
-                            src='/images/Premium.png'
+                            src='/images/PremiumDark.png'
                             width={300}
                             height={300}
                             alt='PROMO'
-                            className='drop-shadow-lg lg:w-96'
+                            className='hidden dark:block lg:w-96'
+                        />
+                        <Image
+                            src='/images/PremiumLight.png'
+                            width={300}
+                            height={300}
+                            alt='PROMO'
+                            className='lg:w-96 dark:hidden'
                         />
                     </div>
                 </div>

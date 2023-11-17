@@ -142,17 +142,15 @@ const Navbar = () => {
                                             : "md:hidden lg:hidden"
                                     } `}
                                 >
-                                    <div className='flex flex-col-reverse gap-1 py-3 bg-gray-100 shadow-lg rounded-xl bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#0d0d0d]/80 dark:from-[#181818] dark:from-15% dark:via-[#1f1f1f] via-30% dark:to-[#2c2c2c] to-90% '>
+                                    <div className=' grid grid-cols-3 gap-1 overflow-hidden bg-gray-100 shadow-lg rounded-xl bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#0d0d0d]/80 dark:from-[#181818] dark:from-15% dark:via-[#1f1f1f] via-30% dark:to-[#2c2c2c] to-90% '>
                                         {contactsButton.map((cont): any => (
                                             <Link
                                                 href={cont.url}
-                                                className='flex gap-2 hover:bg-white/20 w-full py-1 px-3'
-                                                key={cont.title}
+                                                className='flex gap-2 hover:bg-white/20 w-full p-3 justify-center items-center'
+                                                key={cont.url}
                                                 target='_blank'
                                             >
                                                 {cont.icon}
-                                                {cont.title}
-                                                <RiArrowRightUpLine className='text-sm opacity-50' />
                                             </Link>
                                         ))}
                                     </div>

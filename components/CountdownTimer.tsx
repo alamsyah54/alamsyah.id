@@ -56,7 +56,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     return (
         <div className='flex justify-center items-center flex-col'>
             <h2
-                className={`${roboto.className} dark:text-purple-500 text-[55px] py-1`}
+                className={`${roboto.className} dark:text-red-500 text-[55px] py-1`}
             >
                 ENDED IN
             </h2>
@@ -67,7 +67,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                     >
                         {timeLeft.days}
                     </div>
-                    <span className='dark:text-fuchsia-500 text-sm'>Days</span>
+                    <span className='dark:text-fuchsia-500 text-sm py-2'>
+                        Days
+                    </span>
                 </div>
                 <div className='flex flex-col items-center'>
                     <div
@@ -75,7 +77,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                     >
                         {timeLeft.hours}
                     </div>
-                    <span className='dark:text-fuchsia-500 text-sm'>Hours</span>
+                    <span className='dark:text-fuchsia-500 text-sm py-2'>
+                        Hours
+                    </span>
                 </div>
                 <div className='flex flex-col items-center'>
                     <div
@@ -83,7 +87,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                     >
                         {timeLeft.minutes}
                     </div>
-                    <span className='dark:text-fuchsia-500 text-sm'>
+                    <span className='dark:text-fuchsia-500 text-sm py-2'>
                         Minutes
                     </span>
                 </div>
@@ -93,7 +97,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                     >
                         {timeLeft.seconds}
                     </div>
-                    <span className='dark:text-fuchsia-500 text-sm'>
+                    <span className='dark:text-fuchsia-500 text-sm py-2'>
                         Seconds
                     </span>
                 </div>
@@ -102,8 +106,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                 href='/products'
                 className='relative group w-fit h-fit duration-500 group mt-8'
             >
-                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg'></div>
-                <div className='relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-4 font-black bg-gray-200 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#171c23]/80 dark:from-[#171c23] dark:from-15% dark:via-[#171c23] via-30% dark:to-[#0c0d0f] to-90%  shadow-light-100 dark:shadow-dark-100'>
+                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg animate-pulse duration-1000'></div>
+                <div className='relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-4 font-black bg-gray-100 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#171c23]/80 dark:from-[#171c23] dark:from-15% dark:via-[#171c23] via-30% dark:to-[#0c0d0f] to-90%  shadow-light-100 dark:shadow-dark-100'>
                     Order Now!
                 </div>
             </Link>
