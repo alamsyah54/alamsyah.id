@@ -56,14 +56,14 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     return (
         <div className='flex justify-center items-center flex-col'>
             <h2
-                className={`${roboto.className} dark:text-red-500 text-3xl py-1`}
+                className={`${roboto.className} dark:text-red-500 text-3xl py-1 `}
             >
                 Berakhir Pada
             </h2>
-            <div className='flex justify-center items-center gap-2'>
+            <div className='flex justify-center items-center gap-2 duration-700'>
                 <div className='flex flex-col items-center'>
                     <div
-                        className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
+                        className={`p-3 text-4xl duration-700 bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
                     >
                         {timeLeft.days}
                     </div>
@@ -74,7 +74,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                 <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
-                        className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
+                        className={`p-3 text-4xl duration-700 bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
                     >
                         {timeLeft.hours}
                     </div>
@@ -85,7 +85,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                 <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
-                        className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
+                        className={`p-3 text-4xl duration-700 bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
                     >
                         {timeLeft.minutes}
                     </div>
@@ -96,7 +96,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
                 <span className={`${roboto.className} text-3xl pb-7`}>:</span>
                 <div className='flex flex-col items-center'>
                     <div
-                        className={`p-3 text-4xl bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
+                        className={`p-3 text-4xl duration-700 bg-gray-100 dark:bg-dark-600 shadow-lg rounded-lg text-center font-black dark:text-sky-500 ${roboto.className}`}
                     >
                         {timeLeft.seconds}
                     </div>
@@ -107,9 +107,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
             </div>
             <Link
                 href='/products'
-                className='relative group w-fit h-fit duration-500 group mt-8'
+                className='relative group w-fit h-fit group mt-8'
             >
-                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg animate-pulse duration-1000'></div>
+                <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg animate-pulse duration-700'></div>
                 <div className='relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-4 font-black bg-gray-100 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#171c23]/80 dark:from-[#171c23] dark:from-15% dark:via-[#171c23] via-30% dark:to-[#0c0d0f] to-90%  shadow-light-100 dark:shadow-dark-100'>
                     Order Now!
                 </div>

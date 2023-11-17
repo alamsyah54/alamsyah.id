@@ -11,6 +11,7 @@
 
 body {
     font-family: "Open Sans", "sans-serif";
+    @apply duration-700;
 }
 .animate-spin-slow {
     animation: spin 5s linear infinite;
