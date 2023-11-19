@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Roboto } from "next/font/google"
 import CountdownTimer from "./CountdownTimer"
 
@@ -10,7 +9,7 @@ const roboto = Roboto({
 const PromoSection = () => {
     const targetDate = "2023-11-19T00:00:00"
     return (
-        <section id='promo' className='flex flex-col lg:p-24 px-10 pb-24 h-fit'>
+        <section id='promo' className='flex flex-col py-10 h-fit'>
             <div className='flex justify-center flex-col md:flex-row lg:flex-row items-start '>
                 <div className='flex items-center flex-col w-full h-64 max-h-full justify-center '>
                     <div className='flex justify-center items-center w-full duration-700'>

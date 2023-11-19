@@ -326,3 +326,71 @@ export const supportDevices = [
         ),
     },
 ]
+
+export const Products = [
+    {
+        _id: "1",
+        package: "Shared",
+        price: "25",
+        features: [
+            "Bisa Request Nama Profile",
+            "Bebas Request PIN",
+            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bisa Perpanjang",
+            "Resolusi 4K HDR",
+            "Support All Device",
+            "Klaim Garansi Maksimal 1x24jam",
+            "Bukan Hasil Change Email (Bule)",
+            "Bukan Hasil Phishing",
+            "Bukan Hasil Crack",
+        ],
+        description:
+            "Akun berbagi memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
+        picture: "/images/SHARED.png",
+        url: "",
+    },
+    {
+        _id: "2",
+        package: "Private",
+        price: "109",
+        features: [
+            "Bisa Mengganti Password",
+            "Bisa Membuat 5 Profile",
+            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bisa Perpanjang",
+            "Resolusi 4K HDR",
+            "Support All Device",
+            "Klaim Garansi Maksimal 1x24jam",
+            "Bukan Hasil Change Email (Bule)",
+            "Bukan Hasil Phishing",
+            "Bukan Hasil Crack",
+        ],
+        description:
+            "Akun pribadi memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
+        picture: "/images/PRIVATE2.png",
+        url: "",
+    },
+    {
+        _id: "3",
+        package: "Reseller",
+        price: "299",
+        features: [
+            "Mendapatkan 3 Akun Sekaligus",
+            "Harga Spesial",
+            "Bisa Membuat 5 Profile untuk dijual",
+            "Bisa Mengganti Password",
+            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bisa Perpanjang",
+            "Resolusi 4K HDR",
+            "Support All Device",
+            "Klaim Garansi Maksimal 1x24jam",
+            "Bukan Hasil Change Email (Bule)",
+            "Bukan Hasil Phishing",
+            "Bukan Hasil Crack",
+        ],
+        description:
+            "Paket RESELLER kami tidak hanya memberi Anda kesempatan untuk menjual akun berbagi premium yang kami tawarkan, tetapi juga memberikan Anda akses eksklusif ke akun pribadi dengan harga khusus. Ini adalah kesempatan emas untuk membangun bisnis streaming Anda sendiri tanpa perlu investasi besar. Dengan harga spesial dan kemampuan untuk menjual kembali, Anda dapat merajut jalan menuju kesuksesan di industri ini. Bergabunglah dengan kami dan buat langkah pertama Anda dalam meraih sukses bersama!",
+        picture: "/images/PRIVATE.png",
+        url: "",
+    },
+]

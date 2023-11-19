@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Spline from "@splinetool/react-spline"
-import { Variants, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -29,40 +29,44 @@ const HeroSection = () => {
             // Cleanup logic if needed
         }
     }, [])
-
-    const containerVariants: Variants = {
-        hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 1, // Adjust the stagger duration as needed
-            },
-        },
-    }
-
-    const comeFromLeft: Variants = {
-        hidden: { opacity: 0, y: 0, x: -100 },
-        visible: { opacity: 1, y: 0 },
-    }
     return (
         <AnimatePresence mode='wait'>
             <section
                 id='home'
                 className='flex max-lg:justify-between max-md:flex-col-reverse items-center w-full max-h-screen '
             >
-                <div className='flex max-lg:basis-2/5 w-full h-screen duration-700 items-center max-sm:pb-24 sm:pb-24 -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-100 dark:from-dark-700 z-10 '>
+                <div className='flex max-lg:basis-2/5 w-full h-screen duration-700 items-center max-sm:pb-24 sm:pb-24 -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-50 dark:from-dark-700 z-10 '>
                     <div>
-                        <h1 className='font-black text-2xl md:text-3xl lg:text-6xl'>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 100, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='font-black text-2xl md:text-3xl lg:text-6xl'
+                        >
                             Unlock Premium Digital Experiences
-                            <br /> with{" "}
+                            <br /> with
                             <span className='font-conthrax duration-700 my-4 dark:text-transparent dark:bg-gradient-to-tl dark:from-cyan-300 dark:to-fuchsia-400 bg-clip-text'>
                                 ALAMSYAH.ID
                             </span>
-                        </h1>
-                        <h2 className='font-light md:text-lg lg:text-2xl lg:py-2'>
+                        </motion.h1>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 80, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='font-light md:text-lg lg:text-2xl lg:py-2'
+                        >
                             Your Trusted Choice for Premium Netflix Accounts and
                             High Quality Solutions
-                        </h2>
-                        <div className='flex pt-8'>
+                        </motion.h2>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='flex pt-8'
+                        >
                             <Link
                                 href='/products'
                                 className='relative group w-fit h-fit duration-700 group'
@@ -72,7 +76,7 @@ const HeroSection = () => {
                                     Buy Now
                                 </div>
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
                 <div className='flex max-lg:basis-3/5 w-full'>

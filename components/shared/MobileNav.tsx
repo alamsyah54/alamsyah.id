@@ -21,11 +21,6 @@ const NavContent = () => {
             url: "/products",
             LineColor: "bg-purple-500",
         },
-        {
-            name: "Testimoni",
-            url: "/testimoni",
-            LineColor: "bg-fuchsia-500",
-        },
     ]
 
     const pathname = usePathname()
