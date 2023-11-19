@@ -5,7 +5,7 @@ import React from "react"
 
 const Footer = () => {
     return (
-        <footer className='flex justify-center items-center px-24 py-5 border-t-[1px] border-black/50 dark:border-white/50'>
+        <footer className='flex justify-center items-center px-24 py-5 border-t-[1px] border-black/30 dark:border-white/30 bg-gray-100 dark:bg-dark-600 drop-shadow-md'>
             <div className='flex w-full justify-center md:justify-between lg:justify-between items-center flex-col md:flex-row lg:flex-row gap-2'>
                 <Link href='/' className='flex items-center  justify-start '>
                     <Image
