@@ -5,6 +5,7 @@ import React, { useState } from "react"
 import { Products } from "@/constant"
 import { FaCheckCircle } from "react-icons/fa"
 import { AnimatePresence, motion } from "framer-motion"
+import Link from "next/link"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -46,10 +47,10 @@ const ProductsCarousel = () => {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className='flex flex-col px-8 rounded-2xl shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '
+                    className='flex flex-col px-8 rounded-3xl duration-700 shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '
                 >
                     <h1
-                        className={`text-4xl py-5  w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
+                        className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                     >
                         {Products[currentIndex].package}
                     </h1>
@@ -82,17 +83,28 @@ const ProductsCarousel = () => {
                             </span>
                         ))}
                     </div>
+                    <Link
+                        href={Products[currentIndex].url}
+                        className='relative group w-fit h-fit duration-700 group my-10'
+                    >
+                        <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>
+                        <div
+                            className={`relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
+                        >
+                            Order Now
+                        </div>
+                    </Link>
                 </motion.div>
                 <div className='flex justify-center mt-5'>
                     {Products.map((product, slideIndex) => (
                         <motion.div
-                            initial={{ opacity: 0, y: 50, x: 0 }}
+                            initial={{ opacity: 0, y: 10, x: 0 }}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             viewport={{ once: false }}
-                            transition={{ duration: 0.4 * slideIndex + 1 }}
+                            transition={{ duration: 1 }}
                             key={slideIndex}
                             onClick={() => goToSlide(slideIndex)}
-                            className='px-3 py-1 rounded-full m-3 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
+                            className='px-3 duration-700 py-1 rounded-full m-3 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
                         >
                             <h4
                                 className={`flex items-center px-3 py-1 ${roboto.className}`}

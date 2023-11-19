@@ -45,7 +45,7 @@ const HeroSection = () => {
                             className='font-black text-2xl md:text-3xl lg:text-6xl'
                         >
                             Unlock Premium Digital Experiences
-                            <br /> with
+                            <br /> with{" "}
                             <span className='font-conthrax duration-700 my-4 dark:text-transparent dark:bg-gradient-to-tl dark:from-cyan-300 dark:to-fuchsia-400 bg-clip-text'>
                                 ALAMSYAH.ID
                             </span>

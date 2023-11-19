@@ -10,7 +10,7 @@ export default function Home() {
             <DetailSection />
             <AdsSection />
             <PromoSection />
-            <div className='lg:bg-red-500 md:bg-orange-500 sm:bg-yellow-500 bg-green-500 w-full h-2' />
+            {/* <div className='lg:bg-red-500 md:bg-orange-500 sm:bg-yellow-500 bg-green-500 w-full h-2' /> */}
         </main>
     )
 }

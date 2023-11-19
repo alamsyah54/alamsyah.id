@@ -345,7 +345,7 @@ export const Products = [
             "Bukan Hasil Crack",
         ],
         description:
-            "Akun berbagi memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
+            "Akun Shared memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
         picture: "/images/SHARED.png",
         url: "",
     },
@@ -366,7 +366,7 @@ export const Products = [
             "Bukan Hasil Crack",
         ],
         description:
-            "Akun pribadi memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
+            "Akun Private memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
         picture: "/images/PRIVATE2.png",
         url: "",
     },

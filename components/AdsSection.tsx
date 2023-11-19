@@ -19,16 +19,6 @@ const AdsSection = () => {
                 >
                     NETFLIX PREMIUM ACCOUNT
                 </motion.h1>
-                {/* <div className='flex flex-row items-center gap-7 overflow-x-auto w-96 py-12 bg-gray-500'>
-                {Products.map((product, i) => (
-                    <div
-                        key={product._id}
-                        className='flex flex-col w-64 bg-dark-600 rounded-xl shadow-lg shadow-black p-6 md:p-10 lg:p-16 items-center'
-                    >
-                        {product.package}
-                    </div>
-                ))}
-            </div> */}
                 <ProductsCarousel />
             </section>
         </AnimatePresence>

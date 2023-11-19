@@ -92,19 +92,23 @@ const DetailSection = () => {
                     </div>
                 </div>
                 <div className='py-14 lg:pt-24 max-sm:py-20 px-5 w-full h-full justify-center flex items-center flex-col md:flex-col lg:flex-row-reverse'>
-                    <motion.div
-                        initial={{ opacity: 0, y: 0, x: 80 }}
-                        whileInView={{ opacity: 1, y: 0, x: 0 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: false }}
-                        className='flex flex-col justify-center items-end  w-full text-right mb-12'
-                    >
-                        <p
+                    <div className='flex flex-col justify-center items-end  w-full text-right mb-12'>
+                        <motion.p
+                            initial={{ opacity: 0, y: 100, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
                             className={`${roboto.className} indent-4 flex gap-2 items-center text-2xl w-fit mb-3`}
                         >
                             Jaminan Kami <BsShieldLock />
-                        </p>
-                        <p className='opacity-80 capitalize'>
+                        </motion.p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='opacity-80 capitalize'
+                        >
                             <span className='font-extrabold text-lg'>
                                 Aman dan Tanpa Masalah
                             </span>
@@ -134,22 +138,26 @@ const DetailSection = () => {
                             <br className='hidden md:block lg:block' />
                             kepastian dan perlindungan ekstra bagi setiap
                             pelanggan.
-                        </p>
-                    </motion.div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 0, x: -80 }}
-                        whileInView={{ opacity: 1, y: 0, x: 0 }}
-                        transition={{ duration: 2 }}
-                        viewport={{ once: false }}
-                        className='flex flex-col justify-center items-start  w-full text-left'
-                    >
-                        <p
+                        </motion.div>
+                    </div>
+                    <div className='flex flex-col justify-center items-start  w-full text-left'>
+                        <motion.p
+                            initial={{ opacity: 0, y: 100, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
                             className={`${roboto.className} indent-4 flex gap-1 items-center text-2xl w-fit mb-3`}
                         >
                             <BsInfoCircle />
                             Informasi
-                        </p>
-                        <div className='opacity-80 capitalize'>
+                        </motion.p>
+                        <motion.div
+                            initial={{ opacity: 0, y: 50, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='opacity-80 capitalize'
+                        >
                             <span className='font-extrabold text-lg text-black dark:text-white'>
                                 Netflix Shared (1 Profil 1 Device)
                             </span>
@@ -195,8 +203,8 @@ const DetailSection = () => {
                                     subscription.
                                 </li>
                             </ul>
-                        </div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
         </AnimatePresence>
