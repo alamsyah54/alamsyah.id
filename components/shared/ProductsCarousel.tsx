@@ -34,7 +34,7 @@ const ProductsCarousel = () => {
 
     return (
         <AnimatePresence mode='wait'>
-            <div className='relative w-fit'>
+            <div className='relative w-fit md:hidden lg:hidden'>
                 {/* <Image
                 alt='ALAMSYAH.ID'
                 className='min-h-fit bg-gray-300 w-full bg-center bg-cover duration-500 transition-transform'
@@ -98,13 +98,13 @@ const ProductsCarousel = () => {
                 <div className='flex justify-center mt-5'>
                     {Products.map((product, slideIndex) => (
                         <motion.div
-                            initial={{ opacity: 0, y: 10, x: 0 }}
+                            initial={{ opacity: 0, y: -70, x: 0 }}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             viewport={{ once: false }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 2 }}
                             key={slideIndex}
                             onClick={() => goToSlide(slideIndex)}
-                            className='px-3 duration-700 py-1 rounded-full m-3 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
+                            className='px-3 duration-700 py-1 -z-20 rounded-full m-3 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
                         >
                             <h4
                                 className={`flex items-center px-3 py-1 ${roboto.className}`}
