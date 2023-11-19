@@ -39,7 +39,7 @@ const AdsSection = () => {
                     Ketersediaan Terbatas
                 </motion.p>
                 <ProductsCarousel />
-                <div className='flex gap-16 w-full justify-center'>
+                <div className='hidden md:flex lg:flex lg:gap-16 md:gap-5 w-full justify-center'>
                     {Products.map((product) => (
                         <motion.div
                             key={product._id}

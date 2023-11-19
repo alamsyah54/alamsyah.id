@@ -34,7 +34,7 @@ const ProductsCarousel = () => {
 
     return (
         <AnimatePresence mode='wait'>
-            <div className='relative w-fit md:hidden lg:hidden'>
+            <div className='relative md:hidden lg:hidden w-full'>
                 {/* <Image
                 alt='ALAMSYAH.ID'
                 className='min-h-fit bg-gray-300 w-full bg-center bg-cover duration-500 transition-transform'
@@ -47,7 +47,7 @@ const ProductsCarousel = () => {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: false }}
-                    className='flex flex-col px-8 rounded-3xl duration-700 shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '
+                    className='flex flex-col px-5 rounded-3xl duration-700 shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '
                 >
                     <h1
                         className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}

@@ -23,7 +23,7 @@ const Footer = () => {
                         className='dark:hidden duration-700'
                     />
                     <span className='px-2'>
-                        <p className='text-sm font-conthrax'>
+                        <p className='text-xs font-conthrax'>
                             &copy; 2023 ALAMSYAH.ID
                         </p>
                         <p className='text-xs font-extralight'>
