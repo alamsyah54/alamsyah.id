@@ -18,7 +18,7 @@ const AdsSection = () => {
         <AnimatePresence mode='wait'>
             <section
                 id='ads'
-                className='flex justify-center items-center flex-col w-[97vw] max-w-screen p-5'
+                className='flex justify-center items-center flex-col w-[97vw] max-w-screen'
             >
                 <motion.h1
                     initial={{ opacity: 0, y: 20, x: 0 }}
@@ -38,14 +38,16 @@ const AdsSection = () => {
                 >
                     Ketersediaan Terbatas
                 </motion.p>
-                <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen pb-10 w-full rounded-2xl'>
+
+                <PiHandSwipeRightLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
+                <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen p-5 pb-12 w-full'>
                     {Products.map((product) => (
                         <motion.div
                             key={product._id}
                             initial={{ opacity: 0, y: 50, x: 0 }}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
-                            viewport={{ once: false }}
+                            viewport={{ once: true }}
                             className='flex flex-col px-8 group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
                         >
                             <div className='flex flex-col items-center justify-between h-full mx-3'>
@@ -100,7 +102,7 @@ const AdsSection = () => {
                         </motion.div>
                     ))}
                 </div>
-                <PiHandSwipeRightLight className='text-3xl lg:text-4xl mt-5 opacity-60' />
+                <PiHandSwipeRightLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
             </section>
         </AnimatePresence>
     )

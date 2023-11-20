@@ -51,3 +51,18 @@ body {
     right: 0%;
     overflow: hidden;
 }
+
+@keyframes rightleft {
+    0%,
+    100% {
+        transform: translateX(-50%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: none;
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+.animate-rightleft {
+    animation: rightleft 1.5s infinite;
+}
