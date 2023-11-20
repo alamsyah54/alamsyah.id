@@ -5,7 +5,7 @@ import PromoSection from "@/components/PromoSection"
 
 export default function Home() {
     return (
-        <main className='flex flex-col h-fit'>
+        <main className='flex flex-col h-fit items-center justify-center'>
             <HeroSection />
             <DetailSection />
             <AdsSection />

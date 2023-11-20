@@ -18,7 +18,7 @@ const AdsSection = () => {
         <AnimatePresence mode='wait'>
             <section
                 id='ads'
-                className='flex justify-center items-center flex-col lg:p-24 p-5 h-fit w-screen'
+                className='flex justify-center items-center flex-col w-[97vw] max-w-screen p-5'
             >
                 <motion.h1
                     initial={{ opacity: 0, y: 20, x: 0 }}
@@ -38,7 +38,7 @@ const AdsSection = () => {
                 >
                     Ketersediaan Terbatas
                 </motion.p>
-                <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen p-5 pb-10 w-full rounded-2xl'>
+                <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen pb-10 w-full rounded-2xl'>
                     {Products.map((product) => (
                         <motion.div
                             key={product._id}
