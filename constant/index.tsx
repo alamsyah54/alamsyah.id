@@ -8,37 +8,37 @@ export const contactsButton = [
     {
         url: "https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD",
         icon: (
-            <MdGroups className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <MdGroups className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://api.whatsapp.com/send?phone=6285172010009",
         icon: (
-            <FaWhatsapp className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <FaWhatsapp className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.facebook.com/alamsyah0054",
         icon: (
-            <FaFacebookF className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <FaFacebookF className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.facebook.com/messages/t/100029480103950",
         icon: (
-            <RiMessengerLine className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <RiMessengerLine className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.instagram.com/_alamsyah.id/",
         icon: (
-            <FaInstagram className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <FaInstagram className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://twitter.com/alamsyah0322",
         icon: (
-            <BsTwitterX className='text-dark-700 dark:text-gray-200 text-lg duration-700 m-1' />
+            <BsTwitterX className='text-dark-700 dark:text-gray-200 text-xl lg:text-lg duration-700 m-1' />
         ),
     },
 ]

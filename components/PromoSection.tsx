@@ -7,7 +7,7 @@ const roboto = Roboto({
     subsets: ["latin"],
 })
 const PromoSection = () => {
-    const targetDate = "2023-11-19T00:00:00"
+    const targetDate = "2023-11-30T00:00:00"
     return (
         <section id='promo' className='flex flex-col py-10 h-fit'>
             <div className='flex justify-center flex-col md:flex-row lg:flex-row items-start '>

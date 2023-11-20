@@ -61,11 +61,11 @@ const NavContent = () => {
                 })}
             </div>
 
-            <div className='grid grid-rows-2 grid-flow-col gap-3 pb-12  justify-evenly py-4'>
+            <div className='grid grid-rows-2 grid-flow-col gap-3 pb-16  justify-evenly py-4'>
                 {contactsButton.map((cont) => (
                     <Link
                         href={cont.url}
-                        className='flex gap-2  w-full py-3'
+                        className='flex gap-2 w-full py-3'
                         key={cont.url}
                     >
                         {cont.icon}

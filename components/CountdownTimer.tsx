@@ -55,10 +55,11 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
     return (
         <div className='flex justify-center items-center flex-col'>
-            <h2
-                className={`${roboto.className} dark:text-red-500 text-3xl py-1 `}
-            >
+            <h2 className={`${roboto.className} dark:text-red-500 text-3xl`}>
                 Berakhir Pada
+                <p className='text-sm w-full text-center font-extralight text-dark-700 dark:text-white font-mono'>
+                    30 November
+                </p>
             </h2>
             <div className='flex justify-center items-center gap-2 duration-700'>
                 <div className='flex flex-col items-center'>
