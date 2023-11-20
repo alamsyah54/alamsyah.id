@@ -42,13 +42,7 @@ const ProductsCarousel = () => {
                 height={300}
                 src={Products[currentIndex].picture}
             /> */}
-                <motion.div
-                    initial={{ opacity: 0, y: 50, x: 0 }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: false }}
-                    className='flex flex-col px-5 rounded-3xl w-fit duration-700 shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '
-                >
+                <div className='flex flex-col px-5 rounded-3xl w-fit duration-700 shadow-lg bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 dark:shadow-black shadow-black/30 items-center '>
                     <h1
                         className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                     >
@@ -94,14 +88,10 @@ const ProductsCarousel = () => {
                             Order Now
                         </div>
                     </Link>
-                </motion.div>
+                </div>
                 <div className='flex justify-center mt-5'>
                     {Products.map((product, slideIndex) => (
-                        <motion.div
-                            initial={{ opacity: 0, y: -50, x: 0 }}
-                            whileInView={{ opacity: 1, y: 0, x: 0 }}
-                            viewport={{ once: false }}
-                            transition={{ duration: 1 }}
+                        <div
                             key={slideIndex}
                             onClick={() => goToSlide(slideIndex)}
                             className='px-3 duration-700 py-1 rounded-full m-3 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
@@ -111,7 +101,7 @@ const ProductsCarousel = () => {
                             >
                                 {product.package}
                             </h4>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
