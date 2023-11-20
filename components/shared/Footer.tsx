@@ -6,7 +6,7 @@ import React from "react"
 const Footer = () => {
     return (
         <footer className='flex justify-center items-center px-10 lg:px-32 py-5 border-t-[1px] border-black/30 dark:border-white/30 bg-gray-100 dark:bg-dark-600 drop-shadow-md'>
-            <div className='flex w-full justify-center md:justify-between lg:justify-between items-center flex-col md:flex-row lg:flex-row gap-2 bg-red-500'>
+            <div className='flex w-full justify-center md:justify-between lg:justify-between items-center flex-col md:flex-row lg:flex-row gap-2'>
                 <Link href='/' className='flex items-center  justify-start '>
                     <Image
                         width={60}
