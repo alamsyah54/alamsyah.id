@@ -23,21 +23,6 @@ const PromoSection = () => {
                         >
                             &ldquo;For Reseller&rdquo;
                         </h2>
-
-                        {/* <Image
-                            src='/images/PremiumDark.png'
-                            width={300}
-                            height={300}
-                            alt='PROMO'
-                            className='hidden dark:block lg:w-96 duration-700'
-                        />
-                        <Image
-                            src='/images/PremiumLight.png'
-                            width={300}
-                            height={300}
-                            alt='PROMO'
-                            className='lg:w-96 dark:hidden duration-700'
-                        /> */}
                     </div>
                     <h2 className='font-black text-lg md:text-xl lg:text-2xl lg:pt-5'>
                         Netflix Private Hanya 99k/Akun

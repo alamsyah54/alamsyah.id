@@ -8,6 +8,13 @@ import { contactsButton } from "@/constant"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { AiOutlineMenu } from "react-icons/ai"
+import { Roboto } from "next/font/google"
+
+const roboto = Roboto({
+    weight: ["900"],
+    style: ["normal"],
+    subsets: ["latin"],
+})
 
 const NavContent = () => {
     const navButtons = [
@@ -36,7 +43,7 @@ const NavContent = () => {
                             <div className='flex items-start '>
                                 <Link
                                     href={nav.url}
-                                    className='flex gap-2 w-full p-4 my-4'
+                                    className='flex gap-2 text-lg w-full p-4 my-4'
                                 >
                                     <div
                                         className={`rounded-full w-1 h-full text-transparent ${
@@ -49,7 +56,9 @@ const NavContent = () => {
                                     </div>
                                     <p
                                         className={`${
-                                            isActivate ? "font-conthrax" : ""
+                                            isActivate
+                                                ? "font-conthrax"
+                                                : roboto.className
                                         }`}
                                     >
                                         {nav.name}
@@ -79,13 +88,13 @@ const NavContent = () => {
 const MobileNav = () => {
     return (
         // @ts-ignore
-        <Sheet className='transition-transform duration-500'>
+        <Sheet className='transition-transform duration-500 '>
             <SheetTrigger className='hidden max-md:flex dark:bg-white/10 bg-black/5 rounded-full p-2'>
                 <AiOutlineMenu className='duration-500 text-dark-800 dark:text-gray-300' />
             </SheetTrigger>
             <SheetContent
                 side='left'
-                className='border-none text-red-500 bg-gray-100 dark:bg-dark-700 drop-shadow-lg'
+                className='border-none text-red-500 backdrop-blur-lg dark:bg-dark-800/50 shadow-lg shadow-black/50'
             >
                 <Link
                     href='/'

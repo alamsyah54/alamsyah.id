@@ -2,7 +2,7 @@
 
 import { Roboto } from "next/font/google"
 import React, { useState, useEffect } from "react"
-import { format, differenceInSeconds } from "date-fns"
+import { parseISO, format, differenceInSeconds } from "date-fns"
 import Link from "next/link"
 
 const roboto = Roboto({
@@ -22,7 +22,6 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
         minutes: 0,
         seconds: 0,
     })
-
     useEffect(() => {
         const calculateTimeLeft = () => {
             const difference = differenceInSeconds(
@@ -53,14 +52,17 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []) // Empty dependency array ensures this effect runs only once after the initial render
 
+    const date = parseISO(targetDate)
     return (
         <div className='flex justify-center items-center flex-col'>
             <h2 className={`${roboto.className} dark:text-red-500 text-3xl`}>
                 Berakhir Pada
-                <p className='text-sm w-full text-center font-extralight text-dark-700 dark:text-white font-mono'>
-                    30 November
-                </p>
             </h2>
+            <div>
+                <p className='text-sm w-full text-center font-extralight text-dark-700 dark:text-white font-mono'>
+                    {format(date, "d LLLL, yyyy")}
+                </p>
+            </div>
             <div className='flex justify-center items-center gap-2 duration-700'>
                 <div className='flex flex-col items-center'>
                     <div
