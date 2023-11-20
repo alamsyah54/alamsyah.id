@@ -9,8 +9,8 @@ const roboto = Roboto({
 const PromoSection = () => {
     const targetDate = "2023-11-30T00:00:00"
     return (
-        <section id='promo' className='flex flex-col py-10 h-fit'>
-            <div className='flex justify-center flex-col md:flex-row lg:flex-row items-start '>
+        <section id='promo' className='flex flex-col py-10 h-fit w-full'>
+            <div className='flex justify-between w-full flex-col md:flex-row lg:flex-row items-start '>
                 <div className='flex items-center flex-col w-full h-64 max-h-full justify-center '>
                     <div className='flex justify-center items-center w-full duration-700'>
                         <h1
