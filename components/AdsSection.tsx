@@ -90,6 +90,7 @@ const AdsSection = () => {
                                 </div>
                                 <Link
                                     href={product.url}
+                                    target='_blank'
                                     className='relative group w-fit h-fit duration-700 group mb-10'
                                 >
                                     <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>

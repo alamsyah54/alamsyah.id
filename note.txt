@@ -31,7 +31,7 @@ Jika tertarik dengan layanan ini, silakan klik dibawah untuk pemesaan langsung d
 
 
 https://www.w3schools.com/TagS/ref_urlencode.asp
-https://api.whatsapp.com/send?phone=6285172010009&text=Halo%20bang%20saya%20mau%20Order%20Netflixnya
+https://api.whatsapp.com/send?phone=6285172010009&text=XXXXXX
 
 
 
@@ -40,27 +40,6 @@ https://api.whatsapp.com/send?phone=6285172010009&text=Halo%20bang%20saya%20mau%
 
 
 
-
-
-SHARED
-
-
-
-
-
-
-
-
-
-
-
-
-PRIVATE
-
-
-
-
-RESELLER
 
 
 

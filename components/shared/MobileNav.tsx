@@ -74,6 +74,7 @@ const NavContent = () => {
                 {contactsButton.map((cont) => (
                     <Link
                         href={cont.url}
+                        target='_blank'
                         className='flex gap-2 w-full py-3'
                         key={cont.url}
                     >

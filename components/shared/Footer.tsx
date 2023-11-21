@@ -37,6 +37,7 @@ const Footer = () => {
                             href={cont.url}
                             className='p-3 opacity-70 md:hover:bg-black/5 lg:hover:bg-black/5 dark:md:hover:bg-white/10 dark:lg:hover:bg-white/10 rounded-md'
                             key={cont.url}
+                            target='_blank'
                         >
                             {cont.icon}
                         </Link>

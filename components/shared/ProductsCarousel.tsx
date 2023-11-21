@@ -35,7 +35,7 @@ const ProductsCarousel = () => {
 
     return (
         <AnimatePresence mode='wait'>
-            <div className='w-full justify-center items-center flex flex-col '>
+            <div className='w-full justify-center items-center flex flex-col sm:px-20 md:px-36 lg:px-96'>
                 <Image
                     src={Products[currentIndex].picture}
                     alt={Products[currentIndex].package}
@@ -47,14 +47,14 @@ const ProductsCarousel = () => {
                     className='flex flex-col w-full items-center'
                 >
                     <div className='flex flex-col items-center justify-between h-full w-full px-5 '>
-                        <div className='flex justify-between items-start px-5 pt-5 lg:pt-24 w-full border-t-[1px] dark:border-white/30 border-black/30'>
+                        <div className='flex justify-between items-start pt-5 lg:pt-24 w-full border-t-[1px] dark:border-white/30 border-black/30'>
                             <h1
                                 className={`text-5xl py-3 duration-700 w-full text-left text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                             >
                                 {Products[currentIndex].package}
                             </h1>
                             <div className='flex flex-col items-end'>
-                                <div className='flex flex-col items-end py-3 w-full '>
+                                <div className='flex flex-col items-end py-3 w-fit '>
                                     <span className='flex justify-start h-full gap-1'>
                                         <p className='flex items-start text-md font-bold'>
                                             IDR
@@ -74,11 +74,12 @@ const ProductsCarousel = () => {
                                 </div>
                                 <Link
                                     href={Products[currentIndex].url}
-                                    className='relative group w-full h-fit duration-700 group mb-10'
+                                    target='_blank'
+                                    className='relative group w-fit h-fit duration-700 group mb-10'
                                 >
                                     <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>
                                     <div
-                                        className={`relative group-hover:scale-110 duration-500 text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
+                                        className={`relative group-hover:scale-110 duration-500 text-lg border-white rounded-lg flex items-center justify-center py-2 px-6 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
                                     >
                                         Order Now
                                     </div>
@@ -104,7 +105,7 @@ const ProductsCarousel = () => {
                                 </div>
                             ))}
                         </div>
-                        <p className='pt-5 text-xl'>
+                        <p className='py-5 text-xl'>
                             {Products[currentIndex].description}
                         </p>
                         <div className='flex flex-col justify-start w-full items-start pt-5'>
@@ -121,7 +122,7 @@ const ProductsCarousel = () => {
                             )}
                         </div>
                     </div>
-                    <p className='text-xl p-5 text-center text-red-500 font-extrabold capitalize'>
+                    <p className='text-xl py-10 px-5 text-center text-red-500 font-extrabold capitalize'>
                         Harap Dibaca! <br /> {Products[currentIndex].rules}
                     </p>
                 </div>

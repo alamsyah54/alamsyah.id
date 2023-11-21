@@ -7,7 +7,6 @@ import Rules from "@/components/Rules"
 export default function Home() {
     return (
         <main className='flex flex-col h-fit items-center justify-center'>
-            {/* <div className='lg:bg-red-500 md:bg-orange-500 sm:bg-yellow-500 bg-green-500 w-full h-2' /> */}
             <HeroSection />
             <AdsSection />
             <PromoSection />
