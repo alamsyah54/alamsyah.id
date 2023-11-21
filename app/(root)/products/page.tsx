@@ -3,7 +3,7 @@ import React from "react"
 
 const page = () => {
     return (
-        <section className='flex flex-col lg:p-20 p-7 h-fit'>
+        <section className='flex flex-col lg:p-20 pb-10 h-fit'>
             <ProductsCarousel />
         </section>
     )
