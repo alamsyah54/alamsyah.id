@@ -1,5 +1,4 @@
 "use client"
-import React from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
 import { Products } from "@/constant"

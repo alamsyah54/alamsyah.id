@@ -86,7 +86,7 @@ const Navbar = () => {
                 visible ? "translate-y-0" : "-translate-y-full"
             } z-10`}
         >
-            <div className='backdrop-blur-md dark:bg-dark-600/50 bg-gray-100/50 rounded-[20px] py-2 flex px-6 justify-between duration-1000 items-center shadow-lg shadow-black/25 dark:shadow-black/70'>
+            <div className='backdrop-blur-sm dark:bg-dark-600/50 bg-gray-100/50 rounded-[20px] py-2 flex px-6 justify-between duration-1000 items-center shadow-lg shadow-black/25 dark:shadow-black/70'>
                 <Link href='/' className='max-md:p-2'>
                     <h1 className='font-conthrax lg:text-xl lg:p-3 '>
                         ALAMSYAH.ID
