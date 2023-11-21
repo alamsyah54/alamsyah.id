@@ -48,16 +48,16 @@ const AdsSection = () => {
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: true }}
-                            className='flex flex-col px-8 group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
+                            className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
                         >
-                            <div className='flex flex-col items-center justify-between h-full mx-3'>
-                                <div className='flex flex-col items-center w-fit pt-5 mx-5'>
+                            <div className='flex flex-col items-center justify-between h-full w-full'>
+                                <div className='flex flex-col items-center p-5 w-full '>
                                     <h1
                                         className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                                     >
                                         {product.package}
                                     </h1>
-                                    <div className='flex flex-col items-start py-8 w-full'>
+                                    <div className='flex flex-col items-start py-8 w-full '>
                                         <span className='flex justify-start h-full gap-1'>
                                             <p className='flex items-start text-md font-bold'>
                                                 IDR
@@ -77,13 +77,15 @@ const AdsSection = () => {
                                     </div>
                                     <div className='flex flex-col justify-center items-start '>
                                         {product.features.map((feature, i) => (
-                                            <span
+                                            <div
                                                 key={i}
-                                                className='flex gap-2 py-2 items-center capitalize'
+                                                className='flex gap-2 py-2 justify-start items-center w-full capitalize '
                                             >
-                                                <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500' />
-                                                <p>{feature}</p>
-                                            </span>
+                                                <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500 ' />
+                                                <p className='w-full'>
+                                                    {feature}
+                                                </p>
+                                            </div>
                                         ))}
                                     </div>
                                 </div>
