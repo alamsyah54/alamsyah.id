@@ -11,7 +11,7 @@ const roboto = Roboto({
 const PromoSection = () => {
     const targetDate = "2023-11-30T00:00:00"
     return (
-        <section id='promo' className='flex flex-col py-10 h-fit w-full'>
+        <section id='promo' className='flex flex-col py-20 h-fit w-full'>
             <div className='flex justify-between w-full flex-col md:flex-row lg:flex-row items-start '>
                 <motion.div
                     initial={{ opacity: 0, y: 100, x: 0 }}

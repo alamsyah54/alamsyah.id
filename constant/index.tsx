@@ -367,7 +367,7 @@ export const Products = [
         ],
         description:
             "Akun Private memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
-        picture: "/images/PRIVATE2.png",
+        picture: "/images/PRIVATE.png",
         url: "",
     },
     {
@@ -390,7 +390,7 @@ export const Products = [
         ],
         description:
             "Paket RESELLER kami tidak hanya memberi Anda kesempatan untuk menjual akun berbagi premium yang kami tawarkan, tetapi juga memberikan Anda akses eksklusif ke akun pribadi dengan harga khusus. Ini adalah kesempatan emas untuk membangun bisnis streaming Anda sendiri tanpa perlu investasi besar. Dengan harga spesial dan kemampuan untuk menjual kembali, Anda dapat merajut jalan menuju kesuksesan di industri ini. Bergabunglah dengan kami dan buat langkah pertama Anda dalam meraih sukses bersama!",
-        picture: "/images/PRIVATE.png",
+        picture: "/images/RESELLER.png",
         url: "",
     },
 ]
