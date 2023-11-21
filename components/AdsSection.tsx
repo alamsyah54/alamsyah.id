@@ -50,7 +50,7 @@ const AdsSection = () => {
                             viewport={{ once: true }}
                             className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
                         >
-                            <div className='flex flex-col items-center justify-between h-full w-full'>
+                            <div className='flex flex-col items-center justify-between h-full w-full px-5'>
                                 <div className='flex flex-col items-center p-5 w-full '>
                                     <h1
                                         className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
@@ -79,7 +79,7 @@ const AdsSection = () => {
                                         {product.features.map((feature, i) => (
                                             <div
                                                 key={i}
-                                                className='flex gap-2 py-2 justify-start items-center w-full capitalize '
+                                                className='flex gap-2 py-2 justify-start items-start w-full capitalize '
                                             >
                                                 <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500 ' />
                                                 <p className='w-full'>
@@ -91,7 +91,7 @@ const AdsSection = () => {
                                 </div>
                                 <Link
                                     href={product.url}
-                                    className='relative group w-fit h-fit duration-700 group my-10'
+                                    className='relative group w-fit h-fit duration-700 group mb-10'
                                 >
                                     <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>
                                     <div
