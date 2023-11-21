@@ -1,3 +1,5 @@
+"use client"
+import { AnimatePresence, motion } from "framer-motion"
 import { Roboto } from "next/font/google"
 import CountdownTimer from "./CountdownTimer"
 
@@ -11,7 +13,13 @@ const PromoSection = () => {
     return (
         <section id='promo' className='flex flex-col py-10 h-fit w-full'>
             <div className='flex justify-between w-full flex-col md:flex-row lg:flex-row items-start '>
-                <div className='flex items-center flex-col w-full h-64 max-h-full justify-center '>
+                <motion.div
+                    initial={{ opacity: 0, y: 100, x: 0 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: false }}
+                    className='flex items-center flex-col w-full h-64 max-h-full justify-center '
+                >
                     <div className='flex justify-center items-center w-full duration-700'>
                         <h1
                             className={`${roboto.className} text-[85px] lg:text-[150px] absolute opacity-10 duration-700`}
@@ -30,10 +38,16 @@ const PromoSection = () => {
                     <p className='font-light text-gray-600 dark:text-gray-400 md:text-lg '>
                         Minimum Pembelian 2 Akun Per Transaksi
                     </p>
-                </div>
-                <div className='flex items-end w-full h-full justify-center '>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 100, x: 0 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    transition={{ duration: 2 }}
+                    viewport={{ once: false }}
+                    className='flex items-end w-full h-full justify-center '
+                >
                     <CountdownTimer targetDate={targetDate} />
-                </div>
+                </motion.div>
             </div>
         </section>
     )
