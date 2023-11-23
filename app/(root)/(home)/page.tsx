@@ -8,8 +8,8 @@ export default function Home() {
     return (
         <main className='flex flex-col h-fit items-center justify-center'>
             <HeroSection />
-            <AdsSection />
             <PromoSection />
+            <AdsSection />
             <DetailSection />
             <Rules />
         </main>

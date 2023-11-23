@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Products } from "@/constant"
 import { FaCheckCircle } from "react-icons/fa"
 import { Roboto } from "next/font/google"
-import { PiHandSwipeRightLight } from "react-icons/pi"
+import { PiHandPointingLight } from "react-icons/pi"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -38,7 +38,7 @@ const AdsSection = () => {
                     Ketersediaan Terbatas
                 </motion.p>
 
-                <PiHandSwipeRightLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
+                <PiHandPointingLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
                 <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen p-5 pb-12 w-full'>
                     {Products.map((product) => (
                         <motion.div
@@ -104,7 +104,7 @@ const AdsSection = () => {
                         </motion.div>
                     ))}
                 </div>
-                <PiHandSwipeRightLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
+                <PiHandPointingLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft' />
             </section>
         </AnimatePresence>
     )

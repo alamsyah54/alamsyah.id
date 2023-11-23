@@ -35,8 +35,8 @@ const HeroSection = () => {
                 id='home'
                 className='flex max-lg:justify-between max-md:flex-col-reverse items-center w-full max-h-screen '
             >
-                <div className='flex max-lg:basis-2/5 w-full h-screen duration-700 items-center max-sm:pb-24 sm:pb-24 -mt-40 md:-mt-32 lg:-mt-32 sm:-mt-40 lg:px-24 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-50 dark:from-dark-700 z-10 '>
-                    <div>
+                <div className='flex max-lg:basis-2/5 w-full h-screen duration-700 items-center max-sm:pb-24 sm:pb-24 -mt-40 md:-mt-32 lg:-mt-10 sm:-mt-40 lg:px-28 md:pl-14 first-letter:first-line:marker:lg:m-0 px-5 max-sm:bg-gradient-to-t from-gray-50 dark:from-dark-700 z-10 '>
+                    <div className='lg:pl-14'>
                         <motion.h1
                             initial={{ opacity: 0, y: 100, x: 0 }}
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
