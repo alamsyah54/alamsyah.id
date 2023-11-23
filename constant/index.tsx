@@ -347,7 +347,7 @@ export const Products = [
         description:
             "Akun Shared memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
         picture: "/images/SHARED.png",
-        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20tertarik%20dengan%20Akun%20Netflix%20Shared.%20Bisa%20beri%20saya%20detail%20pembelian%20dan%20cara%20pembayaran%3F%20Terima%20kasih!",
+        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20tertarik%20dengan%20Akun%20Netflix%20SHARED.%20Bisa%20beri%20saya%20detail%20pembelian%20dan%20cara%20pembayaran%3F%20Terima%20kasih!",
         rules: "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Dilarang Menggunakan VPN/Login Diluar Indonesia",
     },
     {
@@ -369,7 +369,7 @@ export const Products = [
         description:
             "Akun Private memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
         picture: "/images/PRIVATE.png",
-        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20ingin%20memesan%20Akun%20Netflix%20Private.%20Mohon%20informasi%20lebih%20lanjut%20tentang%20pembelian%20dan%20metode%20pembayaran.%20Terima%20kasih!",
+        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20ingin%20memesan%20Akun%20Netflix%20PRIVATE.%20Mohon%20informasi%20lebih%20lanjut%20tentang%20pembelian%20dan%20metode%20pembayaran.%20Terima%20kasih!",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
     {
