@@ -93,13 +93,7 @@ const ProductsCarousel = () => {
                                     onClick={() => goToSlide(slideIndex)}
                                     className='px-3 duration-700 py-1 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
                                 >
-                                    <Image
-                                        alt='Product'
-                                        src={product.picture}
-                                        width={100}
-                                        height={100}
-                                    />
-                                    <p className='font-conthrax'>
+                                    <p className='font-conthrax text-xl'>
                                         {product.package}
                                     </p>
                                 </div>

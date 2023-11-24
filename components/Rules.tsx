@@ -13,7 +13,7 @@ const Rules = () => {
     return (
         <section
             id='promo'
-            className='flex flex-col items-center p-10 lg:px-24 h-fit w-full'
+            className='flex flex-col items-center p-10 lg:px-24 h-fit mb-20 w-full'
         >
             <BsExclamationCircle className='text-5xl mb-2 animate-pulse' />
             <span className='flex w-full justify-center items-center text-center text-2xl pb-10'>

@@ -397,3 +397,15 @@ export const Products = [
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
 ]
+
+export interface Testimonial {
+    picture: string
+}
+
+export const Testi: Testimonial[] = []
+
+for (let i = 1; i <= 59; i++) {
+    Testi.push({
+        picture: `/images/testimonial/testimoni_${i}.jpeg`,
+    })
+}
