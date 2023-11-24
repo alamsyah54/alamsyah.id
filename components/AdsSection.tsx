@@ -49,39 +49,39 @@ const AdsSection = () => {
                             viewport={{ once: true }}
                             className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
                         >
-                            <div className='flex flex-col items-center justify-between h-full w-full px-5'>
-                                <div className='flex flex-col items-center p-5 w-full '>
+                            <div className='flex flex-col items-center justify-between h-full w-full'>
+                                <div className='flex flex-col items-center p-7 w-80 max-w-5xl '>
                                     <h1
-                                        className={`text-4xl py-5 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
+                                        className={`text-4xl pb-3 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                                     >
                                         {product.package}
                                     </h1>
-                                    <div className='flex flex-col items-start py-8 w-full '>
+                                    <div className='flex flex-col items-start py-5 w-full '>
                                         <span className='flex justify-start h-full gap-1'>
-                                            <p className='flex items-start text-md font-bold'>
+                                            <p className='flex items-start text-xs font-bold'>
                                                 IDR
                                             </p>
                                             <h2
-                                                className={`flex items-center text-6xl ${roboto.className}`}
+                                                className={`flex items-center text-4xl ${roboto.className}`}
                                             >
                                                 {product.price}
                                             </h2>
-                                            <p className='flex text-xl items-end font-bold'>
+                                            <p className='flex text-sm items-end font-bold'>
                                                 K
                                             </p>
-                                            <p className='flex text-xl items-end font-bold'>
+                                            <p className='flex text-sm items-end font-bold'>
                                                 /Month
                                             </p>
                                         </span>
                                     </div>
-                                    <div className='flex flex-col justify-center items-start '>
+                                    <div className='flex flex-col gap-3 justify-center items-start '>
                                         {product.features.map((feature, i) => (
                                             <div
                                                 key={i}
-                                                className='flex gap-2 py-2 justify-start items-start w-full capitalize '
+                                                className='flex gap-1.5 justify-start items-start w-full capitalize '
                                             >
                                                 <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500 ' />
-                                                <p className='w-full'>
+                                                <p className='w-full text-sm'>
                                                     {feature}
                                                 </p>
                                             </div>
