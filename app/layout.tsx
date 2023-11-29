@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import "../styles/globals.css"
 
 export const metadata: Metadata = {
-    title: "ALAMSYAH.ID",
+    title: "ALAMSYAH.ID | Netflix Premium Terpercaya",
     description:
-        "ALAMSYAH.ID Menawarkan Premium Digital dan Solusi Terjangkau. Kami adalah pilihan terpercaya untuk akun premium seperti Netflix dan solusi virtual machine berkinerja tinggi seperti VPS, Remote Desktop, WHM, serta Cloud9 IDE. Produk berkualitas dengan harga terjangkau, hanya di ALAMSYAH.ID.",
+        "Your trusted destination for premium Netflix accounts. Elevate your streaming experience with our high-quality, affordable Netflix solutions. We specialize in providing a seamless and secure platform for your entertainment needs. Choose ALAMSYAH.ID for premium quality at an affordable price, exclusively tailored for Netflix enthusiasts.",
     icons: {
         icon: [
             {
