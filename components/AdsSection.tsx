@@ -47,7 +47,7 @@ const AdsSection = () => {
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: true }}
-                            className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/30 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
+                            className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/10 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
                         >
                             <div className='flex flex-col items-center justify-between h-full w-full'>
                                 <div className='flex flex-col items-center p-7 w-80 max-w-5xl '>

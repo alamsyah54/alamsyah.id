@@ -347,7 +347,7 @@ export const Products = [
         description:
             "Akun Shared memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
         picture: "/images/SHARED.png",
-        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20tertarik%20dengan%20Akun%20Netflix%20SHARED.%20Bisa%20beri%20saya%20detail%20pembelian%20dan%20cara%20pembayaran%3F%20Terima%20kasih!",
+        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BSHARED%5D*%0A%20%20%20%20*Rp%2025.000%2FBulan*%0A%20%20%20%20(1%20Profile%201%20Device)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Dilarang Menggunakan VPN/Login Diluar Indonesia",
     },
     {
@@ -369,7 +369,7 @@ export const Products = [
         description:
             "Akun Private memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
         picture: "/images/PRIVATE.png",
-        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20ingin%20memesan%20Akun%20Netflix%20PRIVATE.%20Mohon%20informasi%20lebih%20lanjut%20tentang%20pembelian%20dan%20metode%20pembayaran.%20Terima%20kasih!",
+        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BPRIVATE%5D*%0A%20%20%20%20*Rp%20109.000%2FBulan*%0A%20%20%20%20(Full%20Akses%205%20Profile)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
     {
@@ -393,7 +393,7 @@ export const Products = [
         description:
             "Paket RESELLER kami tidak hanya memberi Anda kesempatan untuk menjual akun berbagi premium yang kami tawarkan, tetapi juga memberikan Anda akses eksklusif ke akun pribadi dengan harga khusus. Ini adalah kesempatan emas untuk membangun bisnis streaming Anda sendiri tanpa perlu investasi besar. Dengan harga spesial dan kemampuan untuk menjual kembali, Anda dapat merajut jalan menuju kesuksesan di industri ini. Bergabunglah dengan kami dan buat langkah pertama Anda dalam meraih sukses bersama!",
         picture: "/images/RESELLER.png",
-        url: "https://api.whatsapp.com/send?phone=6285172010009&text=Saya%20berminat%20dengan%20Program%20RESELLER.%20Bagaimana%20cara%20bergabung%20dan%20mendapatkan%20akun%20pribadi%20dengan%20harga%20khusus%3F%20Mohon%20bantuannya.%20Terima%20kasih!",
+        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BRESELLER%5D*%0A%20%20%20%20*Rp%20299.000%2FBulan*%0A%20%20%20%20(Dapat%203%20Akun%20Sekaligus)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
 ]
