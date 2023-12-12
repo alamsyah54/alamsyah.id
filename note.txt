@@ -28,6 +28,53 @@ Harga : Rp.200.000,- | Kami menawarkan harga ini dengan garansi selama 3 Bulan. 
 Jika tertarik dengan layanan ini, silakan klik dibawah untuk pemesaan langsung dari website
 
 
+
+
+
+
+
+
+
+
+
+i want more dynamic
+change the text area with this template
+but some information is dynamic
+
+Halo bang, saya mau pesan :
+
+{nomor_pesanan}. *{nama_product}*
+
+    Durasi : *{durasi}*
+    Harga Satuan : {harga_satuan}
+    Kuantitas : *{kuantitas}*
+    ____________________
+    Harga : *{kuantitas}* x {harga_satuan} = *{harga}*
+
+{nomor_pesanan}. *{nama_product}*
+
+    Durasi : *{durasi}*
+    Harga Satuan : {harga_satuan}
+    Kuantitas : *{kuantitas}*
+    ____________________
+    Harga : *{kuantitas}* x {harga_satuan} = *{harga}*
+
+________________________
+Total yang harus dibayar (*{total_jumlah_pesanan}* Pesanan) = *{total_harga_pesanan}*
+
+___________________
+Informasi Pemesan :
+
+Nama : *{nama_pemesan}*
+Catatan Pesanan :
+{catatan_pesanan}
+
+____________________
+Metode Pembayaran : 
+{metode_pembayaran}
+
+this the example
+
 Halo bang, saya mau pesan :
 
 1. *Netflix Premium UHD 4K Full Garansi [SHARED]*
@@ -47,31 +94,38 @@ Halo bang, saya mau pesan :
     Harga Total : *3* x Rp 109.000 = *Rp 327.000*
 
 ________________________
-Total ( *2* Pesanan ) = Rp 25.000 + Rp 327.000 = *352.000*
+Total yang harus dibayar (*2* Pesanan) = *352.000*
 
 ___________________
 Informasi Pemesan :
 
 Nama : *Asep*
 Catatan Pesanan :
-aduh anjir
+tolong reset password menjadi 'asdasdwasd'
+
 ____________________
-Metode Pembayaran : Transfer Dana
+Metode Pembayaran : 
+Transfer Dana
 085172010009 AN/Dede Aldi Alamsyah
 
 
+and if the order just one package ({nama_product})
+no need to show ({nomor_pesanan})
 
-Halo bang, saya mau pesan :
-________________________________________________
-*Netflix Premium UHD 4K | Full Garansi [RESELLER]*
-    *Rp 299.000/Bulan*
-    (Dapat 3 Akun Sekaligus)
+and about input type is like this
+{nomor_pesanan} 'auto increment'
+{nama_product} 'checkbox' (so client can choose more than one)
+{durasi} 'option' (client only can choose one per nama_product)
+{harga_satuan} no need use input i call the data from my constant array
+{kuantitas} 'number' with + and - button for add the number
+{harga} result multiple from {kuantitas} x {harga_satuan}
+{total_jumlah_pesanan} 'auto increment' from how many nama_product client choosed
+{total_harga_pesanan}  result from all {harga} (if more than one)
+{nama_pemesan} 'text'
+{catatan_pesanan} 'text area'
+{metode_pembayaran} 'option select' 
 
-Bisa dikirim Metode pembayarannya? Terima kasih!
 
-
-https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BSHARED%5D*%0A%20%20%20%20*Rp%2025.000%2FBulan*%0A%20%20%20%20(1%20Profile%201%20Device)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!
-
-https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BPRIVATE%5D*%0A%20%20%20%20*Rp%20109.000%2FBulan*%0A%20%20%20%20(Full%20Akses%205%20Profile)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!
-
-https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BRESELLER%5D*%0A%20%20%20%20*Rp%20299.000%2FBulan*%0A%20%20%20%20(Dapat%203%20Akun%20Sekaligus)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!
+just explain the detail you will build first
+no need to type code yet
+and give me the example usecase (make different from my example)

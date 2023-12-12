@@ -8,37 +8,37 @@ export const contactsButton = [
     {
         url: "https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD",
         icon: (
-            <MdGroups className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
+            <MdGroups className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://api.whatsapp.com/send?phone=6285172010009",
         icon: (
-            <FaWhatsapp className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
+            <FaWhatsapp className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.facebook.com/alamsyah0054",
         icon: (
-            <FaFacebookF className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
+            <FaFacebookF className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.facebook.com/messages/t/100029480103950",
         icon: (
-            <RiMessengerLine className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
+            <RiMessengerLine className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://www.instagram.com/_alamsyah.id/",
         icon: (
-            <FaInstagram className='text-dark-700 dark:text-gray-200 text-2xl lg:text-xl duration-700 m-1' />
+            <FaInstagram className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
         url: "https://twitter.com/alamsyah0322",
         icon: (
-            <BsTwitterX className='text-dark-700 dark:text-gray-200 text-xl lg:text-lg duration-700 m-1' />
+            <BsTwitterX className='text-dark-800 dark:text-gray-300 text-xl lg:text-lg duration-700 m-1' />
         ),
     },
 ]
@@ -329,13 +329,19 @@ export const supportDevices = [
 
 export const Products = [
     {
-        _id: "1",
-        package: "Shared",
+        _id: 1,
+        package: "SHARED",
         price: "25",
+        durations: [
+            { title: "7 Hari", price: 9000 },
+            { title: "14 Hari", price: 14000 },
+            { title: "1 Bulan", price: 25000 },
+            { title: "3 Bulan", price: 70000 },
+        ],
         features: [
             "Bisa Request Nama Profile",
             "Bebas Request PIN",
-            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bergaransi Full Sesuai Durasi Pembelian",
             "Bisa Perpanjang",
             "Resolusi 4K HDR",
             "Support All Device",
@@ -346,18 +352,29 @@ export const Products = [
         ],
         description:
             "Akun Shared memungkinkan Anda menikmati langganan Premium Ultra HD Netflix tanpa membayar harga penuh. Layanan ini dirancang untuk individu yang menginginkan kualitas tinggi dengan biaya terjangkau.",
-        picture: "/images/SHARED.png",
+        picture: [
+            "/images/SHARED.png",
+            "/images/SHARED.png",
+            "/images/SHARED.png",
+            "/images/SHARED.png",
+        ],
         url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BSHARED%5D*%0A%20%20%20%20*Rp%2025.000%2FBulan*%0A%20%20%20%20(1%20Profile%201%20Device)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Dilarang Menggunakan VPN/Login Diluar Indonesia",
     },
     {
-        _id: "2",
-        package: "Private",
+        _id: 2,
+        package: "PRIVATE",
         price: "109",
+        durations: [
+            { title: "7 Hari", price: 29000 },
+            { title: "14 Hari", price: 59000 },
+            { title: "1 Bulan", price: 109000 },
+            { title: "3 Bulan", price: 320000 },
+        ],
         features: [
             "Bisa Mengganti Password",
             "Bisa Membuat 5 Profile",
-            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bergaransi Full Sesuai Durasi Pembelian",
             "Bisa Perpanjang",
             "Resolusi 4K HDR",
             "Support All Device",
@@ -368,20 +385,29 @@ export const Products = [
         ],
         description:
             "Akun Private memberikan akses penuh ke semua fitur Netflix, termasuk lima profil yang dapat diatur sesuai keinginan Anda. Anda bisa mengganti password, mengatur profil, dan merasakan kendali penuh atas akun Anda.",
-        picture: "/images/PRIVATE.png",
+        picture: [
+            "/images/PRIVATE.png",
+            "/images/PRIVATE.png",
+            "/images/PRIVATE.png",
+            "/images/PRIVATE.png",
+        ],
         url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BPRIVATE%5D*%0A%20%20%20%20*Rp%20109.000%2FBulan*%0A%20%20%20%20(Full%20Akses%205%20Profile)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
     {
-        _id: "3",
-        package: "Reseller",
+        _id: 3,
+        package: "RESELLER",
         price: "299",
+        durations: [
+            { title: "1 Bulan", price: 299000 },
+            { title: "3 Bulan", price: 895000 },
+        ],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
             "Harga Spesial",
             "Bisa Membuat 5 Profile untuk dijual",
             "Bisa Mengganti Password",
-            "Bergaransi Full Sesuai Durati Pembelian",
+            "Bergaransi Full Sesuai Durasi Pembelian",
             "Bisa Perpanjang",
             "Resolusi 4K HDR",
             "Support All Device",
@@ -392,7 +418,12 @@ export const Products = [
         ],
         description:
             "Paket RESELLER kami tidak hanya memberi Anda kesempatan untuk menjual akun berbagi premium yang kami tawarkan, tetapi juga memberikan Anda akses eksklusif ke akun pribadi dengan harga khusus. Ini adalah kesempatan emas untuk membangun bisnis streaming Anda sendiri tanpa perlu investasi besar. Dengan harga spesial dan kemampuan untuk menjual kembali, Anda dapat merajut jalan menuju kesuksesan di industri ini. Bergabunglah dengan kami dan buat langkah pertama Anda dalam meraih sukses bersama!",
-        picture: "/images/RESELLER.png",
+        picture: [
+            "/images/RESELLER.png",
+            "/images/RESELLER.png",
+            "/images/RESELLER.png",
+            "/images/RESELLER.png",
+        ],
         url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BRESELLER%5D*%0A%20%20%20%20*Rp%20299.000%2FBulan*%0A%20%20%20%20(Dapat%203%20Akun%20Sekaligus)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { BsSunFill, BsFillMoonStarsFill } from "react-icons/bs"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
@@ -10,8 +10,18 @@ import {
     MdOutlineKeyboardArrowUp,
 } from "react-icons/md"
 import { contactsButton } from "@/constant"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuLabel,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const Navbar = () => {
+    const [position, setPosition] = React.useState("bottom")
     const navButtons = [
         {
             title: "Home",
@@ -94,7 +104,7 @@ const Navbar = () => {
                 </Link>
                 <div className='flex items-center justify-between gap-5 lg:gap-10'>
                     <div className='max-md:hidden flex lg:text-md'>
-                        <div className='flex lg:gap-7 gap-5'>
+                        <div className='flex lg:gap-7 gap-5 items-start'>
                             {navButtons.map((nav, i) => (
                                 <Link
                                     href={nav.url}
@@ -117,39 +127,26 @@ const Navbar = () => {
                                     />
                                 </Link>
                             ))}
-                            <div
-                                onClick={handleDropdown}
-                                className={`flex items-center pb-3 duration-700 transition group dark:text-gray-400 py-2 md:text-sm font-medium cursor-pointer ${
-                                    dropdown ? "underline" : ""
-                                }`}
-                            >
-                                Contact
-                                {dropdown ? (
-                                    <MdOutlineKeyboardArrowUp className='text-dark-700 dark:text-gray-200 text-lg duration-700 ml-1' />
-                                ) : (
-                                    <MdOutlineKeyboardArrowDown className='text-dark-700 dark:text-gray-200 text-lg duration-700 ml-1' />
-                                )}
-                                <div
-                                    className={`top-5 mt-16  p-3  ${
-                                        dropdown
-                                            ? "md:absolute lg:absolute"
-                                            : "md:hidden lg:hidden"
-                                    } `}
-                                >
-                                    <div className=' grid grid-cols-3 gap-1 overflow-hidden shadow-lg rounded-xl bg-gray-100 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#0d0d0d]/80 dark:from-[#181818] dark:from-15% dark:via-[#1f1f1f] via-30% dark:to-[#2c2c2c] to-90% '>
-                                        {contactsButton.map((cont): any => (
-                                            <Link
-                                                href={cont.url}
-                                                className='flex gap-2 dark:hover:bg-white/20 hover:bg-black/20 w-full p-3 justify-center items-center'
-                                                key={cont.url}
-                                                target='_blank'
-                                            >
-                                                {cont.icon}
-                                            </Link>
-                                        ))}
+                            <DropdownMenu>
+                                <DropdownMenuTrigger asChild>
+                                    <div className='dark:text-gray-400 flex items-center gap-1 py-2 md:text-sm font-medium group cursor-pointer'>
+                                        Contact
+                                        <MdOutlineKeyboardArrowDown className='text-xl' />
                                     </div>
-                                </div>
-                            </div>
+                                </DropdownMenuTrigger>
+                                <DropdownMenuContent className='grid grid-cols-3 gap-1 overflow-hidden !p-0 shadow-lg rounded-xl bg-gray-100 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#0d0d0d]/80 dark:from-[#181818] dark:from-15% dark:via-[#1f1f1f] via-30% dark:to-[#2c2c2c] to-90% '>
+                                    {contactsButton.map((cont): any => (
+                                        <Link
+                                            href={cont.url}
+                                            className='flex gap-2 dark:hover:bg-white/20 hover:bg-black/20 w-full p-3 justify-center items-center text-dark-800 dark:text-gray-300'
+                                            key={cont.url}
+                                            target='_blank'
+                                        >
+                                            {cont.icon}
+                                        </Link>
+                                    ))}
+                                </DropdownMenuContent>
+                            </DropdownMenu>
                         </div>
                     </div>
                     <div className='flex justify-center items-center gap-3 md:gap-5 lg:gap-5'>

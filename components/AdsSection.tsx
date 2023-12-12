@@ -5,6 +5,7 @@ import { Products } from "@/constant"
 import { FaCheckCircle } from "react-icons/fa"
 import { Roboto } from "next/font/google"
 import { PiHandPointingLight } from "react-icons/pi"
+import { formatPrice } from "@/lib/utils"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -47,7 +48,7 @@ const AdsSection = () => {
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: true }}
-                            className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/10 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center '
+                            className='flex flex-col group hover:shadow-black/50 shadow-xl dark:shadow-black shadow-black/10 rounded-3xl duration-700 w-[400px] md:w-[500px] lg:w-fit backdrop-blur-sm bg-gray-100 dark:bg-dark-600 border-2 border-gray-50 dark:border-dark-500 items-center'
                         >
                             <div className='flex flex-col items-center justify-between h-full w-full'>
                                 <div className='flex flex-col items-center p-7 w-80 max-w-5xl '>
@@ -56,22 +57,25 @@ const AdsSection = () => {
                                     >
                                         {product.package}
                                     </h1>
-                                    <div className='flex flex-col items-start py-5 w-full '>
-                                        <span className='flex justify-start h-full gap-1'>
-                                            <p className='flex items-start text-xs font-bold'>
+                                    <div className='flex justify-between py-5 w-full '>
+                                        <h2 className='flex items-start w-full'>
+                                            Mulai Dari
+                                        </h2>
+                                        <span className='flex justify-end w-full gap-1'>
+                                            <p className='flex items-start text-sm font-bold'>
                                                 IDR
                                             </p>
                                             <h2
-                                                className={`flex items-center text-4xl ${roboto.className}`}
+                                                className={`flex items-center text-3xl ${roboto.className}`}
                                             >
-                                                {product.price}
+                                                {
+                                                    //@ts-ignore
+                                                    formatPrice(
+                                                        product.durations[0]
+                                                            .price,
+                                                    )
+                                                }
                                             </h2>
-                                            <p className='flex text-sm items-end font-bold'>
-                                                K
-                                            </p>
-                                            <p className='flex text-sm items-end font-bold'>
-                                                /Month
-                                            </p>
                                         </span>
                                     </div>
                                     <div className='flex flex-col gap-3 justify-center items-start '>
@@ -89,8 +93,7 @@ const AdsSection = () => {
                                     </div>
                                 </div>
                                 <Link
-                                    href={product.url}
-                                    target='_blank'
+                                    href='/products'
                                     className='relative group w-fit h-fit duration-700 group mb-10'
                                 >
                                     <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>

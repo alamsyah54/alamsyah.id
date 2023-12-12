@@ -16,10 +16,7 @@ const roboto = Roboto({
 const DetailSection = () => {
     return (
         <AnimatePresence mode='wait'>
-            <section
-                id='details'
-                className='flex flex-col lg:p-20 pt-7 px-7 h-fit'
-            >
+            <section id='details' className='flex flex-col lg:p-20 pt-7 h-fit'>
                 <div className='flex justify-center flex-col lg:flex-row-reverse items-center'>
                     <div className='flex w-full flex-col justify-end items-end'>
                         <div className='flex w-full flex-col items-center'>

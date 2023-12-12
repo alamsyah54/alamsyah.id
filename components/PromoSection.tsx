@@ -1,5 +1,5 @@
 "use client"
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { Roboto } from "next/font/google"
 import CountdownTimer from "./CountdownTimer"
 
