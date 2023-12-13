@@ -17,6 +17,7 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
+    DialogFooter,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -211,12 +212,13 @@ ${
     (paymentMethod === "QRIS" && "Scan QRIS")
 }
 
-DIBACA!
-setelah berhasil transfer WAJIB kirim bukti transfer ke group : https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD
-otomatis admin akan mengirimkan NETFLIX yang di beli ke nomor whatsapp yang mengirimkan bukti transfer
-TERIMAKASIH Telah Mempercayai ALAMSYAH.ID <3
 
-ordered via https://store-alamsyah.id
+*DIBACA!*
+setelah berhasil transfer *WAJIB* kirim bukti transfer ke group : https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD
+otomatis admin akan mengirimkan NETFLIX yang di beli ke nomor whatsapp yang mengirimkan bukti transfer
+_TERIMAKASIH Telah Mempercayai ALAMSYAH.ID <3_
+
+ordered by https://store-alamsyah.id
 `
 
             // Encode the message and construct the WhatsApp link
@@ -252,18 +254,6 @@ ordered via https://store-alamsyah.id
     return (
         <main className='w-full justify-center items-center flex flex-col px-5'>
             <div className='w-full justify-center md:w-[600px] lg:w-[750px] items-center flex flex-col'>
-                {/* <div className='flex flex-row gap-5 overflow-x-auto overflow-y-hidden justify-start w-full mb-5'>
-                        {Products[currentIndex].picture.map((picture, i) => (
-                            <Image
-                                key={i}
-                                src={picture}
-                                alt='Package Pictures'
-                                width={700}
-                                height={700}
-                                className='full'
-                            />
-                        ))}
-                    </div> */}
                 <Image
                     src={Products[currentIndex].picture[0]}
                     alt='Package Pictures'
@@ -911,6 +901,12 @@ ordered via https://store-alamsyah.id
                                                 </button>
                                             </div>
                                         </div>
+                                        <DialogFooter>
+                                            <div className='text-xs'>
+                                                Proses 5-10 menit jika admin
+                                                sedang aktif
+                                            </div>
+                                        </DialogFooter>
                                     </DialogContent>
                                 </Dialog>
                             </div>
