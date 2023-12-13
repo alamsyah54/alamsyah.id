@@ -211,8 +211,12 @@ ${
     (paymentMethod === "QRIS" && "Scan QRIS")
 }
 
+DIBACA!
+setelah berhasil transfer WAJIB kirim bukti transfer ke group : https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD
+otomatis admin akan mengirimkan NETFLIX yang di beli ke nomor whatsapp yang mengirimkan bukti transfer
+TERIMAKASIH Telah Mempercayai ALAMSYAH.ID <3
 
-https://store-alamsyah.id
+ordered via https://store-alamsyah.id
 `
 
             // Encode the message and construct the WhatsApp link
