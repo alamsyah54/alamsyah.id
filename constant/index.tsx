@@ -334,7 +334,7 @@ export const Products = [
         price: "25",
         durations: [
             { title: "7 Hari", price: 9000 },
-            { title: "14 Hari", price: 14000 },
+            { title: "14 Hari", price: 15000 },
             { title: "1 Bulan", price: 25000 },
             { title: "3 Bulan", price: 70000 },
         ],
@@ -367,9 +367,9 @@ export const Products = [
         price: "109",
         durations: [
             { title: "7 Hari", price: 29000 },
-            { title: "14 Hari", price: 59000 },
+            { title: "14 Hari", price: 57000 },
             { title: "1 Bulan", price: 109000 },
-            { title: "3 Bulan", price: 320000 },
+            { title: "3 Bulan", price: 319000 },
         ],
         features: [
             "Bisa Mengganti Password",
@@ -400,7 +400,7 @@ export const Products = [
         price: "299",
         durations: [
             { title: "1 Bulan", price: 299000 },
-            { title: "3 Bulan", price: 895000 },
+            { title: "3 Bulan", price: 889000 },
         ],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
