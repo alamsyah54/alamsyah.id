@@ -358,7 +358,8 @@ export const Products = [
             "/images/SHARED.png",
             "/images/SHARED.png",
         ],
-        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BSHARED%5D*%0A%20%20%20%20*Rp%2025.000%2FBulan*%0A%20%20%20%20(1%20Profile%201%20Device)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
+        whatYouGet:
+            "Akses ke 1 Profile Maksimal 1 Device, dan boleh request nama Profile dan PIN. jika mau",
         rules: "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Dilarang Menggunakan VPN/Login Diluar Indonesia",
     },
     {
@@ -391,7 +392,8 @@ export const Products = [
             "/images/PRIVATE.png",
             "/images/PRIVATE.png",
         ],
-        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BPRIVATE%5D*%0A%20%20%20%20*Rp%20109.000%2FBulan*%0A%20%20%20%20(Full%20Akses%205%20Profile)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
+        whatYouGet:
+            "Full Akses ke seluruh akun, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
     {
@@ -424,7 +426,8 @@ export const Products = [
             "/images/RESELLER.png",
             "/images/RESELLER.png",
         ],
-        url: "https://wa.me/6285172010009?text=Halo%20bang%2C%20saya%20mau%20pesan%20%3A%0A________________________________________________%0A*Netflix%20Premium%20UHD%204K%20%7C%20Full%20Garansi%20%5BRESELLER%5D*%0A%20%20%20%20*Rp%20299.000%2FBulan*%0A%20%20%20%20(Dapat%203%20Akun%20Sekaligus)%0A%0ABisa%20dikirim%20Metode%20pembayarannya%3F%20Terima%20kasih!",
+        whatYouGet:
+            "Mendapatkan 3 Akun Sekaligus dengan durasi yang sama, dan full akses, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
         rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Dilarang Menggunakan VPN/Login Diluar Indonesia | Selalu Lapor dan kirim Password baru, Untuk pendataan",
     },
 ]

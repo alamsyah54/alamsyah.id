@@ -328,7 +328,7 @@ ordered by https://store-alamsyah.id
                                                         className='flex flex-col w-fit gap-5'
                                                     >
                                                         {/* Product checkbox */}
-                                                        <label className='flex w-fit'>
+                                                        <label className='flex w-fit items-center'>
                                                             <input
                                                                 type='checkbox'
                                                                 onChange={() =>
@@ -433,6 +433,11 @@ ordered by https://store-alamsyah.id
                                                                     product.package
                                                                 }
                                                             </span>
+                                                            <p className='text-[12px] ml-5 opacity-70 capitalize font-extralight'>
+                                                                {
+                                                                    product.whatYouGet
+                                                                }
+                                                            </p>
                                                         </label>
                                                         {/* Display durations and quantity input when selected */}
                                                         <div className='flex flex-col h-full gap-5 pl-5'>
@@ -902,9 +907,8 @@ ordered by https://store-alamsyah.id
                                             </div>
                                         </div>
                                         <DialogFooter>
-                                            <div className='text-xs'>
-                                                Proses 5-10 menit jika admin
-                                                sedang aktif
+                                            <div className='text-xs capitalize'>
+                                                Wajib Mengirimkan Bukti Transfer
                                             </div>
                                         </DialogFooter>
                                     </DialogContent>
