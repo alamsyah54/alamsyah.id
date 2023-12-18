@@ -20,7 +20,7 @@ const AdsSection = () => {
                 id='ads'
                 className='flex justify-center items-center flex-col w-[97vw] max-w-screen'
             >
-                <motion.h1
+                <motion.h2
                     initial={{ opacity: 0, y: 20, x: 0 }}
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ duration: 1 }}
@@ -28,7 +28,7 @@ const AdsSection = () => {
                     className='w-full flex justify-center text-2xl font-extrabold text-transparent bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 bg-clip-text'
                 >
                     NETFLIX PREMIUM ACCOUNT
-                </motion.h1>
+                </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, y: 50, x: 0 }}
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
@@ -52,11 +52,11 @@ const AdsSection = () => {
                         >
                             <div className='flex flex-col items-center justify-between h-full w-full'>
                                 <div className='flex flex-col items-center p-7 w-80 max-w-5xl '>
-                                    <h1
+                                    <h2
                                         className={`text-4xl pb-3 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                                     >
                                         {product.package}
-                                    </h1>
+                                    </h2>
                                     <div className='flex justify-between py-5 w-full '>
                                         <h2 className='flex items-start w-full'>
                                             Mulai Dari
