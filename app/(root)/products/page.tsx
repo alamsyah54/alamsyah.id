@@ -264,11 +264,11 @@ ordered by https://store-alamsyah.id
                 >
                     <div className='flex flex-col items-center justify-between h-full w-full'>
                         <div className='flex justify-between items-start pt-5 lg:pt-20 w-full border-t-[1px] dark:border-white/30 border-black/30'>
-                            <h1
+                            <h2
                                 className={`text-3xl py-3 duration-700 w-full text-left text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                             >
                                 {Products[currentIndex].package}
-                            </h1>
+                            </h2>
                             <div className='flex flex-col items-end  w-full'>
                                 <div className='flex flex-col items-end py-3 '>
                                     <h2 className='flex items-center'>

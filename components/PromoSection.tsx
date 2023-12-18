@@ -21,11 +21,11 @@ const PromoSection = () => {
                     className='flex items-center flex-col w-full h-64 max-h-full justify-center '
                 >
                     <div className='flex justify-center items-center w-full duration-700'>
-                        <h1
+                        <h2
                             className={`${roboto.className} text-[85px] lg:text-[150px] absolute opacity-10 duration-700`}
                         >
                             PROMO
-                        </h1>
+                        </h2>
                         <h2
                             className={`${roboto.className} text-fuchsia-500 text-5xl md:text-5xl md:py-3 lg:text-6xl opacity-100 duration-700 z-10`}
                         >

@@ -17,9 +17,9 @@ const Rules = () => {
         >
             <BsExclamationCircle className='text-5xl mb-2 animate-pulse' />
             <span className='flex w-full justify-center items-center text-center text-2xl pb-10'>
-                <h1 className={`${roboto.className} capitalize`}>
+                <h3 className={`${roboto.className} capitalize`}>
                     Harap patuhi peraturan agar pengalaman Anda tetap optimal
-                </h1>
+                </h3>
             </span>
             <div className='flex justify-between w-full flex-col md:flex-row lg:flex-row items-center md:gap-40 lg:gap-52 capitalize'>
                 <motion.div

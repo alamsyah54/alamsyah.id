@@ -32,11 +32,11 @@ const DetailSection = () => {
                                 >
                                     All Devices
                                 </h2>
-                                <h1
+                                <h2
                                     className={`${roboto.className} text-[85px] lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700`}
                                 >
                                     SUPPORT
-                                </h1>
+                                </h2>
                             </motion.div>
                             <motion.h2
                                 initial={{ opacity: 0, y: 80, x: 0 }}
