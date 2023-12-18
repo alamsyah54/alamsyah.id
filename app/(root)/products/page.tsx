@@ -4,7 +4,6 @@ import { Roboto } from "next/font/google"
 import React, { useState, useEffect } from "react"
 import { Products } from "@/constant"
 import { FaCheckCircle } from "react-icons/fa"
-
 import Image from "next/image"
 import { formatPrice } from "@/lib/utils"
 import { ImCheckboxUnchecked } from "react-icons/im" //uncheck
@@ -12,7 +11,6 @@ import { ImCheckboxChecked } from "react-icons/im" //check
 import { FaMinus } from "react-icons/fa6"
 import { FaPlus } from "react-icons/fa6"
 import { PiPaperPlaneTiltFill } from "react-icons/pi"
-
 import {
     Dialog,
     DialogContent,
@@ -30,7 +28,6 @@ const roboto = Roboto({
     style: ["normal"],
     subsets: ["latin"],
 })
-
 const Page = () => {
     const [currentIndex, setCurrentIndex] = useState<number>(0)
 

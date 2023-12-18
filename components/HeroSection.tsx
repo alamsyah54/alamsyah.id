@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Spline from "@splinetool/react-spline"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
+import Spline from "@splinetool/react-spline"
 
 const HeroSection = () => {
     const [isLoaded, setIsLoaded] = useState(false)
