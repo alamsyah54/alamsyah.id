@@ -264,11 +264,11 @@ ordered by https://store-alamsyah.id
                 >
                     <div className='flex flex-col items-center justify-between h-full w-full'>
                         <div className='flex justify-between items-start pt-5 lg:pt-20 w-full border-t-[1px] dark:border-white/30 border-black/30'>
-                            <h2
+                            <h1
                                 className={`text-3xl py-3 duration-700 w-full text-left text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                             >
                                 {Products[currentIndex].package}
-                            </h2>
+                            </h1>
                             <div className='flex flex-col items-end  w-full'>
                                 <div className='flex flex-col items-end py-3 '>
                                     <h2 className='flex items-center'>
@@ -919,9 +919,9 @@ ordered by https://store-alamsyah.id
                                     onClick={() => goToSlide(slideIndex)}
                                     className='duration-700 px-1 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
                                 >
-                                    <h1 className={`p-1 ${roboto.className}`}>
+                                    <h2 className={`p-1 ${roboto.className}`}>
                                         {product.package}
-                                    </h1>
+                                    </h2>
                                 </div>
                             ))}
                         </div>
