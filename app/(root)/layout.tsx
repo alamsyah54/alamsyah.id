@@ -6,7 +6,7 @@ import React from "react"
 export const metadata: Metadata = {
     title: "ALAMSYAH.ID | Netflix Premium Murah dan Terpercaya",
     description:
-        "ALAMSYAH.ID your trusted source for premium Netflix accounts. Enjoy high-quality, affordable solutions on our seamless, secure platform. Tailored exclusively for Netflix enthusiasts.",
+        "ALAMSYAH.ID your trusted source for premium Netflix accounts. Enjoy high-quality, secure platform, and Tailored exclusively for Netflix enthusiasts.",
     icons: {
         icon: [
             {

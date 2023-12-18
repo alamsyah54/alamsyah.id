@@ -7,7 +7,7 @@ export const metadata: Metadata = {
         default: "ALAMSYAH.ID | Netflix Premium Terpercaya",
     },
     description:
-        "ALAMSYAH.ID your trusted source for premium Netflix accounts. Enjoy high-quality, affordable solutions on our seamless, secure platform. Tailored exclusively for Netflix enthusiasts.",
+        "ALAMSYAH.ID your trusted source for premium Netflix accounts. Enjoy high-quality, secure platform, and Tailored exclusively for Netflix enthusiasts.",
     icons: {
         icon: [
             {

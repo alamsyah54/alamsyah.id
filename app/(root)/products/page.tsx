@@ -919,9 +919,9 @@ ordered by https://store-alamsyah.id
                                     onClick={() => goToSlide(slideIndex)}
                                     className='duration-700 px-1 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
                                 >
-                                    <p className={`p-1 ${roboto.className}`}>
+                                    <h1 className={`p-1 ${roboto.className}`}>
                                         {product.package}
-                                    </p>
+                                    </h1>
                                 </div>
                             ))}
                         </div>
