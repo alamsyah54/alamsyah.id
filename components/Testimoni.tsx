@@ -31,7 +31,7 @@ const Testimoni = () => {
             </div>
             <div className='flex w-full justify-center items-center'>
                 <Link
-                    href='https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD'
+                    href='https://whatsapp.com/channel/0029VaHhgea72WTsjGiBV12K'
                     target='_blank'
                     className='relative group w-fit h-fit duration-700 group mb-10'
                 >
