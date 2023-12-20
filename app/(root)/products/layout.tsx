@@ -19,3 +19,9 @@ export const metadata: Metadata = {
     keywords:
         "netflix, premium, 4k, uhd, full garansi, netflix account, netflix premium uhd, netflix murah, netflix shared, netflix private, netflix terpercaya, murah, terpercaya, film terbaru, alamsyah.id, alamsyah, bergaransi",
 }
+
+const Layout = ({ children }: { children: React.ReactNode }) => {
+    return { children }
+}
+
+export default Layout
