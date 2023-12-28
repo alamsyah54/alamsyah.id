@@ -171,7 +171,7 @@ Durasi : *${selectedDuration || ""}*
 Harga : Rp ${formatPrice(selectedDurationData?.price || 0)}
 Kuantitas : *${quantity}*
 
-Total Harga : *${quantity} x Rp ${formatPrice(
+Total Harga : *${quantity}* x Rp ${formatPrice(
                             selectedDurationData?.price || 0,
                         )} = *Rp ${formatPrice(harga)}*
 `
@@ -213,9 +213,12 @@ ${
 *DIBACA!*
 setelah berhasil transfer *WAJIB* kirim bukti transfer ke group : https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD
 otomatis admin akan mengirimkan NETFLIX yang di beli ke nomor whatsapp yang mengirimkan bukti transfer
+
+*[TRANSAKSI TIDAK AKAN DI PROSES JIKA TIDAK MENGIRIMKAN BUKTI TRANSFER DI GROUP]*
+
 _TERIMAKASIH Telah Mempercayai ALAMSYAH.ID <3_
 
-ordered by https://store-alamsyah.id
+ordered from https://store-alamsyah.id
 `
 
             // Encode the message and construct the WhatsApp link
@@ -250,20 +253,52 @@ ordered by https://store-alamsyah.id
 
     return (
         <main className='w-full justify-center items-center flex flex-col px-5'>
-            <div className='w-full justify-center md:w-[600px] lg:w-[750px] items-center flex flex-col'>
-                <Image
-                    src={Products[currentIndex].picture[0]}
-                    alt='Package Pictures'
-                    width={700}
-                    height={700}
-                    className='full'
-                />
+            <div className='w-full  justify-center md:w-[600px] lg:w-[80%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
+                <div className='flex flex-col items-center w-full h-full'>
+                    <Image
+                        src={Products[currentIndex].picture[0]}
+                        alt='Package Pictures'
+                        width={700}
+                        height={700}
+                        className='full '
+                    />
+                    <div className='lg:flex justify-center w-full hidden'>
+                        {Products.map((product, slideIndex) => (
+                            <div
+                                key={slideIndex}
+                                onClick={() => goToSlide(slideIndex)}
+                                className={`px-1 duration-700 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%
+                                ${
+                                    Products[currentIndex].package ==
+                                        product.package && "shadow-md"
+                                }
+                                ${
+                                    product.package === "SHARED" &&
+                                    " shadow-fuchsia-500"
+                                }
+                                ${
+                                    product.package === "PRIVATE" &&
+                                    " shadow-purple-500"
+                                }
+                                ${
+                                    product.package === "RESELLER" &&
+                                    " shadow-cyan-500"
+                                }
+                                `}
+                            >
+                                <h2 className={`p-1 ${roboto.className}`}>
+                                    {product.package}
+                                </h2>
+                            </div>
+                        ))}
+                    </div>
+                </div>
                 <div
                     key={Products[currentIndex]._id}
-                    className='flex flex-col w-full items-center'
+                    className='flex flex-col w-full items-center '
                 >
                     <div className='flex flex-col items-center justify-between h-full w-full'>
-                        <div className='flex justify-between items-start pt-5 lg:pt-20 w-full border-t-[1px] dark:border-white/30 border-black/30'>
+                        <div className='flex justify-between items-start pt-5 lg:pt-20 w-full border-t-[1px] lg:border-none dark:border-white/30 border-black/30'>
                             <h1
                                 className={`text-3xl py-3 duration-700 w-full text-left text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
                             >
@@ -296,9 +331,9 @@ ordered by https://store-alamsyah.id
                                         <div className='relative group w-fit h-fit duration-700 group mb-10 cursor-pointer'>
                                             <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-5 transition group-hover:opacity-100 group-hover:blur-lg '></div>
                                             <div
-                                                className={`relative duration-500 text-lg border-white rounded-lg flex items-center justify-center py-2 px-6 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 w-fit ${roboto.className}`}
+                                                className={`relative duration-500 text-lg border-white rounded-lg flex items-center justify-center py-2 px-6 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-600 w-fit hover:bg-dark-700 dark:hover:bg-gray-300 active:bg-black dark:active:bg-gray-400 ${roboto.className}`}
                                             >
-                                                Order Now
+                                                List Harga
                                             </div>
                                         </div>
                                     </DialogTrigger>
@@ -912,12 +947,29 @@ ordered by https://store-alamsyah.id
                                 </Dialog>
                             </div>
                         </div>
-                        <div className='flex justify-center w-full'>
+                        <div className='flex justify-center w-full lg:hidden'>
                             {Products.map((product, slideIndex) => (
                                 <div
                                     key={slideIndex}
                                     onClick={() => goToSlide(slideIndex)}
-                                    className='duration-700 px-1 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% '
+                                    className={`px-1 duration-700 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%
+                                ${
+                                    Products[currentIndex].package ==
+                                        product.package && "shadow-md"
+                                }
+                                ${
+                                    product.package === "SHARED" &&
+                                    " shadow-fuchsia-500"
+                                }
+                                ${
+                                    product.package === "PRIVATE" &&
+                                    " shadow-purple-500"
+                                }
+                                ${
+                                    product.package === "RESELLER" &&
+                                    " shadow-cyan-500"
+                                }
+                                `}
                                 >
                                     <h2 className={`p-1 ${roboto.className}`}>
                                         {product.package}
@@ -935,14 +987,29 @@ ordered by https://store-alamsyah.id
                                         key={i}
                                         className='flex gap-2 py-2 justify-start items-start w-full capitalize '
                                     >
-                                        <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500 ' />
+                                        <FaCheckCircle
+                                            className={`  
+                                        ${
+                                            Products[currentIndex].package ==
+                                                "SHARED" && "text-fuchsia-500"
+                                        }
+                                        ${
+                                            Products[currentIndex].package ==
+                                                "PRIVATE" && "text-purple-500"
+                                        }
+                                        ${
+                                            Products[currentIndex].package ==
+                                                "RESELLER" && "text-cyan-500"
+                                        }
+                                        `}
+                                        />
                                         <p className='w-full'>{feature}</p>
                                     </div>
                                 ),
                             )}
                         </div>
                     </div>
-                    <p className='py-10 text-center text-red-500 font-extrabold capitalize'>
+                    <p className='py-10 text-center lg:text-start text-red-500 font-extrabold capitalize'>
                         DIBACA! <br /> {Products[currentIndex].rules}
                     </p>
                 </div>

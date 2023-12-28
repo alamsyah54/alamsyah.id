@@ -15,7 +15,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* Toaster */}
             <Footer />
             <div className='galaxy-background opacity-75 -z-50' />
-            {/* <div className='w-full h-2 fixed bottom-0 bg-green-500 sm:bg-yellow-500 md:bg-orange-500 lg:bg-red-500' /> */}
+            <div className='w-full h-2 fixed bottom-0 bg-green-500 sm:bg-yellow-500 md:bg-orange-500 lg:bg-red-500' />
         </main>
     )
 }

@@ -39,7 +39,6 @@ const AdsSection = () => {
                     Ketersediaan Terbatas
                 </motion.p>
 
-                <PiHandPointingLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft  lg:hidden' />
                 <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen p-5 pb-12 w-full'>
                     {Products.map((product) => (
                         <motion.div
@@ -84,7 +83,24 @@ const AdsSection = () => {
                                                 key={i}
                                                 className='flex gap-1.5 justify-start items-start w-full capitalize '
                                             >
-                                                <FaCheckCircle className='text-fuchsia-500 dark:text-sky-500 ' />
+                                                <FaCheckCircle
+                                                    className={` 
+                                                    ${
+                                                        product.package ===
+                                                            "SHARED" &&
+                                                        " text-fuchsia-500"
+                                                    }
+                                                    ${
+                                                        product.package ===
+                                                            "PRIVATE" &&
+                                                        " text-purple-500"
+                                                    }
+                                                    ${
+                                                        product.package ===
+                                                            "RESELLER" &&
+                                                        " text-cyan-500"
+                                                    }`}
+                                                />
                                                 <p className='w-full text-sm'>
                                                     {feature}
                                                 </p>
@@ -94,13 +110,13 @@ const AdsSection = () => {
                                 </div>
                                 <Link
                                     href='/products'
-                                    className='relative group w-fit h-fit duration-700 group mb-10'
+                                    className='relative group w-fit h-fit duration-700 mb-10'
                                 >
                                     <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>
                                     <div
-                                        className={`relative group-hover:scale-110 duration-500 md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
+                                        className={`relative duration-500 md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-600 w-fit hover:bg-dark-700 dark:hover:bg-gray-300 active:bg-black dark:active:bg-gray-400 ${roboto.className}`}
                                     >
-                                        Order Now
+                                        Buy Now
                                     </div>
                                 </Link>
                             </div>

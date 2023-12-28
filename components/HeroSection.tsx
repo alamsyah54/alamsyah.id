@@ -73,7 +73,7 @@ const HeroSection = () => {
                             >
                                 <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur transition opacity-75 group-hover:opacity-100 group-hover:blur-lg animate-pulse duration-700'></div>
                                 <div className='relative md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-4 font-black bg-gray-100 bg-gradient-to-bl from-light-850 from-15% via-light-850 to-gray-100 border-2 dark:border-[#171c23]/80 dark:from-[#171c23] dark:from-15% dark:via-[#171c23] via-30% dark:to-[#0c0d0f] to-90%  shadow-light-100 dark:shadow-dark-100'>
-                                    Buy Now
+                                    See More
                                 </div>
                             </Link>
                         </motion.div>
