@@ -331,12 +331,12 @@ export const Products = [
     {
         _id: 1,
         package: "SHARED",
-        price: "25",
+        price: "30",
         durations: [
-            { title: "7 Hari", price: 9000 },
-            { title: "14 Hari", price: 15000 },
-            { title: "1 Bulan", price: 25000 },
-            { title: "3 Bulan", price: 70000 },
+            { title: "7 Hari", price: 10000 },
+            { title: "14 Hari", price: 17000 },
+            { title: "1 Bulan", price: 30000 },
+            { title: "3 Bulan", price: 80000 },
         ],
         features: [
             "Bisa Request Nama Profile",
@@ -365,12 +365,12 @@ export const Products = [
     {
         _id: 2,
         package: "PRIVATE",
-        price: "109",
+        price: "119",
         durations: [
-            { title: "7 Hari", price: 29000 },
-            { title: "14 Hari", price: 57000 },
-            { title: "1 Bulan", price: 109000 },
-            { title: "3 Bulan", price: 319000 },
+            { title: "7 Hari", price: 33000 },
+            { title: "14 Hari", price: 63000 },
+            { title: "1 Bulan", price: 119000 },
+            { title: "3 Bulan", price: 353000 },
         ],
         features: [
             "Bisa Mengganti Password",
@@ -399,11 +399,8 @@ export const Products = [
     {
         _id: 3,
         package: "RESELLER",
-        price: "299",
-        durations: [
-            { title: "1 Bulan", price: 299000 },
-            { title: "3 Bulan", price: 889000 },
-        ],
+        price: "349",
+        durations: [{ title: "1 Bulan", price: 349000 }],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
             "Harga Spesial",
