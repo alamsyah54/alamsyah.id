@@ -100,5 +100,11 @@ export const fetchData = async () => {
     console.log("totalccounts ///", totalccounts)
 
     setInterval(getGoogleSheetsData, 120000)
-    return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
+    return {
+        Data,
+        totalPrivateAccounts,
+        totalSharedAccounts,
+        totalccounts,
+        revalidate: 60,
+    }
 }
