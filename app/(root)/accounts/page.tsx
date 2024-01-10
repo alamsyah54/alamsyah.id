@@ -11,17 +11,8 @@ const roboto = Roboto({
 })
 
 const page = async () => {
-    const dataPivate = await fetchData(
-        process.env.SPREADSHEET_ID as string,
-        process.env.PRIVATE_SHEETS as string,
-    )
-    const dataShared = await fetchData(
-        process.env.SPREADSHEET_ID as string,
-        process.env.SHARED_SHEETS as string,
-    )
-    const Private = dataPivate.slice(1)
-    const Shared = dataShared.slice(1)
-    const Data = [...Private, ...Shared].sort((a: any, b: any) => a[4] - b[4])
+    const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
+        await fetchData()
 
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
@@ -38,10 +29,11 @@ const page = async () => {
                         <p
                             className={`text-purple-500 font-black ${roboto.className}`}
                         >
+                            {"  "}
                             //
                         </p>
                         <p className='font-conthrax text-lg select-text'>
-                            {Private.length}
+                            {totalPrivateAccounts}
                         </p>
                         Akun
                     </div>
@@ -50,12 +42,26 @@ const page = async () => {
                         <p
                             className={`text-fuchsia-500 font-black ${roboto.className}`}
                         >
+                            {"  "}
                             //
                         </p>
                         <p className='font-conthrax text-lg select-text'>
-                            {Shared.length}
+                            {totalSharedAccounts}
                         </p>
                         Profile
+                    </div>
+                    <div className='font-light flex gap-1 py-1'>
+                        Total{" "}
+                        <p
+                            className={`text-sky-500 font-black ${roboto.className}`}
+                        >
+                            {"  "}
+                            //
+                        </p>
+                        <p className='font-conthrax text-lg select-text'>
+                            {totalccounts}
+                        </p>
+                        Aktif Customer
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 items-end justify-start text-start'>

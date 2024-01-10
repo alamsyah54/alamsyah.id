@@ -73,9 +73,35 @@ function formatData(data: string[][]): string[][] {
 
     return formattedData
 }
-export const fetchData = async (spreadsheetId: string, range: string) => {
-    const Data = (await getGoogleSheetsData(spreadsheetId, range)) as string[][]
-    const DataFormated = formatData(Data)
-    console.log(DataFormated)
-    return DataFormated
+// export const fetchData = async (spreadsheetId: string, range: string) => {
+//     const Data = (await getGoogleSheetsData(spreadsheetId, range)) as string[][]
+//     const DataFormated = formatData(Data)
+//     console.log(DataFormated)
+
+//     return DataFormated
+// }
+export const fetchData = async () => {
+    const dataPivate = (await getGoogleSheetsData(
+        process.env.SPREADSHEET_ID as string,
+        process.env.PRIVATE_SHEETS as string,
+    )) as string[][]
+
+    const dataShared = (await getGoogleSheetsData(
+        process.env.SPREADSHEET_ID as string,
+        process.env.SHARED_SHEETS as string,
+    )) as string[][]
+
+    const PrivateFormated = formatData(dataPivate)
+    const SharedFormated = formatData(dataShared)
+    const Private = PrivateFormated.slice(1)
+    const Shared = SharedFormated.slice(1)
+    const Data = [...Private, ...Shared].sort((a: any, b: any) => a[4] - b[4])
+    const totalPrivateAccounts = Private.length
+    const totalSharedAccounts = Shared.length
+    const totalccounts = Data.length
+    console.log("totalPrivateAccounts", totalPrivateAccounts)
+    console.log("totalSharedAccounts", totalSharedAccounts)
+    console.log("totalccounts", totalccounts)
+    console.log("Data", Data)
+    return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
 }
