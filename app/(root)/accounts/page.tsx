@@ -13,7 +13,7 @@ const roboto = Roboto({
 const page = async () => {
     const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
         await fetchData()
-    setInterval(fetchData, 120000)
+    setInterval(fetchData, 60000)
     console.log("///////////////////////////////////")
     console.log(Data)
     console.log("///////////////////////////////////")
@@ -200,5 +200,6 @@ const page = async () => {
         </div>
     )
 }
+setInterval(page, 60000)
 
 export default page
