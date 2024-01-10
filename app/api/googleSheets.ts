@@ -105,6 +105,6 @@ export const fetchData = async () => {
         totalPrivateAccounts,
         totalSharedAccounts,
         totalccounts,
-        revalidate: 60,
+        revalidate: 61,
     }
 }
