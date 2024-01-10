@@ -10,15 +10,9 @@ const roboto = Roboto({
     subsets: ["latin"],
 })
 
-const page = async ({
-    Data,
-    totalPrivateAccounts,
-    totalSharedAccounts,
-    totalccounts,
-}: any) => {
-    // const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
-    //     await fetchData()
-    setInterval(fetchData, 60000)
+const page = async () => {
+    const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
+        await fetchData()
     console.log("///////////////////////////////////")
     console.log(Data)
     console.log("///////////////////////////////////")
@@ -205,6 +199,5 @@ const page = async ({
         </div>
     )
 }
-setInterval(page, 60000)
 
 export default page

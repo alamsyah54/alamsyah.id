@@ -100,13 +100,5 @@ export const fetchData = async () => {
     console.log("totalccounts ///", totalccounts)
 
     setInterval(getGoogleSheetsData, 120000)
-    return {
-        props: {
-            Data,
-            totalPrivateAccounts,
-            totalSharedAccounts,
-            totalccounts,
-            revalidate: 60, // Refetch every 60 seconds
-        },
-    }
+    return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
 }
