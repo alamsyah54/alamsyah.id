@@ -92,6 +92,11 @@ export const fetchData = async () => {
     const totalPrivateAccounts = Private.length
     const totalSharedAccounts = Shared.length
     const totalccounts = Data.length
-
+    console.log("///////////////////////////////////")
+    console.log(Data)
+    console.log("///////////////////////////////////")
+    console.log("totalPrivateAccounts ///", totalPrivateAccounts)
+    console.log("totalSharedAccounts ///", totalSharedAccounts)
+    console.log("totalccounts ///", totalccounts)
     return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
 }

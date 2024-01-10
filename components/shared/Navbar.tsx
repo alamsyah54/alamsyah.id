@@ -111,10 +111,10 @@ const Navbar = () => {
                                         <div
                                             className={`${
                                                 nav.LineColor
-                                            } rounded-full w-full h-1 ${
+                                            } rounded-full w-full h-1 flex ${
                                                 path === nav.url
-                                                    ? "flex"
-                                                    : "hidden group-hover:flex"
+                                                    ? "opacity-100"
+                                                    : "opacity-0 group-hover:opacity-100"
                                             }`}
                                         />
                                     </Link>
