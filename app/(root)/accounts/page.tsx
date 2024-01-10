@@ -22,8 +22,8 @@ const page = async () => {
     console.log("totalccounts ///", totalccounts)
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
-            <div className='flex gap-7 justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
-                <div className='flex flex-col text-lg select-none'>
+            <div className='flex gap-7 flex-col md:flex-row lg:flex-row justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
+                <div className='flex flex-col text-lg select-none '>
                     <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
                         <p className='font-extralight font-sans capitalize'>
                             (Refreshed Every 2 Minutes)
@@ -57,19 +57,20 @@ const page = async () => {
                         Profile
                     </div>
                     <div className='font-light flex gap-1 py-1'>
-                        <p className='font-conthrax text-lg select-text'>
-                            {totalccounts}
-                        </p>
+                        Total
                         <p
                             className={`text-sky-500 font-black ${roboto.className}`}
                         >
                             {"  "}
                             //
                         </p>
-                        Akrif Customer
+                        <p className='font-conthrax text-lg select-text'>
+                            {totalccounts}
+                        </p>
+                        Aktif Customer
                     </div>
                 </div>
-                <div className='flex flex-col gap-3 items-end justify-start text-start'>
+                <div className='flex flex-col gap-3 items-start justify-start text-start md:items-end lg:items-end'>
                     <Link
                         href='/accounts/secret'
                         className='relative group w-fit h-fit'
@@ -81,10 +82,8 @@ const page = async () => {
                             Your Order
                         </div>
                     </Link>
-                    <p className='font-light text-xs text-end'>
-                        Lihat List Akun mu{" "}
-                        <br className='lg:hidden md:hidden' />
-                        Dengan Secret ID
+                    <p className='font-light text-xs text-start md:text-end lg:text-end'>
+                        Lihat List Akun mu Dengan Secret ID
                     </p>
                 </div>
             </div>
