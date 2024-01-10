@@ -27,8 +27,8 @@ const page = async () => {
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
                 <div className='flex flex-col text-lg select-none'>
-                    <div className='font-black flex lg:flex-row flex-col gap-2'>
-                        <p className='font-extralight capitalize'>
+                    <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
+                        <p className='font-extralight font-sans capitalize'>
                             (realtime data)
                         </p>
                         Akun Terjual
@@ -36,22 +36,22 @@ const page = async () => {
                     <div className='font-light flex gap-1 py-1'>
                         Private{" "}
                         <p
-                            className={`text-purple-500 font-black  ${roboto.className}`}
+                            className={`text-purple-500 font-black ${roboto.className}`}
                         >
                             //
                         </p>
-                        <p className='font-black text-lg select-text'>
+                        <p className='font-conthrax text-lg select-text'>
                             {Private.length}
                         </p>
                     </div>
                     <div className='font-light flex gap-1 py-1'>
                         Shared{" "}
                         <p
-                            className={`text-fuchsia-500 font-black  ${roboto.className}`}
+                            className={`text-fuchsia-500 font-black ${roboto.className}`}
                         >
                             //
                         </p>
-                        <p className='font-black text-lg select-text'>
+                        <p className='font-conthrax text-lg select-text'>
                             {Shared.length}
                         </p>
                     </div>
