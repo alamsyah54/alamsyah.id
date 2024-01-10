@@ -13,7 +13,7 @@ const roboto = Roboto({
 const page = async () => {
     const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
         await fetchData()
-    setInterval(fetchData, 61000)
+    setInterval(fetchData, 120000)
     console.log("///////////////////////////////////")
     console.log(Data)
     console.log("///////////////////////////////////")
