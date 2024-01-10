@@ -25,7 +25,11 @@
         "clsx": "^2.0.0",
         "date-fns": "^2.30.0",
         "framer-motion": "^10.16.5",
+        "googleapis": "^129.0.0",
+        "isomorphic-fetch": "^3.0.0",
         "lucide-react": "^0.292.0",
+        "mongodb": "^6.3.0",
+        "mongoose": "^8.0.3",
         "next": "14.0.2",
         "next-auth": "^4.24.5",
         "next-seo": "^6.4.0",
@@ -38,6 +42,8 @@
         "zod": "^3.22.4"
     },
     "devDependencies": {
+        "@types/gapi": "^0.0.47",
+        "@types/gapi.auth2": "^0.0.60",
         "@types/node": "^20.9.0",
         "@types/react": "^18.2.37",
         "@types/react-dom": "^18.2.15",

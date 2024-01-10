@@ -26,6 +26,11 @@ const Navbar = () => {
             url: "/products",
             LineColor: "bg-purple-500",
         },
+        {
+            title: "Accounts",
+            url: "/accounts",
+            LineColor: "bg-sky-500",
+        },
     ]
 
     const path = usePathname()
@@ -85,7 +90,7 @@ const Navbar = () => {
             >
                 <div className='backdrop-blur-sm dark:bg-dark-600/50 bg-gray-100/50 rounded-[20px] py-2 flex px-6 justify-between duration-1000 items-center shadow-lg shadow-black/25 dark:shadow-black/70'>
                     <Link href='/' className='max-md:p-2'>
-                        <span className='font-conthrax lg:text-xl lg:p-3 '>
+                        <span className='font-conthrax lg:text-xl lg:p-3 select-none'>
                             ALAMSYAH.ID
                         </span>
                     </Link>

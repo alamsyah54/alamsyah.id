@@ -19,14 +19,19 @@ const roboto = Roboto({
 const NavContent = () => {
     const navButtons = [
         {
-            name: "Home",
+            title: "Home",
             url: "/",
             LineColor: "bg-fuchsia-500",
         },
         {
-            name: "Products",
+            title: "Products",
             url: "/products",
             LineColor: "bg-purple-500",
+        },
+        {
+            title: "Accounts",
+            url: "/accounts",
+            LineColor: "bg-sky-500",
         },
     ]
 
@@ -61,7 +66,7 @@ const NavContent = () => {
                                                 : roboto.className
                                         }`}
                                     >
-                                        {nav.name}
+                                        {nav.title}
                                     </p>
                                 </Link>
                             </div>

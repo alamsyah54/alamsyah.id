@@ -12,7 +12,7 @@ const roboto = Roboto({
 const Rules = () => {
     return (
         <section
-            id='promo'
+            id='rules'
             className='flex flex-col items-center p-5 lg:px-24 h-fit mb-20 w-full'
         >
             <BsExclamationCircle className='text-5xl mb-2 animate-pulse' />
@@ -27,7 +27,7 @@ const Rules = () => {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    className='flex flex-col items-center justify-center text-center py-5'
+                    className='flex flex-col items-center justify-center text-start py-5'
                 >
                     <h2 className={`${roboto.className} capitalize`}>Shared</h2>
                     <p>
@@ -42,7 +42,7 @@ const Rules = () => {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     transition={{ duration: 2 }}
                     viewport={{ once: true }}
-                    className='flex flex-col items-center justify-center text-center py-5'
+                    className='flex flex-col items-center justify-center text-start py-5'
                 >
                     <h2 className={`${roboto.className} capitalize`}>
                         Private
@@ -54,7 +54,29 @@ const Rules = () => {
                         menggunakan VPN/login diluar Indonesia
                     </p>
                 </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 50, x: 0 }}
+                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    transition={{ duration: 2 }}
+                    viewport={{ once: true }}
+                    className='flex flex-col items-center justify-center text-start py-5'
+                >
+                    <h2 className={`${roboto.className} capitalize`}>
+                        Reseller
+                    </h2>
+                    <p>
+                        Dilarang Menjual 1 Profile Lebih dari 1 Device |
+                        Dilarang Menipu seperti menjual paket 1 tahun lalu kabur
+                        | wajib bertanggung jawab pada customer
+                    </p>
+                </motion.div>
             </div>
+            <h3
+                className={`${roboto.className} capitalize mt-3 text-yellow-500`}
+            >
+                jika melanggar peraturan otomatis garansi hangus, di blocking
+                dilarang membeli lagi disini, dan tidak ada refund sepeserpun
+            </h3>
         </section>
     )
 }

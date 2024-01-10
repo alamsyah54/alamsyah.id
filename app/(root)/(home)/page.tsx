@@ -21,7 +21,7 @@ export default function Home() {
 
     const Loading = () => {
         return (
-            <div className='flex w-screen h-[75vh] justify-center items-center '>
+            <div className='flex flex-col w-screen h-screen justify-center items-center gap-10'>
                 <Image
                     width={100}
                     height={100}
@@ -36,6 +36,9 @@ export default function Home() {
                     alt='Loading...'
                     className='dark:hidden duration-700'
                 />
+                <p className='text-lg text-transparent bg-gradient-to-bl dark:from-white from-black bg-clip-text cursor-default select-none'>
+                    Loading...
+                </p>
             </div>
         )
     }

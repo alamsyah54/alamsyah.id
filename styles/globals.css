@@ -41,12 +41,12 @@ body {
 }
 /* width */
 ::-webkit-scrollbar {
-    @apply h-1.5 w-0;
+    @apply h-1.5 w-1.5 absolute right-0 z-50;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    @apply bg-gray-600 rounded-full;
+    @apply bg-gray-600 rounded-full absolute right-0 z-50;
 }
 
 /* Handle on hover */

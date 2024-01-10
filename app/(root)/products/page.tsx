@@ -253,7 +253,7 @@ ordered from https://store-alamsyah.id
 
     return (
         <main className='w-full justify-center items-center flex flex-col px-5'>
-            <div className='w-full  justify-center md:w-[600px] lg:w-[80%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
+            <div className='w-full justify-center md:w-[600px] lg:w-[80%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
                 <div className='flex flex-col items-center w-full h-full'>
                     <Image
                         src={Products[currentIndex].picture[0]}
@@ -267,7 +267,7 @@ ordered from https://store-alamsyah.id
                             <div
                                 key={slideIndex}
                                 onClick={() => goToSlide(slideIndex)}
-                                className={`px-1 duration-700 rounded-md m-1 cursor-pointer border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%
+                                className={`px-1 rounded-md m-1 cursor-pointer duration-700 border-2 border-white dark:border-dark-600 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%
                                 ${
                                     Products[currentIndex].package ==
                                         product.package && "shadow-md"
@@ -932,7 +932,7 @@ ordered from https://store-alamsyah.id
                                                     <div
                                                         className={`relative duration-500 gap-3 md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
                                                     >
-                                                        Proses Pesanan{" "}
+                                                        Proses Pesanan
                                                         <PiPaperPlaneTiltFill />
                                                     </div>
                                                 </button>

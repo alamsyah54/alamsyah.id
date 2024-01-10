@@ -10,25 +10,28 @@ const roboto = Roboto({
 })
 const Testimoni = () => {
     return (
-        <section id='#testimonial'>
+        <section id='#testi'>
             <h2
                 className={`${roboto.className} flex w-full justify-center text-transparent bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 bg-clip-text text-5xl md:text-5xl md:py-3 lg:text-6xl opacity-100 duration-700`}
             >
                 &ldquo;TESTIMONIAL&rdquo;
             </h2>
             <p className='flex w-full justify-center'>Transfer and Feedback</p>
-            <div className='columns-3 md:columns-4 lg:columns-6 my-10 gap-5 p-5 lg:gap-10 lg:p-10 w-full'>
-                {Testi.map((testi, i) => (
-                    <Image
-                        key={i}
-                        src={testi.picture}
-                        alt='Testimonial Pictures'
-                        width={500}
-                        height={500}
-                        className='rounded-xl bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 p-1 shadow-xl shadow-black/40 mb-5 lg:mb-10'
-                    />
-                ))}
+            <div className='flex justify-center items-center flex-col w-[97vw] max-w-screen'>
+                <div className='flex flex-row gap-5 overflow-x-auto overflow-y-hidden justify-start max-w-screen p-5 pb-12 w-full'>
+                    {Testi.map((testi, i) => (
+                        <Image
+                            key={i}
+                            src={testi.picture}
+                            alt='Testimonial Pictures'
+                            width={200}
+                            height={200}
+                            className='rounded-xl w-full h-96 bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 p-1 shadow-xl shadow-black/40 mb-5'
+                        />
+                    ))}
+                </div>
             </div>
+
             <div className='flex w-full justify-center items-center'>
                 <Link
                     href='https://whatsapp.com/channel/0029VaHhgea72WTsjGiBV12K'
