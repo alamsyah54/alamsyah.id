@@ -101,10 +101,12 @@ export const fetchData = async () => {
 
     setInterval(getGoogleSheetsData, 120000)
     return {
-        Data,
-        totalPrivateAccounts,
-        totalSharedAccounts,
-        totalccounts,
-        revalidate: 61,
+        props: {
+            Data,
+            totalPrivateAccounts,
+            totalSharedAccounts,
+            totalccounts,
+            revalidate: 60, // Refetch every 60 seconds
+        },
     }
 }

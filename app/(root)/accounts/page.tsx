@@ -10,9 +10,14 @@ const roboto = Roboto({
     subsets: ["latin"],
 })
 
-const page = async () => {
-    const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
-        await fetchData()
+const page = async ({
+    Data,
+    totalPrivateAccounts,
+    totalSharedAccounts,
+    totalccounts,
+}: any) => {
+    // const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
+    //     await fetchData()
     setInterval(fetchData, 60000)
     console.log("///////////////////////////////////")
     console.log(Data)
