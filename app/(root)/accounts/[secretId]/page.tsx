@@ -3,17 +3,7 @@ import { fetchData } from "@/app/api/googleSheets"
 import { BsShieldLock } from "react-icons/bs"
 
 const page = async ({ params }: { params: { secretId: string } }) => {
-    const dataPivate = await fetchData(
-        process.env.SPREADSHEET_ID as string,
-        process.env.PRIVATE_SHEETS as string,
-    )
-    const dataShared = await fetchData(
-        process.env.SPREADSHEET_ID as string,
-        process.env.SHARED_SHEETS as string,
-    )
-    const Private = dataPivate.slice(1)
-    const Shared = dataShared.slice(1)
-    const Data = [...Private, ...Shared].sort((a: any, b: any) => a[4] - b[4])
+    const { Data } = await fetchData()
     const secretID = params.secretId
 
     return (
