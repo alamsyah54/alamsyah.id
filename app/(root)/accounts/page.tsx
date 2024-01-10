@@ -43,6 +43,7 @@ const page = async () => {
                         <p className='font-conthrax text-lg select-text'>
                             {Private.length}
                         </p>
+                        Akun
                     </div>
                     <div className='font-light flex gap-1 py-1'>
                         Shared{" "}
@@ -54,6 +55,7 @@ const page = async () => {
                         <p className='font-conthrax text-lg select-text'>
                             {Shared.length}
                         </p>
+                        Profile
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 items-end justify-start text-start'>
