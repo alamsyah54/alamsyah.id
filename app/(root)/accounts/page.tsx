@@ -27,7 +27,7 @@ const page = async () => {
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
                 <div className='flex flex-col text-lg select-none'>
-                    <div className='font-black flex gap-2'>
+                    <div className='font-black flex lg:flex-row flex-col gap-2'>
                         <p className='font-extralight capitalize'>
                             (realtime data)
                         </p>
@@ -63,12 +63,12 @@ const page = async () => {
                     >
                         <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur py-4 px-6 transition group-hover:opacity-100 group-hover:blur-md '></div>
                         <div
-                            className={`relative duration-500 md:text-md lg:text-xl border-white rounded-lg flex items-center justify-center py-2 px-4 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-600 w-fit hover:bg-dark-700 dark:hover:bg-gray-300 active:bg-black dark:active:bg-gray-400 ${roboto.className}`}
+                            className={`relative duration-500 text-sm md:text-md lg:text-xl border-white rounded-lg flex items-center justify-center py-2 px-4 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-600 w-fit hover:bg-dark-700 dark:hover:bg-gray-300 active:bg-black dark:active:bg-gray-400 ${roboto.className}`}
                         >
                             Your Order
                         </div>
                     </Link>
-                    <p className='font-light text-sm text-end'>
+                    <p className='font-light text-xs text-end'>
                         Lihat List Akun mu{" "}
                         <br className='lg:hidden md:hidden' />
                         Dengan Secret ID
