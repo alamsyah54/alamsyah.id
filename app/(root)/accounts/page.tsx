@@ -13,7 +13,12 @@ const roboto = Roboto({
 const page = async () => {
     const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
         await fetchData()
-
+    console.log("///////////////////////////////////")
+    console.log(Data)
+    console.log("///////////////////////////////////")
+    console.log("totalPrivateAccounts ///", totalPrivateAccounts)
+    console.log("totalSharedAccounts ///", totalSharedAccounts)
+    console.log("totalccounts ///", totalccounts)
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
