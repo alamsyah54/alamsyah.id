@@ -26,7 +26,7 @@ const page = async () => {
                 <div className='flex flex-col text-lg select-none'>
                     <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
                         <p className='font-extralight font-sans capitalize'>
-                            (realtime data)
+                            (Refreshed Every 2 Minutes)
                         </p>
                         Akun Terjual
                     </div>
@@ -57,17 +57,16 @@ const page = async () => {
                         Profile
                     </div>
                     <div className='font-light flex gap-1 py-1'>
-                        Total{" "}
+                        <p className='font-conthrax text-lg select-text'>
+                            {totalccounts}
+                        </p>
                         <p
                             className={`text-sky-500 font-black ${roboto.className}`}
                         >
                             {"  "}
                             //
                         </p>
-                        <p className='font-conthrax text-lg select-text'>
-                            {totalccounts}
-                        </p>
-                        Aktif Customer
+                        Akrif Customer
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 items-end justify-start text-start'>
