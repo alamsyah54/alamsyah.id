@@ -2,8 +2,11 @@ import React from "react"
 import { fetchData } from "@/app/api/googleSheets"
 import { BsShieldLock } from "react-icons/bs"
 
-const page = async ({ params }: { params: { secretId: string } }) => {
-    const { Data } = await fetchData()
+const page = async (
+    { params }: { params: { secretId: string } },
+    { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }: any,
+) => {
+    // const { Data } = await fetchData()
     const secretID = params.secretId
 
     return (
