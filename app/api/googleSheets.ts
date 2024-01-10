@@ -73,13 +73,6 @@ function formatData(data: string[][]): string[][] {
 
     return formattedData
 }
-// export const fetchData = async (spreadsheetId: string, range: string) => {
-//     const Data = (await getGoogleSheetsData(spreadsheetId, range)) as string[][]
-//     const DataFormated = formatData(Data)
-//     console.log(DataFormated)
-
-//     return DataFormated
-// }
 export const fetchData = async () => {
     const dataPivate = (await getGoogleSheetsData(
         process.env.SPREADSHEET_ID as string,
@@ -99,5 +92,6 @@ export const fetchData = async () => {
     const totalPrivateAccounts = Private.length
     const totalSharedAccounts = Shared.length
     const totalccounts = Data.length
+
     return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
 }
