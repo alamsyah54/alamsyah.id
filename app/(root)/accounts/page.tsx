@@ -3,6 +3,7 @@ import React from "react"
 import { fetchData, censorEmail, censorPassword } from "@/app/api/googleSheets"
 import Link from "next/link"
 import { Roboto } from "next/font/google"
+import { unstable_noStore } from "next/cache"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -11,6 +12,7 @@ const roboto = Roboto({
 })
 
 const page = async () => {
+    unstable_noStore()
     const { Data } = await fetchData()
     const getPrivateOnly = (data: string[][]): string[][] => {
         return data.filter((innerArray) => innerArray[0] === "PRIVATE")
