@@ -29,6 +29,7 @@ const page = async () => {
     const Private = getPrivateOnly(Data)
     const Shared = getSharedOnly(Data)
     const allData = getAll(Data)
+    console.log(allData)
     console.log("_________________________________")
     console.log(" ")
     console.log(allData.length, "///", Private.length, "///", Shared.length)
@@ -134,7 +135,7 @@ const page = async () => {
                                 {censorEmail(row[2])}
                             </p>
 
-                            {/* <p className='font-extralight select-none mb-1'>
+                            <p className='font-extralight select-none mb-1'>
                                 Password
                             </p>
                             <p
@@ -200,7 +201,7 @@ const page = async () => {
                             >
                                 {row[0] === "SHARED" && row[8] + " 2024"}
                                 {row[0] === "PRIVATE" && row[6] + " 2024"}
-                            </p> */}
+                            </p>
                         </div>
                         <div className='font-conthrax w-full flex justify-center items-center'>
                             <p className='text-s bg-gradient-to-bl dark:text-white/5 text-black/5 bg-clip-text cursor-default select-none'>
