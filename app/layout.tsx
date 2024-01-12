@@ -11,11 +11,11 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/icons/AHeaderDark.webp",
+                url: "/icons/ALight.webp",
                 media: "(prefers-color-scheme: light)",
             },
             {
-                url: "/icons/AHeaderLight.webp",
+                url: "/icons/ADark.webp",
                 media: "(prefers-color-scheme: dark)",
             },
         ],
