@@ -32,7 +32,9 @@ const page = async () => {
     console.log(allData)
     console.log("_________________________________")
     console.log(" ")
-    console.log(allData.length, "///", Private.length, "///", Shared.length)
+    console.log("Private ///", Private.length)
+    console.log("Shared ///", Shared.length)
+    console.log("Total Netflix ///", allData.length)
     console.log("_________________________________")
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
