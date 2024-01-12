@@ -44,7 +44,7 @@ const page = async () => {
                 <div className='flex flex-col text-lg select-none '>
                     <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
                         <p className='font-extralight font-sans capitalize'>
-                            (Refreshed Every 2 Minutes)
+                            (Real Time Data)
                         </p>
                         Akun Terjual
                     </div>

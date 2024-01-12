@@ -1,10 +1,11 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 import Spline from "@splinetool/react-spline"
+import Loading from "./shared/Loading"
 
 const HeroSection = () => {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -81,33 +82,12 @@ const HeroSection = () => {
                 </div>
                 <div className='flex max-lg:basis-3/5 w-full'>
                     <div className='relative w-full h-[700px] max-md:-mt-12 -mt-7'>
-                        {isLoaded ? (
+                        <Suspense fallback={<Loading />}>
                             <Spline
                                 scene='https://prod.spline.design/HpJGf1t7hbGw6xJL/scene.splinecode'
                                 className='w-fit'
                             />
-                        ) : (
-                            <div className='flex flex-col justify-center items-center text-center duration-700 w-full h-full'>
-                                <div className='relative items-center justify-center bg-dark-700 rounded-full -z-20 p-2 shadow-lg'>
-                                    <Image
-                                        src='/icons/globe.webp'
-                                        alt='circle'
-                                        width={200}
-                                        height={200}
-                                        className='absolute animate-spin-slow -z-10'
-                                    />
-                                    <Image
-                                        src='/icons/AInCircle.webp'
-                                        alt='Aircle'
-                                        width={200}
-                                        height={200}
-                                    />
-                                </div>
-                                <p className='font-conthrax drop-shadow-lg p-3 animate-bounce duration-1000 transition-transform'>
-                                    Loading...
-                                </p>
-                            </div>
-                        )}
+                        </Suspense>
                     </div>
                 </div>
             </section>
