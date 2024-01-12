@@ -93,16 +93,5 @@ export const fetchData = async () => {
     const Private = PrivateFormated.slice(1)
     const Shared = SharedFormated.slice(1)
     const Data = [...Private, ...Shared].sort((a: any, b: any) => a[4] - b[4])
-    const totalPrivateAccounts = Private.length
-    const totalSharedAccounts = Shared.length
-    const totalccounts = Data.length
-    console.log("///////////////////////////////////")
-    console.log(Data)
-    console.log("///////////////////////////////////")
-    console.log("totalPrivateAccounts ///", totalPrivateAccounts)
-    console.log("totalSharedAccounts ///", totalSharedAccounts)
-    console.log("totalccounts ///", totalccounts)
-
-    setInterval(getGoogleSheetsData, 120000)
-    return { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts }
+    return { Data }
 }

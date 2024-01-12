@@ -71,12 +71,16 @@ const Rules = () => {
                     </p>
                 </motion.div>
             </div>
-            <h3
+            <motion.h3
+                initial={{ opacity: 0, y: 50, x: 0 }}
+                whileInView={{ opacity: 1, y: 0, x: 0 }}
+                transition={{ duration: 2 }}
+                viewport={{ once: true }}
                 className={`${roboto.className} capitalize mt-3 text-yellow-500`}
             >
                 jika melanggar peraturan otomatis garansi hangus, di blocking
                 dilarang membeli lagi disini, dan tidak ada refund sepeserpun
-            </h3>
+            </motion.h3>
         </section>
     )
 }

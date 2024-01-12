@@ -11,14 +11,28 @@ const roboto = Roboto({
 })
 
 const page = async () => {
-    const { Data, totalPrivateAccounts, totalSharedAccounts, totalccounts } =
-        await fetchData()
-    console.log("///////////////////////////////////")
-    console.log(Data)
-    console.log("///////////////////////////////////")
-    console.log("totalPrivateAccounts ///", totalPrivateAccounts)
-    console.log("totalSharedAccounts ///", totalSharedAccounts)
-    console.log("totalccounts ///", totalccounts)
+    const { Data } = await fetchData()
+    const getPrivateOnly = (data: string[][]): string[][] => {
+        return data.filter((innerArray) => innerArray[0] === "PRIVATE")
+    }
+
+    const getSharedOnly = (data: string[][]): string[][] => {
+        return data.filter((innerArray) => innerArray[0] === "SHARED")
+    }
+
+    const getAll = (data: string[][]): string[][] => {
+        return data.filter(
+            (innerArray) =>
+                innerArray[0] === "PRIVATE" || innerArray[0] === "SHARED",
+        )
+    }
+    const Private = getPrivateOnly(Data)
+    const Shared = getSharedOnly(Data)
+    const allData = getAll(Data)
+    console.log("_________________________________")
+    console.log(" ")
+    console.log(allData.length, "///", Private.length, "///", Shared.length)
+    console.log("_________________________________")
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 flex-col md:flex-row lg:flex-row justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
@@ -38,7 +52,7 @@ const page = async () => {
                             //
                         </p>
                         <p className='font-conthrax text-lg select-text'>
-                            {totalPrivateAccounts}
+                            {Private.length}
                         </p>
                         Akun
                     </div>
@@ -51,7 +65,7 @@ const page = async () => {
                             //
                         </p>
                         <p className='font-conthrax text-lg select-text'>
-                            {totalSharedAccounts}
+                            {Shared.length}
                         </p>
                         Profile
                     </div>
@@ -64,7 +78,7 @@ const page = async () => {
                             //
                         </p>
                         <p className='font-conthrax text-lg select-text'>
-                            {totalccounts}
+                            {allData.length}
                         </p>
                         Aktif Customer
                     </div>
@@ -87,7 +101,7 @@ const page = async () => {
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-8 w-full'>
-                {Data.map((row: any, i: number) => (
+                {allData.map((row: any, i: number) => (
                     <div
                         key={i}
                         className={`rounded-3xl p-5 lg:p-10 shadow-md hover:shadow-xl duration-300 h-fit group border-2 border-white dark:border-dark-400 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90% ${
@@ -120,7 +134,7 @@ const page = async () => {
                                 {censorEmail(row[2])}
                             </p>
 
-                            <p className='font-extralight select-none mb-1'>
+                            {/* <p className='font-extralight select-none mb-1'>
                                 Password
                             </p>
                             <p
@@ -186,7 +200,7 @@ const page = async () => {
                             >
                                 {row[0] === "SHARED" && row[8] + " 2024"}
                                 {row[0] === "PRIVATE" && row[6] + " 2024"}
-                            </p>
+                            </p> */}
                         </div>
                         <div className='font-conthrax w-full flex justify-center items-center'>
                             <p className='text-s bg-gradient-to-bl dark:text-white/5 text-black/5 bg-clip-text cursor-default select-none'>
