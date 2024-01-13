@@ -20,25 +20,37 @@ const AdsSection = () => {
                 id='ads'
                 className='flex justify-center items-center flex-col w-[97vw] max-w-screen'
             >
-                <motion.h2
-                    initial={{ opacity: 0, y: 20, x: 0 }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: false }}
-                    className='w-full flex justify-center text-2xl font-extrabold text-transparent bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 bg-clip-text'
-                >
-                    NETFLIX PREMIUM ACCOUNT
-                </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 50, x: 0 }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: false }}
-                    className='w-full flex justify-center text-md mb-16 font-extralight'
-                >
-                    Ketersediaan Terbatas
-                </motion.p>
-
+                <div className='flex w-full flex-col justify-center items-center'>
+                    <div className='flex w-full flex-col items-center py-5'>
+                        <motion.div
+                            initial={{ opacity: 0, y: 100, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='flex justify-center items-center w-full'
+                        >
+                            <h2
+                                className={`${roboto.className} text-red-600 text-5xl md:text-6xl lg:text-6xl opacity-100 duration-700`}
+                            >
+                                NETFLIX
+                            </h2>
+                            <h2
+                                className={`${roboto.className} text-[85px] lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700`}
+                            >
+                                PREMIUM
+                            </h2>
+                        </motion.div>
+                        <motion.p
+                            initial={{ opacity: 0, y: 80, x: 0 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: false }}
+                            className='font-light text-gray-600 dark:text-gray-400 md:text-lg py-2 lg:text-2xl lg:py-5'
+                        >
+                            Ketersediaan Akun Terbatas
+                        </motion.p>
+                    </div>
+                </div>
                 <div className='flex flex-row gap-10 lg:gap-20 overflow-x-auto overflow-y-hidden justify-start lg:justify-center max-w-screen p-5 pb-12 w-full'>
                     {Products.map((product) => (
                         <motion.div

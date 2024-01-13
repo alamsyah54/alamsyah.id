@@ -90,8 +90,27 @@ export const fetchData = async () => {
 
     const PrivateFormated = formatData(dataPivate)
     const SharedFormated = formatData(dataShared)
-    const Private = PrivateFormated.slice(1)
-    const Shared = SharedFormated.slice(1)
-    const Data = [...Private, ...Shared].sort((a: any, b: any) => a[4] - b[4])
-    return { Data }
+    const PrivateData = PrivateFormated.slice(1)
+    const SharedData = SharedFormated.slice(1)
+    const Data = [...PrivateData, ...SharedData].sort(
+        (a: any, b: any) => a[4] - b[4],
+    )
+    const getPrivateOnly = (data: string[][]): string[][] => {
+        return data.filter((innerArray) => innerArray[0] === "PRIVATE")
+    }
+
+    const getSharedOnly = (data: string[][]): string[][] => {
+        return data.filter((innerArray) => innerArray[0] === "SHARED")
+    }
+
+    const getAll = (data: string[][]): string[][] => {
+        return data.filter(
+            (innerArray) =>
+                innerArray[0] === "PRIVATE" || innerArray[0] === "SHARED",
+        )
+    }
+    const Private = getPrivateOnly(Data)
+    const Shared = getSharedOnly(Data)
+    const allData = getAll(Data)
+    return { Private, Shared, allData }
 }

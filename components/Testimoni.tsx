@@ -2,6 +2,7 @@ import { Testi } from "@/constant"
 import { Roboto } from "next/font/google"
 import Image from "next/image"
 import Link from "next/link"
+import { Suspense } from "react"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -20,14 +21,28 @@ const Testimoni = () => {
             <div className='flex justify-center items-center flex-col w-[97vw] max-w-screen'>
                 <div className='flex flex-row gap-5 overflow-x-auto overflow-y-hidden justify-start max-w-screen p-5 pb-12 w-full'>
                     {Testi.map((testi, i) => (
-                        <Image
+                        <Suspense
                             key={i}
-                            src={testi.picture}
-                            alt='Testimonial Pictures'
-                            width={200}
-                            height={200}
-                            className='rounded-xl w-full h-96 bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 p-1 shadow-xl shadow-black/40 mb-5'
-                        />
+                            fallback={
+                                <div className='flex justify-center items-center rounded-2xl w-full h-96 bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 p-1 shadow-xl shadow-black/40 mb-5'>
+                                    <Image
+                                        src={"/images/AFooterLight.png"}
+                                        alt='ALAMSYAH.ID'
+                                        width={300}
+                                        height={300}
+                                    />
+                                </div>
+                            }
+                        >
+                            <Image
+                                key={i}
+                                src={testi.picture}
+                                alt='Testimonial Pictures'
+                                width={200}
+                                height={200}
+                                className='rounded-2xl w-full h-96 bg-gradient-to-r from-sky-500 via-purple-500 to-fuchsia-500 p-1 shadow-xl shadow-black/40 mb-5'
+                            />
+                        </Suspense>
                     ))}
                 </div>
             </div>

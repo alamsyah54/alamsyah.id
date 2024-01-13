@@ -6,6 +6,7 @@ import PromoSection from "@/components/PromoSection"
 import Rules from "@/components/Rules"
 import Testimoni from "@/components/Testimoni"
 import Loading from "@/components/shared/Loading"
+import Accounts from "@/components/Accounts"
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <main className='flex flex-col h-fit items-center justify-center'>
                 <HeroSection />
                 {/* <PromoSection /> */}
+                <Accounts />
                 <AdsSection />
                 <DetailSection />
                 <Rules />

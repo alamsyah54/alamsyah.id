@@ -21,7 +21,7 @@ const DetailSection = () => {
                 className='flex flex-col lg:p-20 pt-7 h-fit px-5'
             >
                 <div className='flex justify-center flex-col lg:flex-row-reverse items-center'>
-                    <div className='flex w-full flex-col justify-end items-end'>
+                    <div className='flex w-full flex-col justify-center items-center'>
                         <div className='flex w-full flex-col items-center'>
                             <motion.div
                                 initial={{ opacity: 0, y: 100, x: 0 }}
@@ -31,14 +31,14 @@ const DetailSection = () => {
                                 className='flex justify-center items-center w-full'
                             >
                                 <h2
-                                    className={`${roboto.className} text-sky-500 text-5xl md:text-6xl lg:text-6xl opacity-100 duration-700`}
+                                    className={`${roboto.className} text-sky-500 text-4xl md:text-5xl lg:text-5xl opacity-100 duration-700`}
                                 >
-                                    All Devices
+                                    SUPPORT ALL
                                 </h2>
                                 <h2
-                                    className={`${roboto.className} text-[85px] lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700`}
+                                    className={`${roboto.className} text-8xl lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700`}
                                 >
-                                    SUPPORT
+                                    DEVICES
                                 </h2>
                             </motion.div>
                             <motion.h2

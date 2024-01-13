@@ -5,15 +5,8 @@ import Loading from "@/components/shared/Loading"
 
 const page = async ({ params }: { params: { secretId: string } }) => {
     const secretID = params.secretId
-    const { Data } = await fetchData()
+    const { allData } = await fetchData()
 
-    const getAll = (data: string[][]): string[][] => {
-        return data.filter(
-            (innerArray) =>
-                innerArray[0] === "PRIVATE" || innerArray[0] === "SHARED",
-        )
-    }
-    const allData = getAll(Data)
     return (
         <Suspense fallback={<Loading />}>
             <div className='w-full justify-center items-start flex px-5'>

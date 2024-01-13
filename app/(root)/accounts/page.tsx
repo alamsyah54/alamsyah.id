@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react"
 import { fetchData, censorEmail, censorPassword } from "@/app/api/googleSheets"
+import { unstable_noStore } from "next/cache"
 import Link from "next/link"
 import { Roboto } from "next/font/google"
-import { unstable_noStore } from "next/cache"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -13,24 +13,8 @@ const roboto = Roboto({
 
 const page = async () => {
     unstable_noStore()
-    const { Data } = await fetchData()
-    const getPrivateOnly = (data: string[][]): string[][] => {
-        return data.filter((innerArray) => innerArray[0] === "PRIVATE")
-    }
+    const { Private, Shared, allData } = await fetchData()
 
-    const getSharedOnly = (data: string[][]): string[][] => {
-        return data.filter((innerArray) => innerArray[0] === "SHARED")
-    }
-
-    const getAll = (data: string[][]): string[][] => {
-        return data.filter(
-            (innerArray) =>
-                innerArray[0] === "PRIVATE" || innerArray[0] === "SHARED",
-        )
-    }
-    const Private = getPrivateOnly(Data)
-    const Shared = getSharedOnly(Data)
-    const allData = getAll(Data)
     console.log(allData)
     console.log("_________________________________")
     console.log(" ")
