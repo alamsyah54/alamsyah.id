@@ -42,16 +42,10 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            {privateStock === "0" ? (
-                                "Kosong/Habis"
-                            ) : (
-                                <>
-                                    <p className='font-conthrax text-lg select-text'>
-                                        {privateStock}
-                                    </p>
-                                    Akun
-                                </>
-                            )}
+                            <p className='font-conthrax text-lg select-text'>
+                                {privateStock}
+                            </p>
+                            Akun
                         </div>
                         <div className='flex gap-1 py-1'>
                             Shared{" "}
@@ -61,16 +55,10 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            {sharedStock === "0" ? (
-                                "Kosong/Habis"
-                            ) : (
-                                <>
-                                    <p className='font-conthrax text-lg select-text'>
-                                        {sharedStock}
-                                    </p>
-                                    Profile
-                                </>
-                            )}
+                            <p className='font-conthrax text-lg select-text'>
+                                {sharedStock}
+                            </p>
+                            Profile
                         </div>
                     </div>
                 </div>
