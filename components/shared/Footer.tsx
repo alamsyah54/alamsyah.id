@@ -11,14 +11,14 @@ const Footer = () => {
                     <Image
                         width={60}
                         height={60}
-                        src='/images/AFooterDark.png'
+                        src='/icons/AOutlineWhite.webp'
                         alt='Footer Picture'
                         className='hidden dark:block duration-700'
                     />
                     <Image
                         width={60}
                         height={60}
-                        src='/images/AFooterLight.png'
+                        src='/icons/AOutlineBlack.webp'
                         alt='Footer Picture'
                         className='dark:hidden duration-700'
                     />

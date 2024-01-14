@@ -7,14 +7,14 @@ const Loading = () => {
                 <Image
                     width={100}
                     height={100}
-                    src='/images/AFooterDark.png'
+                    src='/icons/AOutlineWhite.webp'
                     alt='Loading...'
                     className='hidden dark:block duration-700'
                 />
                 <Image
                     width={100}
                     height={100}
-                    src='/images/AFooterLight.png'
+                    src='/icons/AOutlineBlack.webp'
                     alt='Loading...'
                     className='dark:hidden duration-700'
                 />

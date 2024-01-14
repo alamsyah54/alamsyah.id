@@ -253,7 +253,7 @@ ordered from https://store-alamsyah.id
 
     return (
         <main className='w-full justify-center items-center flex flex-col px-5'>
-            <div className='w-full justify-center md:w-[600px] lg:w-[80%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
+            <div className='w-full justify-center md:w-[650px] lg:w-[85%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
                 <div className='flex flex-col items-center w-full h-full'>
                     <Image
                         src={Products[currentIndex].picture[0]}
@@ -306,22 +306,46 @@ ordered from https://store-alamsyah.id
                             </h1>
                             <div className='flex flex-col items-end  w-full'>
                                 <div className='flex flex-col items-end py-3 '>
-                                    <h2 className='flex items-center'>
-                                        Mulai Dari
-                                    </h2>
-                                    <span className='flex justify-start w-full gap-1'>
-                                        <p className='flex items-start text-sm font-bold'>
-                                            IDR
-                                        </p>
-                                        <h2
-                                            className={`flex items-center text-3xl ${roboto.className}`}
-                                        >
-                                            {formatPrice(
-                                                Products[currentIndex]
-                                                    .durations[0].price,
-                                            )}
-                                        </h2>
-                                    </span>
+                                    <div className=' flex'>
+                                        <span className='flex justify-start w-full gap-1'>
+                                            <p className='flex items-start text-sm font-bold'>
+                                                IDR
+                                            </p>
+                                            <h2
+                                                className={`flex items-center text-2xl ${roboto.className}`}
+                                            >
+                                                {formatPrice(
+                                                    Products[currentIndex]
+                                                        .durations[0].price,
+                                                )}
+                                            </h2>
+                                        </span>
+                                        {Products[currentIndex].package !==
+                                            "RESELLER" && (
+                                            <>
+                                                <p
+                                                    className={`flex items-center text-2xl px-3 ${roboto.className}`}
+                                                >
+                                                    ~
+                                                </p>
+                                                <span className='flex justify-start w-full gap-1'>
+                                                    <p className='flex items-start text-sm font-bold'>
+                                                        IDR
+                                                    </p>
+                                                    <h2
+                                                        className={`flex items-center text-2xl ${roboto.className}`}
+                                                    >
+                                                        {formatPrice(
+                                                            Products[
+                                                                currentIndex
+                                                            ]?.durations?.at(-1)
+                                                                ?.price ?? 0,
+                                                        )}
+                                                    </h2>
+                                                </span>
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
                                 <Dialog>
                                     <DialogTrigger

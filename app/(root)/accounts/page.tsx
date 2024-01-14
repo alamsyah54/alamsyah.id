@@ -13,7 +13,7 @@ const roboto = Roboto({
 
 const page = async () => {
     unstable_noStore()
-    const { Private, Shared, allData } = await fetchData()
+    const { Private, Shared, allData, Stock } = await fetchData()
 
     console.log(allData)
     console.log("_________________________________")
@@ -21,16 +21,17 @@ const page = async () => {
     console.log("Private ///", Private.length)
     console.log("Shared ///", Shared.length)
     console.log("Total Netflix ///", allData.length)
+    console.log("Stock ///", Stock)
     console.log("_________________________________")
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 flex-col md:flex-row lg:flex-row justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
                 <div className='flex flex-col text-lg select-none '>
                     <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
+                        Akun Terjual
                         <p className='font-extralight font-sans capitalize'>
                             (Real Time Data)
                         </p>
-                        Akun Terjual
                     </div>
                     <div className='font-light flex gap-1 py-1'>
                         Private{" "}
