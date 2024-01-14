@@ -12,8 +12,10 @@ const roboto = Roboto({
 
 const Accounts = async () => {
     unstable_noStore()
-    const { Private, Shared, allData } = await fetchData()
+    const { Private, Shared, allData, Stock } = await fetchData()
     console.log(allData)
+    const StockPrivate = Stock[0][0]
+    const StockShared = Stock[0][1]
     console.log("_________________________________")
     console.log(" ")
     console.log("Private ///", Private.length)
@@ -24,7 +26,7 @@ const Accounts = async () => {
     return (
         <div className='w-full flex justify-center mb-32 pb-16 border-b dark:border-white/25 border-black/25 px-5'>
             <div className='flex flex-col rounded-3xl gap-8 p-5 lg:p-8 shadow-md hover:scale-105 hover:shadow-lg duration-300 h-fit group border-2 border-white dark:border-dark-400 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%'>
-                {/* <div className='flex flex-col'>
+                <div className='flex flex-col'>
                     <h2
                         className={`text-xl font-extrabold uppercase text-sky-500 ${roboto.className}`}
                     >
@@ -39,10 +41,16 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            <p className='font-conthrax text-lg select-text'>
-                                {Stock[0]}
-                            </p>
-                            Akun
+                            {StockPrivate === "0" ? (
+                                "Kosong/Habis"
+                            ) : (
+                                <>
+                                    <p className='font-conthrax text-lg select-text'>
+                                        {StockPrivate}
+                                    </p>
+                                    Akun
+                                </>
+                            )}
                         </div>
                         <div className='flex gap-1 py-1'>
                             Shared{" "}
@@ -52,13 +60,19 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            <p className='font-conthrax text-lg select-text'>
-                                {Stock[1]}
-                            </p>
-                            Profile
+                            {StockShared === "0" ? (
+                                "Kosong/Habis"
+                            ) : (
+                                <>
+                                    <p className='font-conthrax text-lg select-text'>
+                                        {StockShared}
+                                    </p>
+                                    Akun
+                                </>
+                            )}
                         </div>
                     </div>
-                </div> */}
+                </div>
                 <div className='flex flex-col'>
                     <h2
                         className={`text-xl font-extrabold uppercase text-fuchsia-500 ${roboto.className}`}
