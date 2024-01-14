@@ -97,7 +97,7 @@ export const fetchData = async () => {
     const StockFormated = formatData(infoStock)
     const PrivateData = PrivateFormated.slice(1)
     const SharedData = SharedFormated.slice(1)
-    const Stock = StockFormated.slice(1)[0]
+    const Stock = StockFormated.slice(1)
     const Data = [...PrivateData, ...SharedData].sort(
         (a: any, b: any) => a[4] - b[4],
     )

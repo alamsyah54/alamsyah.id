@@ -13,8 +13,6 @@ const roboto = Roboto({
 const Accounts = async () => {
     unstable_noStore()
     const { Private, Shared, allData, Stock } = await fetchData()
-    const privateStock = Stock[0]
-    const sharedStock = Stock[1]
     console.log(allData)
     console.log("_________________________________")
     console.log(" ")
@@ -43,7 +41,7 @@ const Accounts = async () => {
                                 //
                             </p>
                             <p className='font-conthrax text-lg select-text'>
-                                {privateStock}
+                                {Stock[0]}
                             </p>
                             Akun
                         </div>
@@ -56,7 +54,7 @@ const Accounts = async () => {
                                 //
                             </p>
                             <p className='font-conthrax text-lg select-text'>
-                                {sharedStock}
+                                {Stock[1]}
                             </p>
                             Profile
                         </div>
