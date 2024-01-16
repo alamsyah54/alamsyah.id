@@ -312,7 +312,7 @@ ordered from https://store-alamsyah.id
                                                 IDR
                                             </p>
                                             <h2
-                                                className={`flex items-center text-2xl ${roboto.className}`}
+                                                className={`flex items-center text-xl ${roboto.className}`}
                                             >
                                                 {formatPrice(
                                                     Products[currentIndex]
@@ -324,7 +324,7 @@ ordered from https://store-alamsyah.id
                                             "RESELLER" && (
                                             <>
                                                 <p
-                                                    className={`flex items-center text-2xl px-3 ${roboto.className}`}
+                                                    className={`flex items-center text-xl px-3 ${roboto.className}`}
                                                 >
                                                     ~
                                                 </p>
@@ -333,7 +333,7 @@ ordered from https://store-alamsyah.id
                                                         IDR
                                                     </p>
                                                     <h2
-                                                        className={`flex items-center text-2xl ${roboto.className}`}
+                                                        className={`flex items-center text-xl ${roboto.className}`}
                                                     >
                                                         {formatPrice(
                                                             Products[

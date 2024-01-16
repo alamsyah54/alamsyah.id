@@ -27,7 +27,7 @@ const AdsSection = () => {
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: false }}
-                            className='flex justify-center items-center w-full'
+                            className='flex justify-center items-center w-full select-none'
                         >
                             <h2
                                 className={`${roboto.className} text-red-600 text-5xl md:text-6xl lg:text-6xl opacity-100 duration-700`}
@@ -45,7 +45,7 @@ const AdsSection = () => {
                             whileInView={{ opacity: 1, y: 0, x: 0 }}
                             transition={{ duration: 1 }}
                             viewport={{ once: false }}
-                            className='font-light text-gray-600 dark:text-gray-400 md:text-lg py-2 lg:text-2xl lg:py-5'
+                            className='font-light text-gray-600 dark:text-gray-400 md:text-lg py-2 lg:text-2xl lg:py-5 select-none'
                         >
                             Ketersediaan Akun Terbatas
                         </motion.p>

@@ -327,6 +327,24 @@ export const supportDevices = [
     },
 ]
 
+export const RulesContent = [
+    {
+        title: "Shared",
+        description:
+            "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Logout terlebih dahulu jika ingin mengganti device | Dilarang Mengganti PIN Tanpa Sepengetahuan Admin (Wajib Lapor)",
+    },
+    {
+        title: "Private",
+        description:
+            "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan",
+    },
+    {
+        title: "Reseller",
+        description:
+            "Dilarang Menjual 1 Profile Lebih Dari 1 Device | Dilarang Menipu Seperti Menjual Paket 1 Tahun Lalu Kabur | Wajib Bertanggung Jawab Pada Customer Anda!",
+    },
+]
+
 export const Products = [
     {
         _id: 1,
@@ -360,7 +378,7 @@ export const Products = [
         ],
         whatYouGet:
             "Akses ke 1 Profile Maksimal 1 Device, dan boleh request nama Profile dan PIN. jika mau",
-        rules: "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Dilarang Menggunakan VPN/Login Diluar Indonesia",
+        rules: RulesContent[0].description,
     },
     {
         _id: 2,
@@ -394,7 +412,7 @@ export const Products = [
         ],
         whatYouGet:
             "Full Akses ke seluruh akun, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
-        rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Selalu Lapor dan kirim Password baru, Untuk pendataan",
+        rules: RulesContent[1].description,
     },
     {
         _id: 3,
@@ -425,7 +443,7 @@ export const Products = [
         ],
         whatYouGet:
             "Mendapatkan 3 Akun Sekaligus dengan durasi yang sama, dan full akses, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
-        rules: "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan | Selalu Lapor dan kirim Password baru, Untuk pendataan",
+        rules: RulesContent[2].description,
     },
 ]
 
@@ -440,21 +458,3 @@ for (let i = 1; i <= 59; i++) {
         picture: `/images/testimonial/testimoni_${i}.jpeg`,
     })
 }
-
-export const RulesContent = [
-    {
-        title: "Shared",
-        description:
-            "Hanya Untuk 1 Perangkat | Dilarang Mengganti Password & Email | Dilarang Menambahkan Profil Baru | Gunakan 1 Profil Saja | Logout terlebih dahulu jika ingin mengganti device | Dilarang Mengganti PIN Tanpa Sepengetahuan Admin (Wajib Lapor)",
-    },
-    {
-        title: "Private",
-        description:
-            "Dilarang Mengganti Email | Dilarang Merubah/Merusak Payment Info Atau Subscription | Selalu Lapor Dan Kirim Password Baru Kepada Admin Untuk Pendataan",
-    },
-    {
-        title: "Reseller",
-        description:
-            "Dilarang Menjual 1 Profile Lebih Dari 1 Device | Dilarang Menipu Seperti Menjual Paket 1 Tahun Lalu Kabur | Wajib Bertanggung Jawab Pada Customer Anda!",
-    },
-]

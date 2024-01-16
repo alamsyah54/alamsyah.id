@@ -14,20 +14,22 @@ const roboto = Roboto({
 const page = async () => {
     unstable_noStore()
     const { Private, Shared, allData, Stock } = await fetchData()
-
+    const StockPrivate = Stock[0][0]
+    const StockShared = Stock[0][1]
     console.log(allData)
     console.log("_________________________________")
     console.log(" ")
     console.log("Private ///", Private.length)
     console.log("Shared ///", Shared.length)
     console.log("Total Netflix ///", allData.length)
-    console.log("Stock ///", Stock)
+    console.log("Stock Private///", StockPrivate)
+    console.log("Stock Shared///", StockShared)
     console.log("_________________________________")
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 flex-col md:flex-row lg:flex-row justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>
                 <div className='flex flex-col text-lg select-none '>
-                    <div className='font-conthrax flex lg:flex-row flex-col gap-2'>
+                    <div className='font-conthrax flex lg:flex-row flex-col mb-2 gap-0 md:gap-2'>
                         Akun Terjual
                         <p className='font-extralight font-sans capitalize'>
                             (Real Time Data)
@@ -71,6 +73,52 @@ const page = async () => {
                             {allData.length}
                         </p>
                         Aktif Customer
+                    </div>
+                </div>
+                <div className='flex flex-col text-lg select-none '>
+                    <div className='font-conthrax flex lg:flex-row flex-col mb-2 gap-0 md:gap-2'>
+                        Stock Akun
+                        <p className='font-extralight font-sans capitalize'>
+                            (Real Time Data)
+                        </p>
+                    </div>
+                    <div className='flex gap-1 py-1'>
+                        Private{" "}
+                        <p
+                            className={`text-purple-500 font-black ${roboto.className}`}
+                        >
+                            {"  "}
+                            //
+                        </p>
+                        {StockPrivate === "0" ? (
+                            "Kosong/Habis"
+                        ) : (
+                            <>
+                                <p className='font-conthrax text-lg select-text'>
+                                    {StockPrivate}
+                                </p>
+                                Akun
+                            </>
+                        )}
+                    </div>
+                    <div className='flex gap-1 py-1'>
+                        Shared{" "}
+                        <p
+                            className={`text-fuchsia-500 font-black ${roboto.className}`}
+                        >
+                            {"  "}
+                            //
+                        </p>
+                        {StockShared === "0" ? (
+                            "Kosong/Habis"
+                        ) : (
+                            <>
+                                <p className='font-conthrax text-lg select-text'>
+                                    {StockShared}
+                                </p>
+                                Profile
+                            </>
+                        )}
                     </div>
                 </div>
                 <div className='flex flex-col gap-3 items-start justify-start text-start md:items-end lg:items-end'>

@@ -21,6 +21,8 @@ const Accounts = async () => {
     console.log("Private ///", Private.length)
     console.log("Shared ///", Shared.length)
     console.log("Total Netflix ///", allData.length)
+    console.log("Stock Private///", StockPrivate)
+    console.log("Stock Shared///", StockShared)
     console.log("_________________________________")
 
     return (
@@ -28,7 +30,7 @@ const Accounts = async () => {
             <div className='flex flex-col rounded-3xl gap-8 p-5 lg:p-8 shadow-md hover:scale-105 hover:shadow-lg duration-300 h-fit group border-2 border-white dark:border-dark-400 bg-gradient-to-bl from-gray-50 from-15% via-gray-100 to-gray-200 dark:from-dark-500 dark:from-15% dark:via-dark-600 via-40% dark:to-dark-700 to-90%'>
                 <div className='flex flex-col'>
                     <h2
-                        className={`text-xl font-extrabold uppercase text-sky-500 ${roboto.className}`}
+                        className={`text-xl font-extrabold uppercase text-sky-500 ${roboto.className} select-none`}
                     >
                         Netflix Stock
                     </h2>
@@ -36,7 +38,7 @@ const Accounts = async () => {
                         <div className='flex gap-1 py-1'>
                             Private{" "}
                             <p
-                                className={`text-purple-500 font-black ${roboto.className}`}
+                                className={`text-purple-500 font-black ${roboto.className} select-none`}
                             >
                                 {"  "}
                                 //
@@ -45,7 +47,7 @@ const Accounts = async () => {
                                 "Kosong/Habis"
                             ) : (
                                 <>
-                                    <p className='font-conthrax text-lg select-text'>
+                                    <p className='font-conthrax text-lg  select-none'>
                                         {StockPrivate}
                                     </p>
                                     Akun
@@ -67,7 +69,7 @@ const Accounts = async () => {
                                     <p className='font-conthrax text-lg select-text'>
                                         {StockShared}
                                     </p>
-                                    Akun
+                                    Profile
                                 </>
                             )}
                         </div>
@@ -75,7 +77,7 @@ const Accounts = async () => {
                 </div>
                 <div className='flex flex-col'>
                     <h2
-                        className={`text-xl font-extrabold uppercase text-fuchsia-500 ${roboto.className}`}
+                        className={`text-xl font-extrabold uppercase text-fuchsia-500 ${roboto.className} select-none`}
                     >
                         Netflix Aktif & Terjual
                     </h2>
@@ -83,12 +85,12 @@ const Accounts = async () => {
                         <div className='flex gap-1 py-1'>
                             Private{" "}
                             <p
-                                className={`text-purple-500 font-black ${roboto.className}`}
+                                className={`text-purple-500 font-black ${roboto.className} select-none`}
                             >
                                 {"  "}
                                 //
                             </p>
-                            <p className='font-conthrax text-lg select-text'>
+                            <p className='font-conthrax text-lg  select-none'>
                                 {Private.length}
                             </p>
                             Akun
@@ -101,7 +103,7 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            <p className='font-conthrax text-lg select-text'>
+                            <p className='font-conthrax text-lg  select-none'>
                                 {Shared.length}
                             </p>
                             Profile
@@ -114,7 +116,7 @@ const Accounts = async () => {
                                 {"  "}
                                 //
                             </p>
-                            <p className='font-conthrax text-lg select-text'>
+                            <p className='font-conthrax text-lg  select-none'>
                                 {allData.length}
                             </p>
                             Aktif Customer
