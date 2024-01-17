@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "../styles/globals.css"
+import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 
 export const metadata: Metadata = {
     title: {
@@ -30,10 +31,13 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang='en' className='!scroll-smooth'>
-            <body className='selection:bg-fuchsia-500 selection:text-white dark:bg-dark-700 bg-gray-50 text-dark-800 dark:text-gray-300 duration-700'>
-                {children}
-            </body>
-        </html>
+        <>
+            <GoogleAnalytics measurementId='G-Z86GVT7LTC' />
+            <html lang='en' className='!scroll-smooth'>
+                <body className='selection:bg-fuchsia-500 selection:text-white dark:bg-dark-700 bg-gray-50 text-dark-800 dark:text-gray-300 duration-700'>
+                    {children}
+                </body>
+            </html>
+        </>
     )
 }
