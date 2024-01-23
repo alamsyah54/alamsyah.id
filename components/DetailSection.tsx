@@ -28,15 +28,15 @@ const DetailSection = () => {
                                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                                 transition={{ duration: 1 }}
                                 viewport={{ once: false }}
-                                className='flex justify-center items-center w-full'
+                                className='flex justify-center items-center w-full select-none'
                             >
                                 <h2
-                                    className={`${roboto.className} text-sky-500 text-4xl md:text-5xl lg:text-5xl opacity-100 duration-700`}
+                                    className={`${roboto.className} text-sky-500 text-4xl md:text-5xl lg:text-5xl opacity-100 duration-700 select-none`}
                                 >
                                     SUPPORT ALL
                                 </h2>
                                 <h2
-                                    className={`${roboto.className} text-8xl lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700`}
+                                    className={`${roboto.className} text-8xl lg:text-8xl md:text-8xl absolute opacity-10 -z-20 duration-700 select-none`}
                                 >
                                     DEVICES
                                 </h2>
@@ -46,7 +46,7 @@ const DetailSection = () => {
                                 whileInView={{ opacity: 1, y: 0, x: 0 }}
                                 transition={{ duration: 1 }}
                                 viewport={{ once: false }}
-                                className='font-light text-gray-600 dark:text-gray-400 md:text-lg py-3 lg:text-2xl lg:py-5'
+                                className='font-light text-gray-600 dark:text-gray-400 md:text-lg py-3 lg:text-2xl lg:py-5 select-none'
                             >
                                 Kenyamanan menonton di berbagai perangkat
                             </motion.h2>

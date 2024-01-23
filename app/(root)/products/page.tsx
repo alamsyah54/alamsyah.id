@@ -11,6 +11,7 @@ import { ImCheckboxChecked } from "react-icons/im" //check
 import { FaMinus } from "react-icons/fa6"
 import { FaPlus } from "react-icons/fa6"
 import { PiPaperPlaneTiltFill } from "react-icons/pi"
+import { GoAlert } from "react-icons/go"
 import {
     Dialog,
     DialogContent,
@@ -255,13 +256,18 @@ ordered from https://store-alamsyah.id
         <main className='w-full justify-center items-center flex flex-col px-5'>
             <div className='w-full justify-center md:w-[650px] lg:w-[85%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
                 <div className='flex flex-col items-center w-full h-full'>
-                    <Image
-                        src={Products[currentIndex].picture[0]}
-                        alt='Package Pictures'
-                        width={700}
-                        height={700}
-                        className='full '
-                    />
+                    <div className='w-full h-full overflow-x-auto flex mb-5'>
+                        {Products[currentIndex].picture.map((pic, i) => (
+                            <Image
+                                key={i}
+                                src={pic}
+                                alt='Package Pictures'
+                                width={700}
+                                height={700}
+                                className='w-full h-full'
+                            />
+                        ))}
+                    </div>
                     <div className='lg:flex justify-center w-full hidden'>
                         {Products.map((product, slideIndex) => (
                             <div
@@ -308,11 +314,11 @@ ordered from https://store-alamsyah.id
                                 <div className='flex flex-col items-end py-3 '>
                                     <div className=' flex'>
                                         <span className='flex justify-start w-full gap-1'>
-                                            <p className='flex items-start text-sm font-bold'>
+                                            <p className='flex items-start text-sm md:text-md font-bold'>
                                                 IDR
                                             </p>
                                             <h2
-                                                className={`flex items-center text-xl ${roboto.className}`}
+                                                className={`flex items-center text-2xl ${roboto.className}`}
                                             >
                                                 {formatPrice(
                                                     Products[currentIndex]
@@ -324,16 +330,16 @@ ordered from https://store-alamsyah.id
                                             "RESELLER" && (
                                             <>
                                                 <p
-                                                    className={`flex items-center text-xl px-3 ${roboto.className}`}
+                                                    className={`flex items-center text-sm px-3 ${roboto.className}`}
                                                 >
                                                     ~
                                                 </p>
                                                 <span className='flex justify-start w-full gap-1'>
-                                                    <p className='flex items-start text-sm font-bold'>
+                                                    <p className='flex items-start text-sm md:text-md font-bold'>
                                                         IDR
                                                     </p>
                                                     <h2
-                                                        className={`flex items-center text-xl ${roboto.className}`}
+                                                        className={`flex items-center text-2xl ${roboto.className}`}
                                                     >
                                                         {formatPrice(
                                                             Products[
@@ -1009,7 +1015,7 @@ ordered from https://store-alamsyah.id
                                 (feature, i) => (
                                     <div
                                         key={i}
-                                        className='flex gap-2 py-2 justify-start items-start w-full capitalize '
+                                        className='flex gap-2 py-2 justify-start items-start w-full capitalize'
                                     >
                                         <FaCheckCircle
                                             className={`  
@@ -1033,9 +1039,14 @@ ordered from https://store-alamsyah.id
                             )}
                         </div>
                     </div>
-                    <p className='py-10 text-center lg:text-start text-red-500 font-extrabold capitalize'>
-                        DIBACA! <br /> {Products[currentIndex].rules}
-                    </p>
+                    <div className='my-10 p-5 rounded-2xl bg-red-500/20 border border-red-500'>
+                        <div className='w-full flex justify-center border-b border-red-500 mb-3 pb-3'>
+                            <GoAlert className='text-4xl text-red-600' />
+                        </div>
+                        <p className='text-center lg:text-start text-red-500 font-extrabold capitalize'>
+                            {Products[currentIndex].rules}
+                        </p>
+                    </div>
                 </div>
             </div>
         </main>
