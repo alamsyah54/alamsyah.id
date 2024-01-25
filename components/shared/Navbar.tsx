@@ -161,7 +161,7 @@ const Navbar = () => {
                     }}
                     className='fixed z-50 bottom-10 right-10 flex flex-col justify-center items-center transition-all duration-700'
                 >
-                    <div className='rounded-full bg-gray-100 dark:bg-dark-800 animate-scrolltop'>
+                    <div className='rounded-full bg-gray-100/30 dark:bg-dark-800/30 animate-scrolltop'>
                         <FiArrowUpCircle className='z-50 text-4xl text-black dark:text-white' />
                     </div>
 
