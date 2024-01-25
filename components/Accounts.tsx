@@ -13,17 +13,17 @@ const roboto = Roboto({
 const Accounts = async () => {
     unstable_noStore()
     const { Private, Shared, allData, Stock } = await fetchData()
-    console.log(allData)
+    // console.log(allData)
     const StockPrivate = Stock[0][0]
     const StockShared = Stock[0][1]
-    console.log("_________________________________")
-    console.log(" ")
-    console.log("Private ///", Private.length)
-    console.log("Shared ///", Shared.length)
-    console.log("Total Netflix ///", allData.length)
-    console.log("Stock Private///", StockPrivate)
-    console.log("Stock Shared///", StockShared)
-    console.log("_________________________________")
+    // console.log("_________________________________")
+    // console.log(" ")
+    // console.log("Private ///", Private.length)
+    // console.log("Shared ///", Shared.length)
+    // console.log("Total Netflix ///", allData.length)
+    // console.log("Stock Private///", StockPrivate)
+    // console.log("Stock Shared///", StockShared)
+    // console.log("_________________________________")
 
     return (
         <div className='w-full flex justify-center mb-32 pb-16 border-b dark:border-white/25 border-black/25 px-5'>

@@ -23,11 +23,12 @@ const Footer = () => {
                         className='dark:hidden duration-700'
                     />
                     <span className='px-2'>
-                        <p className='text-xs font-conthrax'>
-                            &copy; 2023 ALAMSYAH.ID
-                        </p>
+                        <p className='text-xs font-conthrax'>ALAMSYAH.ID</p>
                         <p className='text-xs font-extralight'>
                             USE YOUR YOUTH FOR THE FUTURE
+                        </p>
+                        <p className='text-xs font-conthrax'>
+                            &copy; 2019-2024
                         </p>
                     </span>
                 </Link>

@@ -230,14 +230,14 @@ ordered from https://store-alamsyah.id
         }
 
         // Display the order details in the console
-        console.log("Order Details:", {
-            selectedProducts,
-            quantities,
-            customerName,
-            orderNotes,
-            paymentMethod,
-            totalAmount,
-        })
+        // console.log("Order Details:", {
+        //     selectedProducts,
+        //     quantities,
+        //     customerName,
+        //     orderNotes,
+        //     paymentMethod,
+        //     totalAmount,
+        // })
 
         // Generate WhatsApp link
         generateWhatsAppLink()
