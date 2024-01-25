@@ -20,7 +20,7 @@ const AdsSection = () => {
                 id='ads'
                 className='flex justify-center items-center flex-col w-[97vw] md:w-[100vw] max-w-screen md:bg-cover md:bg-image md:bg-no-repeat md:bg-netflixMedium lg:bg-cover lg:bg-image lg:bg-no-repeat lg:bg-netflixLarge'
             >
-                <div className='w-full h-full flex justify-center items-center flex-col py-10 bg-white/80 dark:bg-black/80'>
+                <div className='w-full h-full flex justify-center items-center flex-col py-10 md:bg-white/90 md:dark:bg-black/90'>
                     <div className='flex w-full flex-col justify-center items-center '>
                         <div className='flex w-full flex-col items-center py-5'>
                             <motion.div
@@ -138,9 +138,8 @@ const AdsSection = () => {
                             </motion.div>
                         ))}
                     </div>
+                    <PiHandPointingLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft lg:hidden' />
                 </div>
-
-                <PiHandPointingLight className='text-3xl lg:text-4xl mt-5 opacity-60 animate-rightleft lg:hidden' />
             </section>
         </AnimatePresence>
     )
