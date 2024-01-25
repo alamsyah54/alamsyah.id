@@ -4,14 +4,8 @@ import { FacebookProvider, CustomChat } from "react-facebook"
 
 const FacebookChat = () => {
     return (
-        <FacebookProvider
-            appId={process.env.FACEBOOK_APP_ID as string}
-            chatSupport
-        >
-            <CustomChat
-                pageId={process.env.FACEBOOK_PAGE_ID as string}
-                minimized={true}
-            />
+        <FacebookProvider appId='328156866736468' chatSupport>
+            <CustomChat pageId='106035745352024' minimized={true} />
         </FacebookProvider>
     )
 }
