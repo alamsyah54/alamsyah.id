@@ -40,6 +40,12 @@ const config: Config = {
             fontFamily: {
                 conthrax: "'Conthrax', sans-serif",
             },
+            backgroundImage: {
+                netflixMedium:
+                    "url('https://assets.nflxext.com/ffe/siteui/vlv3/32c47234-8398-4a4f-a6b5-6803881d38bf/503ebb79-320a-49ae-ab11-ac47b76db697/ID-en-20240122-popsignuptwoweeks-perspective_alpha_website_medium.jpg')",
+                netflixLarge:
+                    "url('https://assets.nflxext.com/ffe/siteui/vlv3/32c47234-8398-4a4f-a6b5-6803881d38bf/503ebb79-320a-49ae-ab11-ac47b76db697/ID-en-20240122-popsignuptwoweeks-perspective_alpha_website_large.jpg')",
+            },
         },
     },
     plugins: [],

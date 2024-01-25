@@ -16,15 +16,6 @@ const page = async () => {
     const { Private, Shared, allData, Stock } = await fetchData()
     const StockPrivate = Stock[0][0]
     const StockShared = Stock[0][1]
-    // console.log(allData)
-    // console.log("_________________________________")
-    // console.log(" ")
-    // console.log("Private ///", Private.length)
-    // console.log("Shared ///", Shared.length)
-    // console.log("Total Netflix ///", allData.length)
-    // console.log("Stock Private///", StockPrivate)
-    // console.log("Stock Shared///", StockShared)
-    // console.log("_________________________________")
     return (
         <div className='w-full justify-center items-center flex flex-col p-12 lg:p-24 scroll-smooth'>
             <div className='flex gap-7 flex-col md:flex-row lg:flex-row justify-between border-b-[1px] border-black/20 dark:border-white/20 pb-8 mb-8 w-full'>

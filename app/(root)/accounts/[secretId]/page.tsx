@@ -6,7 +6,6 @@ import Loading from "@/components/shared/Loading"
 const page = async ({ params }: { params: { secretId: string } }) => {
     const secretID = params.secretId
     const { allData } = await fetchData()
-    // console.log(allData)
     function matchData(data: string[][]): string[][] {
         const matches: string[][] = []
 
