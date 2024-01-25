@@ -256,7 +256,7 @@ ordered from https://store-alamsyah.id
         <main className='w-full justify-center items-center flex flex-col px-5'>
             <div className='w-full justify-center md:w-[650px] lg:w-[85%] lg:flex-row lg:items-start items-center lg:px-10 lg:gap-14 flex flex-col'>
                 <div className='flex flex-col items-center w-full h-full'>
-                    <div className='w-full h-full overflow-x-auto flex mb-5'>
+                    <div className='w-full h-full overflow-x-auto flex mb-5 _product-scrollbar'>
                         {Products[currentIndex].picture.map((pic, i) => (
                             <Image
                                 key={i}

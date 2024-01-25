@@ -48,13 +48,15 @@ body {
 ::-webkit-scrollbar-thumb {
     @apply bg-gray-600 rounded-full absolute right-0 z-50;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     @apply bg-sky-500;
 }
 ._custom-scrollbar::-webkit-scrollbar {
     @apply w-2 h-0 bg-transparent;
+}
+._product-scrollbar::-webkit-scrollbar {
+    @apply w-0 h-2;
 }
 .galaxy-background {
     background-image: url("/images/star.png");
