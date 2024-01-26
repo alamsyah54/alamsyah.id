@@ -264,7 +264,7 @@ ordered from https://store-alamsyah.id
                                 alt='Package Pictures'
                                 width={700}
                                 height={700}
-                                className='w-full h-full'
+                                className='w-full h-full '
                             />
                         ))}
                     </div>
