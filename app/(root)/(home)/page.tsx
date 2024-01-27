@@ -14,7 +14,7 @@ export default function Home() {
             <main className='flex flex-col h-fit items-center justify-center'>
                 <HeroSection />
                 {/* <PromoSection /> */}
-                <Accounts />
+                {/* <Accounts /> */}
                 <AdsSection />
                 <DetailSection />
                 <Rules />
