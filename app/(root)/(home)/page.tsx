@@ -15,7 +15,6 @@ export default function Home() {
                 <HeroSection />
                 {/* <PromoSection /> */}
                 {/* <Accounts /> */}
-                {/* asd? */}
                 <AdsSection />
                 <DetailSection />
                 <Rules />
