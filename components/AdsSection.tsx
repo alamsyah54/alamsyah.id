@@ -20,7 +20,7 @@ const AdsSection = () => {
                 id='ads'
                 className='flex justify-center items-center flex-col w-[97vw] md:w-[100vw] h-screen max-w-screen md:bg-cover md:bg-image md:bg-no-repeat md:bg-netflixMedium lg:bg-cover lg:bg-image lg:bg-no-repeat lg:bg-netflixLarge'
             >
-                <div className='w-full h-full flex justify-center items-center flex-col py-12 md:bg-white/90 md:dark:bg-black/90'>
+                <div className='w-full h-full flex justify-center items-center flex-col py-12 md:bg-white/80 md:dark:bg-black/80'>
                     <div className='flex w-full flex-col justify-center items-center '>
                         <div className='flex w-full flex-col items-center py-5'>
                             <motion.div
