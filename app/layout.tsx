@@ -3,6 +3,7 @@ import "../styles/globals.css"
 import GoogleAnalytics from "@bradgarropy/next-google-analytics"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import FacebookChat from "@/components/FacebookChat"
 
 export const metadata: Metadata = {
     title: {
@@ -37,6 +38,7 @@ export default function RootLayout({
             <GoogleAnalytics measurementId='G-Z86GVT7LTC' />
             <html lang='en' className='!scroll-smooth'>
                 <body className='selection:bg-fuchsia-500 selection:text-white dark:bg-dark-700 bg-gray-50 text-dark-800 dark:text-gray-300 duration-700'>
+                    <FacebookChat />
                     {children}
                     <SpeedInsights />
                     <Analytics />

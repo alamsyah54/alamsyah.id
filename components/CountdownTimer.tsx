@@ -54,7 +54,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
     const date = parseISO(targetDate)
     return (
-        <div className='flex justify-center items-center flex-col'>
+        <div className='flex justify-center items-center flex-col select-none'>
             <h2 className={`${roboto.className} dark:text-red-500 text-3xl`}>
                 Berakhir Pada
             </h2>

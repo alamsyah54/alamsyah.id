@@ -349,7 +349,6 @@ export const Products = [
     {
         _id: 1,
         package: "SHARED",
-        price: "30",
         durations: [
             { title: "7 Hari", price: 10000 },
             { title: "14 Hari", price: 17000 },
@@ -386,7 +385,6 @@ export const Products = [
     {
         _id: 2,
         package: "PRIVATE",
-        price: "119",
         durations: [
             { title: "7 Hari", price: 33000 },
             { title: "14 Hari", price: 63000 },
@@ -419,8 +417,7 @@ export const Products = [
     {
         _id: 3,
         package: "RESELLER",
-        price: "349",
-        durations: [{ title: "1 Bulan", price: 349000 }],
+        durations: [{ title: "1 Bulan", price: 333000 }],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
             "Harga Spesial",

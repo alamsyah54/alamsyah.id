@@ -13,8 +13,8 @@ export default function Home() {
         <Suspense fallback={<Loading />}>
             <main className='flex flex-col h-fit items-center justify-center'>
                 <HeroSection />
-                {/* <PromoSection /> */}
-                {/* <Accounts /> */}
+                <Accounts />
+                <PromoSection />
                 <AdsSection />
                 <DetailSection />
                 <Rules />
