@@ -350,10 +350,10 @@ export const Products = [
         _id: 1,
         package: "SHARED",
         durations: [
-            { title: "7 Hari", price: 10000 },
-            { title: "14 Hari", price: 17000 },
-            { title: "1 Bulan", price: 30000 },
-            { title: "3 Bulan", price: 80000 },
+            // { title: "7 Hari", price: 10000 },
+            // { title: "14 Hari", price: 17000 },
+            { title: "1 Bulan", price: 30000, promo: 27000 },
+            { title: "3 Bulan", price: 80000, promo: 72000 },
         ],
         features: [
             "Bisa Request Nama Profile",
@@ -380,16 +380,17 @@ export const Products = [
         ],
         whatYouGet:
             "Akses ke 1 Profile Maksimal 1 Device, dan boleh request nama Profile dan PIN. jika mau",
+        bestSeller: "false",
         rules: RulesContent[0].description,
     },
     {
         _id: 2,
         package: "PRIVATE",
         durations: [
-            { title: "7 Hari", price: 33000 },
-            { title: "14 Hari", price: 63000 },
-            { title: "1 Bulan", price: 119000 },
-            { title: "3 Bulan", price: 353000 },
+            // { title: "7 Hari", price: 33000 },
+            // { title: "14 Hari", price: 63000 },
+            { title: "1 Bulan", price: 119000, promo: 107000 },
+            { title: "3 Bulan", price: 353000, promo: 318000 },
         ],
         features: [
             "Bisa Mengganti Password",
@@ -412,12 +413,13 @@ export const Products = [
         ],
         whatYouGet:
             "Full Akses ke seluruh akun, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
+        bestSeller: "true",
         rules: RulesContent[1].description,
     },
     {
         _id: 3,
         package: "RESELLER",
-        durations: [{ title: "1 Bulan", price: 333000 }],
+        durations: [{ title: "1 Bulan", price: 333000, promo: 315000 }],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
             "Harga Spesial",
@@ -437,6 +439,7 @@ export const Products = [
         picture: ["/images/RESELLER.png"],
         whatYouGet:
             "Mendapatkan 3 Akun Sekaligus dengan durasi yang sama, dan full akses, Diperbolehkan Mengganti Password ataupun membuat 5 Profile",
+        bestSeller: "false",
         rules: RulesContent[2].description,
     },
 ]

@@ -9,7 +9,7 @@ const roboto = Roboto({
     subsets: ["latin"],
 })
 const PromoSection = () => {
-    const targetDate = "2024-01-31T00:00:00"
+    const targetDate = "2024-03-01T00:00:00"
     return (
         <section id='promo' className='flex flex-col py-10 h-fit w-full'>
             <div className='flex justify-between w-full flex-col md:flex-row lg:flex-row items-start'>
@@ -28,9 +28,9 @@ const PromoSection = () => {
                         className='flex justify-center items-center w-full select-none'
                     >
                         <h2
-                            className={`${roboto.className} text-fuchsia-500 text-5xl md:text-6xl z-10 duration-700`}
+                            className={`${roboto.className} text-fuchsia-500 text-5xl z-10 duration-700`}
                         >
-                            &ldquo;FOR RESELLER&rdquo;
+                            DISCOUNT -10%
                         </h2>
                         <h2
                             className={`${roboto.className} text-[85px] md:text-9xl absolute opacity-20 duration-700`}
@@ -38,11 +38,9 @@ const PromoSection = () => {
                             PROMO
                         </h2>
                     </motion.div>
-                    <h2 className='font-black text-lg md:text-xl lg:text-2xl lg:pt-5'>
-                        Paket Reseller Hanya 333k
-                    </h2>
-                    <p className='font-light text-gray-600 dark:text-gray-400 md:text-lg '>
-                        Berlaku Untuk Pembelian Dari Web
+                    <h2 className='font-black text-lg md:text-xl lg:text-2xl lg:pt-5 capitalize'></h2>
+                    <p className='font-light text-gray-600 dark:text-gray-400 md:text-lg capitalize'>
+                        Potongan 10% berlaku untuk Semua Pilihan
                     </p>
                 </motion.div>
                 <motion.div

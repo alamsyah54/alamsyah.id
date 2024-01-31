@@ -4,6 +4,7 @@ import { fetchData, censorEmail, censorPassword } from "@/app/api/googleSheets"
 import { unstable_noStore } from "next/cache"
 import Link from "next/link"
 import { Roboto } from "next/font/google"
+import Clipboard from "@/components/Clipboard"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -143,7 +144,7 @@ const page = async () => {
                         `}
                     >
                         <div className='font-conthrax w-full flex justify-end items-start'>
-                            <p className='text-lg text-transparent bg-gradient-to-bl dark:from-white from-black bg-clip-text cursor-default select-none'>
+                            <p className='text-lg lg:text-2xl text-transparent bg-gradient-to-bl dark:from-white from-black bg-clip-text cursor-default select-none'>
                                 {row[0]}
                             </p>
                         </div>
@@ -151,8 +152,9 @@ const page = async () => {
                             <p className='font-extralight select-none mb-1'>
                                 Email
                             </p>
+
                             <p
-                                className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-none border-[1px] ${
+                                className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg mb-3 select-none ${
                                     row[0] === "SHARED" &&
                                     " border-fuchsia-500/60"
                                 } ${
@@ -162,12 +164,11 @@ const page = async () => {
                             >
                                 {censorEmail(row[2])}
                             </p>
-
                             <p className='font-extralight select-none mb-1'>
                                 Password
                             </p>
                             <p
-                                className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-none border-[1px] ${
+                                className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg mb-3 select-none ${
                                     row[0] === "SHARED" &&
                                     " border-fuchsia-500/60"
                                 } ${
@@ -185,7 +186,7 @@ const page = async () => {
                                                 Profile Name
                                             </p>
                                             <p
-                                                className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+                                                className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg mb-3 select-none ${
                                                     row[0] === "SHARED" &&
                                                     " border-fuchsia-500/60"
                                                 } ${
@@ -201,7 +202,7 @@ const page = async () => {
                                                 PIN
                                             </p>
                                             <p
-                                                className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+                                                className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg mb-3 select-none ${
                                                     row[0] === "SHARED" &&
                                                     " border-fuchsia-500/60"
                                                 } ${
@@ -219,7 +220,7 @@ const page = async () => {
                                 Expired Date
                             </p>
                             <p
-                                className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-none border-[1px] ${
+                                className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg ${
                                     row[0] === "SHARED" &&
                                     " border-fuchsia-500/60"
                                 } ${

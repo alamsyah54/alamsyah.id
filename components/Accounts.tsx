@@ -31,7 +31,7 @@ const Accounts = async () => {
                     <h2
                         className={`text-xl font-extrabold uppercase text-sky-500 ${roboto.className} select-none`}
                     >
-                        Netflix Stock
+                        Netflix Tersedia
                     </h2>
                     <div className='flex flex-col md:flex-row w-full md:gap-4 lg:gap-10 justify-start select-none'>
                         <div className='flex gap-1 py-1'>

@@ -2,6 +2,7 @@ import React, { Suspense } from "react"
 import { BsShieldLock } from "react-icons/bs"
 import { fetchData } from "@/app/api/googleSheets"
 import Loading from "@/components/shared/Loading"
+import Clipboard from "@/components/Clipboard"
 
 const page = async ({ params }: { params: { secretId: string } }) => {
     const secretID = params.secretId
@@ -57,32 +58,30 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                 <p className='font-extralight select-none mb-1'>
                                                     Email
                                                 </p>
-                                                <p
-                                                    className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+
+                                                <Clipboard
+                                                    text={row[2]}
+                                                    className={`mb-1 ${
                                                         row[0] === "SHARED" &&
                                                         " border-fuchsia-500/60"
                                                     } ${
                                                         row[0] === "PRIVATE" &&
                                                         " border-purple-500/60"
                                                     }`}
-                                                >
-                                                    {row[2]}
-                                                </p>
-
+                                                />
                                                 <p className='font-extralight select-none mb-1'>
                                                     Password
                                                 </p>
-                                                <p
-                                                    className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+                                                <Clipboard
+                                                    text={row[3]}
+                                                    className={`mb-1 ${
                                                         row[0] === "SHARED" &&
                                                         " border-fuchsia-500/60"
                                                     } ${
                                                         row[0] === "PRIVATE" &&
                                                         " border-purple-500/60"
                                                     }`}
-                                                >
-                                                    {row[3]}
-                                                </p>
+                                                />
                                                 {row[0] === "SHARED" && (
                                                     <>
                                                         <div className='flex gap-5'>
@@ -90,8 +89,11 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                                 <p className='font-extralight select-none mb-1'>
                                                                     Profile Name
                                                                 </p>
-                                                                <p
-                                                                    className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+                                                                <Clipboard
+                                                                    text={
+                                                                        row[6]
+                                                                    }
+                                                                    className={`mb-1 ${
                                                                         row[0] ===
                                                                             "SHARED" &&
                                                                         " border-fuchsia-500/60"
@@ -100,16 +102,17 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                                             "PRIVATE" &&
                                                                         " border-purple-500/60"
                                                                     }`}
-                                                                >
-                                                                    {row[6]}
-                                                                </p>
+                                                                />
                                                             </div>
                                                             <div className='flex-col'>
                                                                 <p className='font-extralight select-none mb-1'>
                                                                     PIN
                                                                 </p>
-                                                                <p
-                                                                    className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-all border-[1px] ${
+                                                                <Clipboard
+                                                                    text={
+                                                                        row[7]
+                                                                    }
+                                                                    className={`mb-1 ${
                                                                         row[0] ===
                                                                             "SHARED" &&
                                                                         " border-fuchsia-500/60"
@@ -118,9 +121,7 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                                             "PRIVATE" &&
                                                                         " border-purple-500/60"
                                                                     }`}
-                                                                >
-                                                                    {row[7]}
-                                                                </p>
+                                                                />
                                                             </div>
                                                         </div>
                                                     </>
@@ -129,7 +130,7 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                     Expired Date
                                                 </p>
                                                 <p
-                                                    className={`w-fit flex items-center mb-4 gap-2 rounded-lg px-3 py-1 shadow-none bg-black/5 dark:bg-white/5 select-none border-[1px] ${
+                                                    className={`w-fit flex gap-1 py-2 px-3 items-center focus:ring-1 focus:ring-fuchsia-500 dark:bg-dark-600 bg-gray-100 drop-shadow-md border rounded-lg ${
                                                         row[0] === "SHARED" &&
                                                         " border-fuchsia-500/60"
                                                     } ${
@@ -143,8 +144,8 @@ const page = async ({ params }: { params: { secretId: string } }) => {
                                                         row[6] + " 2024"}
                                                 </p>
                                             </div>
-                                            <div className='font-conthrax w-full flex justify-center items-center'>
-                                                <p className='text-s bg-gradient-to-bl dark:text-white/10 text-black/10 bg-clip-text cursor-default select-none'>
+                                            <div className='font-conthrax w-full flex justify-center items-center mt-5'>
+                                                <p className='text-s bg-gradient-to-bl dark:text-white/30 text-black/30 bg-clip-text cursor-default select-none'>
                                                     ALAMSYAH.ID
                                                 </p>
                                             </div>

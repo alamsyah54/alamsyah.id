@@ -312,7 +312,52 @@ ordered from https://store-alamsyah.id
                             </h1>
                             <div className='flex flex-col items-end  w-full'>
                                 <div className='flex flex-col items-end py-3 '>
-                                    <div className=' flex'>
+                                    <div className='flex text-red-600 '>
+                                        <span
+                                            className={`bg-red-500/30 px-2 text-red-500 flex items-center rounded-md mr-3 ${roboto.className}`}
+                                        >
+                                            -10%
+                                        </span>
+                                        <span className='flex justify-start w-full gap-1'>
+                                            <p className='flex items-start text-sm md:text-md font-bold'>
+                                                IDR
+                                            </p>
+                                            <h2
+                                                className={`flex items-center text-lg md:text-xl line-through ${roboto.className}`}
+                                            >
+                                                {formatPrice(
+                                                    Products[currentIndex]
+                                                        .durations[0].price,
+                                                )}
+                                            </h2>
+                                        </span>
+                                        {Products[currentIndex].package !==
+                                            "RESELLER" && (
+                                            <>
+                                                <p
+                                                    className={`flex items-center text-sm md:text-lg px-3 ${roboto.className}`}
+                                                >
+                                                    ~
+                                                </p>
+                                                <span className='flex justify-start w-full gap-1'>
+                                                    <p className='flex items-start text-sm md:text-md font-bold'>
+                                                        IDR
+                                                    </p>
+                                                    <h2
+                                                        className={`flex items-center text-lg md:text-xl line-through ${roboto.className}`}
+                                                    >
+                                                        {formatPrice(
+                                                            Products[
+                                                                currentIndex
+                                                            ]?.durations?.at(-1)
+                                                                ?.price ?? 0,
+                                                        )}
+                                                    </h2>
+                                                </span>
+                                            </>
+                                        )}
+                                    </div>
+                                    <div className='flex '>
                                         <span className='flex justify-start w-full gap-1'>
                                             <p className='flex items-start text-sm md:text-md font-bold'>
                                                 IDR
@@ -322,7 +367,7 @@ ordered from https://store-alamsyah.id
                                             >
                                                 {formatPrice(
                                                     Products[currentIndex]
-                                                        .durations[0].price,
+                                                        .durations[0].promo,
                                                 )}
                                             </h2>
                                         </span>
@@ -345,7 +390,7 @@ ordered from https://store-alamsyah.id
                                                             Products[
                                                                 currentIndex
                                                             ]?.durations?.at(-1)
-                                                                ?.price ?? 0,
+                                                                ?.promo ?? 0,
                                                         )}
                                                     </h2>
                                                 </span>

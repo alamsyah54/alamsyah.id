@@ -6,6 +6,7 @@ import { FaCheckCircle } from "react-icons/fa"
 import { Roboto } from "next/font/google"
 import { PiHandPointingLight } from "react-icons/pi"
 import { formatPrice } from "@/lib/utils"
+import { IoIosStar } from "react-icons/io"
 
 const roboto = Roboto({
     weight: ["900"],
@@ -18,10 +19,10 @@ const AdsSection = () => {
         <AnimatePresence mode='wait'>
             <section
                 id='ads'
-                className='flex justify-center items-center flex-col w-[97vw] md:w-[100vw] h-screen max-w-screen md:bg-cover md:bg-image md:bg-no-repeat md:bg-netflixMedium lg:bg-cover lg:bg-image lg:bg-no-repeat lg:bg-netflixLarge'
+                className='flex justify-center items-center flex-col w-[97vw] md:w-[100vw] h-fit max-w-screen md:bg-cover md:bg-image md:bg-no-repeat md:bg-netflixMedium lg:bg-cover lg:bg-image lg:bg-no-repeat lg:bg-netflixLarge'
             >
-                <div className='w-full h-full flex justify-center items-center flex-col py-12 md:bg-white/80 md:dark:bg-black/80'>
-                    <div className='flex w-full flex-col justify-center items-center '>
+                <div className='w-full flex justify-center items-center flex-col py-12 md:bg-white/80 md:dark:bg-black/80 '>
+                    <div className='flex w-full flex-col justify-center items-center'>
                         <div className='flex w-full flex-col items-center py-5'>
                             <motion.div
                                 initial={{ opacity: 0, y: 100, x: 0 }}
@@ -64,31 +65,68 @@ const AdsSection = () => {
                             >
                                 <div className='flex flex-col items-center justify-between h-full w-full'>
                                     <div className='flex flex-col items-center p-7 w-80 max-w-5xl '>
-                                        <h2
-                                            className={`text-4xl pb-3 duration-700 w-full text-left border-b-[1px] dark:border-white/30 border-black/30 text-transparent bg-gradient-to-r dark:from-white from-black bg-clip-text ${roboto.className}`}
-                                        >
-                                            {product.package}
-                                        </h2>
-                                        <div className='flex justify-between py-5 w-full '>
-                                            <h2 className='flex items-start w-full'>
-                                                Mulai Dari
+                                        <div className='flex border-b-[1px] dark:border-white/30 border-black/30 w-full justify-between items-start'>
+                                            <h2
+                                                className={`text-4xl pb-3 duration-700 w-fit text-left text-transparent bg-gradient-to-r dark:from-white dark:to-dark-200 from-dark-800 to-gray-300 bg-clip-text ${roboto.className}`}
+                                            >
+                                                {product.package}
                                             </h2>
-                                            <span className='flex justify-end w-full gap-1'>
-                                                <p className='flex items-start text-sm font-bold'>
-                                                    IDR
-                                                </p>
-                                                <h2
-                                                    className={`flex items-center text-3xl ${roboto.className}`}
-                                                >
-                                                    {
-                                                        //@ts-ignore
-                                                        formatPrice(
-                                                            product.durations[0]
-                                                                .price,
-                                                        )
-                                                    }
-                                                </h2>
-                                            </span>
+                                            {product.bestSeller === "true" && (
+                                                <div className='rounded-lg drop-shadow-lg text-xs bg-fuchsia-500/30 h-fit px-2 py-1 mb-3 flex items-center gap-1 font-black dark:text-fuchsia-400 text-fuchsia-600 select-none'>
+                                                    <IoIosStar />
+                                                    Best Seller
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className='flex justify-center py-5 w-full'>
+                                            {/* <span className='flex items-start w-full'>
+                                                {product.package === "RESELLER"
+                                                    ? "Hanya"
+                                                    : "Mulai Dari"}
+                                            </span> */}
+                                            <div className='flex flex-col gap-3'>
+                                                <div className='flex justify-between gap-2'>
+                                                    <span
+                                                        className={`bg-red-500/30 px-2 text-red-500 flex items-center rounded-md ${roboto.className}`}
+                                                    >
+                                                        -10%
+                                                    </span>
+                                                    <div className='flex justify-end w-full gap-1 text-red-600'>
+                                                        <p className='flex items-start text-sm font-bold'>
+                                                            IDR
+                                                        </p>
+                                                        <span
+                                                            className={`flex items-center text-xl line-through ${roboto.className}`}
+                                                        >
+                                                            {
+                                                                //@ts-ignore
+                                                                formatPrice(
+                                                                    product
+                                                                        .durations[0]
+                                                                        .price,
+                                                                )
+                                                            }
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <span className='flex w-full gap-1'>
+                                                    <p className='flex items-start text-sm font-bold'>
+                                                        IDR
+                                                    </p>
+                                                    <h2
+                                                        className={`flex items-center text-4xl ${roboto.className}`}
+                                                    >
+                                                        {
+                                                            //@ts-ignore
+                                                            formatPrice(
+                                                                product
+                                                                    .durations[0]
+                                                                    .promo,
+                                                            )
+                                                        }
+                                                    </h2>
+                                                </span>
+                                            </div>
                                         </div>
                                         <div className='flex flex-col gap-3 justify-center items-start '>
                                             {product.features.map(
