@@ -164,16 +164,16 @@ const Page = () => {
                             (d) => d.title === selectedDuration,
                         )
                         const harga =
-                            quantity * (selectedDurationData?.price || 0)
+                            quantity * (selectedDurationData?.promo || 0)
 
                         return `
 ${index + 1}. *${product.package}*
 Durasi : *${selectedDuration || ""}*
-Harga : Rp ${formatPrice(selectedDurationData?.price || 0)}
+Harga : Rp ${formatPrice(selectedDurationData?.promo || 0)}
 Kuantitas : *${quantity}*
 
 Total Harga : *${quantity}* x Rp ${formatPrice(
-                            selectedDurationData?.price || 0,
+                            selectedDurationData?.promo || 0,
                         )} = *Rp ${formatPrice(harga)}*
 `
                     }
