@@ -137,7 +137,7 @@ const Page = () => {
                         (d) => d.title === selectedDuration,
                     )
                     if (selectedDurationData) {
-                        return total + quantity * selectedDurationData.price
+                        return total + quantity * selectedDurationData.promo
                     }
                 }
                 return total
@@ -327,7 +327,7 @@ ordered from https://store-alamsyah.id
                                             >
                                                 {formatPrice(
                                                     Products[currentIndex]
-                                                        .durations[0].price,
+                                                        .durations[0].promo,
                                                 )}
                                             </h2>
                                         </span>
@@ -350,7 +350,7 @@ ordered from https://store-alamsyah.id
                                                             Products[
                                                                 currentIndex
                                                             ]?.durations?.at(-1)
-                                                                ?.price ?? 0,
+                                                                ?.promo ?? 0,
                                                         )}
                                                     </h2>
                                                 </span>
@@ -671,7 +671,7 @@ ordered from https://store-alamsyah.id
                                                                                             className={`flex items-center text-xl ${roboto.className}`}
                                                                                         >
                                                                                             {formatPrice(
-                                                                                                duration.price,
+                                                                                                duration.promo,
                                                                                             )}
                                                                                         </h2>
                                                                                     </span>
