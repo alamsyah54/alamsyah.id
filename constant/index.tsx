@@ -419,7 +419,7 @@ export const Products = [
     {
         _id: 3,
         package: "RESELLER",
-        durations: [{ title: "1 Bulan", price: 333000, promo: 315000 }],
+        durations: [{ title: "1 Bulan", price: 349000, promo: 315000 }],
         features: [
             "Mendapatkan 3 Akun Sekaligus",
             "Harga Spesial",

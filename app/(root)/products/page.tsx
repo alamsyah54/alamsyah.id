@@ -327,7 +327,7 @@ ordered from https://store-alamsyah.id
                                             >
                                                 {formatPrice(
                                                     Products[currentIndex]
-                                                        .durations[0].promo,
+                                                        .durations[0].price,
                                                 )}
                                             </h2>
                                         </span>
