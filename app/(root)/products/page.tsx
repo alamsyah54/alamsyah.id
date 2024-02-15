@@ -1052,7 +1052,7 @@ ordered from https://store-alamsyah.id
                                 </div>
                             ))}
                         </div>
-                        <p className='py-5 '>
+                        <p className='py-5'>
                             {Products[currentIndex].description}
                         </p>
                         <div className='flex flex-col justify-start w-full items-start pt-5'>
