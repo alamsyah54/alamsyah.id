@@ -89,7 +89,7 @@ const AdsSection = () => {
                                                     <span
                                                         className={`bg-red-500/30 px-2 text-red-500 flex items-center rounded-md ${roboto.className}`}
                                                     >
-                                                        -10%
+                                                        -15%
                                                     </span>
                                                     <div className='flex justify-end w-full gap-1 text-red-600'>
                                                         <p className='flex items-start text-sm font-bold'>

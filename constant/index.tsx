@@ -350,8 +350,6 @@ export const Products = [
         _id: 1,
         package: "SHARED",
         durations: [
-            // { title: "7 Hari", price: 10000 },
-            // { title: "14 Hari", price: 17000 },
             { title: "1 Bulan", price: 30000, promo: 25000 },
             { title: "3 Bulan", price: 80000, promo: 70000 },
         ],
@@ -387,8 +385,6 @@ export const Products = [
         _id: 2,
         package: "PRIVATE",
         durations: [
-            // { title: "7 Hari", price: 33000 },
-            // { title: "14 Hari", price: 63000 },
             { title: "1 Bulan", price: 119000, promo: 105000 },
             { title: "3 Bulan", price: 353000, promo: 310000 },
         ],
