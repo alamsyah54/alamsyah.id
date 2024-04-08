@@ -12,6 +12,7 @@ import { FaMinus } from "react-icons/fa6"
 import { FaPlus } from "react-icons/fa6"
 import { PiPaperPlaneTiltFill } from "react-icons/pi"
 import { GoAlert } from "react-icons/go"
+import axios from "axios"
 import {
     Dialog,
     DialogContent,
@@ -21,6 +22,7 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import { colorfulLog } from "@/lib/utils"
 
 const products = Products
 
@@ -138,7 +140,7 @@ const Page = () => {
         const month = String(currentDate.getMonth() + 1).padStart(2, "0") // Months are zero-indexed
         const year = String(currentDate.getFullYear())
 
-        const orderId = `A${minutes}${hours}${day}${month}${year}ID`
+        const orderId = `A000${year}${month}${day}${hours}${minutes}ID`
         return orderId
     }
     const orderId = generateOrderID()
@@ -223,17 +225,53 @@ ordered from https://store-alamsyah.id
         }
 
         // Display the order details in the console
-        console.log("Order Details:", {
-            selectedProducts,
-            quantities,
-            customerName,
-            orderNotes,
-            paymentMethod,
-            totalAmount,
-            orderId,
-        })
 
         generateWhatsAppLink()
+    }
+
+    const handlePayment = async () => {
+        const itemNames = selectedProducts.map((productId, index) => {
+            const product = products.find((p) => p._id === productId)
+            if (product) {
+                const quantity = quantities[productId] || 1
+                const selectedDuration = durations[productId]
+                return `${quantity}x ${product.package} (${
+                    selectedDuration || ""
+                })`
+            }
+            return ""
+        })
+        const itemName = itemNames.join(", ") // Join array elements into a single string
+        const itemPrice = calculateTotal()
+        const secret = process.env.SERVER_KEY
+        const encodedSecret = Buffer.from(`${secret}:`).toString("base64")
+        console.log("secret", secret)
+        console.log("encodedSecret", encodedSecret)
+        try {
+            const response = await fetch("/api/payment-link", {
+                method: "POST",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                    Authorization: `Basic ${encodedSecret}`,
+                },
+                body: JSON.stringify({
+                    itemName,
+                    totalAmount: itemPrice,
+                    orderId,
+                }),
+            })
+
+            if (!response.ok) {
+                throw new Error("Failed to create payment link")
+            }
+
+            const responseData = await response.json()
+            const { paymentLink } = responseData
+            window.location.href = paymentLink // Redirect user to payment link
+        } catch (error) {
+            console.error("Error creating payment link:", error)
+        }
     }
 
     const isFormFilled = () => {
@@ -308,7 +346,7 @@ ordered from https://store-alamsyah.id
                                         <span
                                             className={`bg-red-500/30 px-2 text-red-500 flex items-center rounded-md mr-3 ${roboto.className}`}
                                         >
-                                            -10%
+                                            -15%
                                         </span>
                                         <span className='flex justify-start w-full gap-1'>
                                             <p className='flex items-start text-sm md:text-md font-bold'>
@@ -1000,6 +1038,18 @@ ordered from https://store-alamsyah.id
                                                         className={`relative duration-500 gap-3 md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
                                                     >
                                                         Proses Pesanan
+                                                        <PiPaperPlaneTiltFill />
+                                                    </div>
+                                                </button>
+                                                <button
+                                                    onClick={handlePayment}
+                                                    className='relative group mx-auto h-fit duration-700 group my-8 w-fit'
+                                                >
+                                                    <div className='absolute -inset-1 bg-gradient-to-br from-cyan-600 to-fuchsia-600 rounded-lg blur-lg py-4 px-6 transition group-hover:opacity-100 group-hover:blur-lg '></div>
+                                                    <div
+                                                        className={`relative duration-500 gap-3 md:text-lg lg:text-2xl border-white rounded-lg flex items-center justify-center py-2 px-8 text-gray-200 dark:text-dark-700 dark:bg-gray-100 bg-dark-700 ${roboto.className}`}
+                                                    >
+                                                        Continue to Payment
                                                         <PiPaperPlaneTiltFill />
                                                     </div>
                                                 </button>

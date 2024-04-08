@@ -38,9 +38,9 @@ const Navbar = () => {
     const [theme, setTheme] = useState(() => {
         if (typeof window !== "undefined") {
             const storedTheme = localStorage.getItem("theme")
-            return storedTheme !== null ? storedTheme : "light"
+            return storedTheme !== null ? storedTheme : "dark"
         }
-        return "light" // Default theme for server-side rendering
+        return "dark" // Default theme for server-side rendering
     })
     useEffect(() => {
         if (typeof window !== "undefined") {
