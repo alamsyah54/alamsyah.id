@@ -31,32 +31,26 @@ export async function getGoogleSheetsData(
     return getData.data.values
 }
 export function censorEmail(email: string): string {
-    // Ensure email has a valid format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-        return email // Return the original email if it's not valid
+        return email
     }
 
-    // Extract username and domain
     const [username, domain] = email.split("@")
 
-    // Censor username
     const censoredUsername =
         username.slice(0, 2) + "*".repeat(6) + username.slice(-1)
     return `${censoredUsername}@${domain}`
 }
 
 export function censorPassword(password: string, censor: number): string {
-    // Ensure password has at least 2 characters
     if (password.length < 2) {
-        return password // Return the original password if too short
+        return password
     }
 
-    // Extract first and last character
     const firstChar = password[0]
     const lastChar = password[password.length - 1]
 
-    // Censor with asterisks between first and last character
     const censoredPassword = firstChar + "*".repeat(censor) + lastChar
 
     return censoredPassword

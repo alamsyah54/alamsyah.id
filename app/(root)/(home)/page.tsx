@@ -18,7 +18,7 @@ export default function Home() {
                 <AdsSection />
                 <DetailSection />
                 <Rules />
-                <Testimoni />
+                {/* <Testimoni /> */}
             </main>
         </Suspense>
     )

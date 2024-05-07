@@ -4,7 +4,6 @@ import { fetchData, censorEmail, censorPassword } from "@/app/api/googleSheets"
 import { unstable_noStore } from "next/cache"
 import Link from "next/link"
 import { Roboto } from "next/font/google"
-import Clipboard from "@/components/Clipboard"
 
 const roboto = Roboto({
     weight: ["900"],
