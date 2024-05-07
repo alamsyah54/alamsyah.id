@@ -6,37 +6,37 @@ import { RiMessengerLine } from "react-icons/ri"
 
 export const contactsButton = [
     {
-        url: "https://chat.whatsapp.com/Fo93LGwQxZjHvOf38msWTD",
+        url: "#",
         icon: (
             <MdGroups className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
-        url: "https://api.whatsapp.com/send?phone=6285172010009",
+        url: "#",
         icon: (
             <FaWhatsapp className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
-        url: "https://www.facebook.com/alamsyah0054",
+        url: "#",
         icon: (
             <FaFacebookF className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
-        url: "https://www.facebook.com/messages/t/100029480103950",
+        url: "#",
         icon: (
             <RiMessengerLine className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
-        url: "https://www.instagram.com/_alamsyah.id/",
+        url: "#",
         icon: (
             <FaInstagram className='text-dark-800 dark:text-gray-300 text-2xl lg:text-xl duration-700 m-1' />
         ),
     },
     {
-        url: "https://twitter.com/alamsyah0322",
+        url: "#",
         icon: (
             <BsTwitterX className='text-dark-800 dark:text-gray-300 text-xl lg:text-lg duration-700 m-1' />
         ),
