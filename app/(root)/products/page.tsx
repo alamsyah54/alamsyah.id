@@ -147,7 +147,7 @@ const Page = () => {
         const totalAmount = calculateTotal()
 
         const generateWhatsAppLink = () => {
-            const phoneNumber = "6285172010009"
+            const phoneNumber = "6289684684684"
 
             const orderSummaryMessage = selectedProducts.map(
                 (productId, index) => {
